@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">    
+
+        <title>Hamel Hawks Baseball</title>
+        <link href="./resources/css/main.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playball">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oleo Script Swash Caps">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+      
+      <body>
+        <!-- Header logo and navigation  -->
+        <header class="header">
+            <nav class="navbar">
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="logo-item">
+                        <div class="logo_area">
+                            <a href="./index.html"><img src="hawks logo.png" alt="Hamel Hawks amateur baseball logo"></a>
+                        </div>
+                    </li>
+                    <li><a href="./schedule.html" class="item">Schedule</a></li>
+                    <li><a href="./roster.html" class="item">Roster</a></li>
+                    <li><a href="./sponsors.html" class="item">Sponsors</a></li>
+                    <li><a href="./paul-fortin-memorial-field.html" class="item">Field</a></li>
+                    <li class="home-item"><a href="./index.html" class="item">Home</a></li>
+                    <li class="contact-item"><a href="./contact.html" class="item">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar blue"></span>
+                    <span class="bar blue"></span>
+                    <span class="bar blue"></span>
+                </div>    
+            </nav>
+        </header>
+        
+        <div class="upgrades-container">
+            <div class="section">
+                <img src="grandstand dusk.jpg" alt="Paul Fortin Memorial Field grandstand image">
+                <div class="description">
+                    <h2>Grandstand (NEW in 2024!)</h2>
+                    <p>The Hawks are excited to play in front of a state-of-the-art grandstand beginning this season. Big
+                        thank you to the Hamel Lions Club and the Hamel Athletic Club for investing in the future of
+                        Hamel baseball.
+                    </p>
+                </div>
+            </div>
+        
+            <div class="section">
+                <div class="description">
+                    <h2>Scoreboard</h2>
+                    <p>Paul Fortin Memorial Field added a beautiful scoreboard in May 2023 courtesy of
+                        the Hamel Lions Club. To our knowledge, we are the only town team in Minnesota with a video scoreboard.
+                    </p>
+                </div>
+                <img src="scoreboard.jpg" alt="Paul Fortin Memorial Field video scoreboard image">
+            </div>
+
+            <div class="section">
+                <img src="field view.jpg" alt="Paul Fortin Memorial Field infield grass image">
+                <div class="description">
+                    <h2>Playing Surface</h2>
+                    <p>The Hawks are devoted to improving the playing surface to meet the standard set
+                        by world-class town ball fields throughout Minnesota. To reduce 'Hamel hops', we added sod
+                        along the outer edges of the infield. A sprinkler system was added to the outfield in April 2024.
+                    </p>
+                </div>
+            </div>
+            <!-- Add more sections as needed -->
+        </div>
+
+        <div class='column margin-override'>
+            <a href='https://icschillers.com/' target="_blank">
+                <img src='ics_chillers.png' alt="ICS Chillers logo">
+            </a>
+            <a href='https://secure.fsboh.com/Pages/Default.html' target="_blank">
+                <img src='farmers_bank_hamel.png' alt="Farmers State Bank of Hamel logo">
+            </a>
+            <a href='https://medinaentertainment.com/' target="_blank">
+                <img src='medina_entertainment.png' alt="Medina Entertainment Center logo">
+            </a>
+            <a href='https://www.innkahootsbar.com/' target="_blank">
+                <img src='inn_kahoots.png' alt="Inn Kahoots bar logo">
+            </a>
+            <a href='https://www.hamellions.org' target="_blank">
+                <img src='hamel_lions.png' alt="Hamel Lions logo">
+            </a>
+            <a href='https://www.55rental.com/' target="_blank">
+                <img src='hwy_55_rental.png' alt="Highway 55 Rental logo">
+            </a>
+        </div>
+        
+        <footer class="footer">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h2>Links</h2>
+                    <ul>
+                        <li>
+                            <a href="https://www.hamelbaseball.org/" target="_blank">Hamel Athletic Club</a>
+                        </li>
+
+                        <li>
+                        <a href="https://www.instagram.com/hamelhawks/" target="_blank">Instagram</a>
+                        </li>
+                        
+                        <li>
+                        <a href="https://twitter.com/mnhamelhawks" target="_blank">Twitter</a>
+                        </li>
+                        
+                        <li>
+                        <a href="https://www.facebook.com/hamelhawks" target="_blank">Facebook</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <a href="contact.html"> <!-- Link to your contact page -->
+                        <h2>Contact</h2>
+                    </a>
+                    <ul>
+                        <li>Fortin Field, Hamel, MN 55340</li>
+                        <li>763-228-3136</li>
+                        <li>gregd.hamelhawks@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <p>&copy; 2024 Hamel Hawks Baseball.</p>
+            </div>
+        </footer>
+
+            <script>
+                const hamburger = document.querySelector(".hamburger");
+                const navMenu = document.querySelector(".nav-menu");
+
+                hamburger.addEventListener("click", mobileMenu);
+
+                function mobileMenu() {
+                    hamburger.classList.toggle("active");
+                    navMenu.classList.toggle("responsive");
+                }  
+                // Get the current page URL
+                const currentPageUrl = window.location.href;
+
+                // Get all navigation links
+                const navLinks = document.querySelectorAll('.nav-menu .item');
+
+                // Loop through each navigation link
+                navLinks.forEach(link => {
+                    // Check if the link's href matches the current page URL
+                    if (link.href === currentPageUrl) {
+                        // Add the 'active' class to the parent <li> element
+                        link.parentElement.classList.add('active');
+                    }
+                });
+            </script>
+      </body>

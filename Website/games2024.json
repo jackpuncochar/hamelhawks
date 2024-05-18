@@ -1,0 +1,226 @@
+[
+  {
+    "date": "Fri, May 3",
+    "opponent": "Watertown Red Devils",
+    "location": "Hamel",
+    "time": "7pm",
+    "sponsor": "Coffee on Wheels",
+    "result": "L 2-16"
+  },
+  {
+    "date": "Fri, May 10",
+    "opponent": "Anoka Bucs",
+    "location": "Hamel",
+    "time": "7pm",
+    "sponsor": "Hometowne Pizza",
+    "result": "L 1-12"
+  },
+  {
+    "date": "Sun, May 19",
+    "opponent": "Hopkins Berries",
+    "location": "Hamel",
+    "time": "6pm",
+    "sponsor": "",
+    "result": ""
+  },
+  {
+    "date": "Fri, May 24",
+    "opponent": "East Bethel Bandits",
+    "location": "Hamel",
+    "time": "7pm",
+    "sponsor": "",
+    "result": ""
+  },
+  {
+    "date": "Sat, June 1",
+    "opponent": "Crystal Cowboys",
+    "location": "Hamel",
+    "time": "2pm",
+    "sponsor": "",
+    "result": ""
+  },
+  {
+    "date": "Wed, June 5",
+    "opponent": "Victoria Vics",
+    "location": "Hamel",
+    "time": "7:30pm",
+    "sponsor": "Farmer's State Bank of Hamel",
+    "result": ""
+  },
+  {
+    "date": "Fri, June 7",
+    "opponent": "Maple Plain Diamond Devils",
+    "location": "Hamel",
+    "time": "7pm",
+    "sponsor": "Grandstand Ceremony",
+    "result": ""
+  },
+  {
+    "date": "Sun, June 9",
+    "opponent": "North St. Paul Snowmen",
+    "location": "Hamel",
+    "time": "1pm",
+    "sponsor": "",
+    "result": ""
+  },
+  {
+    "date": "Tue, June 11",
+    "opponent": "Coon Rapids Redbirds",
+    "location": "Coon Rapids",
+    "time": "7:30pm",
+    "sponsor": "",
+    "result": ""
+  },
+  {
+    "date": "Fri, June 14",
+    "opponent": "Minneapolis River Rats",
+    "location": "Hamel",
+    "time": "7pm",
+    "sponsor": "Opportunity Partners Group Home Non-Profit",
+    "result": ""
+  },
+  {
+    "date": "Sun, June 16",
+    "opponent": "Macstrength Grizzlies",
+    "location": "Hamel",
+    "time": "4pm",
+    "sponsor": "",
+    "result": ""
+  },
+  {
+    "date": "Fri, June 21",
+    "opponent": "Andover Aces",
+    "location": "Hamel",
+    "time": "7pm",
+    "sponsor": "",
+    "result": ""
+  },
+  {
+    "date": "Sun, June 23",
+    "opponent": "Chanhassen Redbirds",
+    "location": "Hamel",
+    "time": "1pm",
+    "sponsor": "Hamel Legends Club Game",
+    "result": ""
+  },
+  {
+    "date": "Thu, June 27",
+    "opponent": "St. Michael Saints",
+    "location": "Hamel",
+    "time": "7pm",
+    "sponsor": "",
+    "result": ""
+  },
+  {
+    "date": "Sat, June 29",
+    "opponent": "Northwest Orioles",
+    "location": "Hamel",
+    "time": "2pm",
+    "sponsor": "",
+    "result": ""
+  },
+  {
+    "date": "Sun, June 30",
+    "opponent": "Forest Lake Brewers",
+    "location": "Hamel",
+    "time": "1pm",
+    "sponsor": "",
+    "result": ""
+  },
+  {
+    "date": "Tue, July 2",
+    "opponent": "Delano Athletics",
+    "location": "Hamel",
+    "time": "7pm",
+    "sponsor": "",
+    "result": ""
+  },
+  {
+    "date": "Sun, July 7",
+    "opponent": "Dundas Dukes",
+    "location": "Dundas",
+    "time": "2pm",
+    "sponsor": "",
+    "result": ""
+  },
+  {
+    "date": "Wed, July 10",
+    "opponent": "St. Louis Park Pirates",
+    "location": "Hamel",
+    "time": "7pm",
+    "sponsor": "Medina Entertainment Center",
+    "result": ""
+  },
+  {
+    "date": "Sun, July 14",
+    "opponent": "Plymouth Hitdawg",
+    "location": "Hamel",
+    "time": "5pm",
+    "sponsor": "",
+    "result": ""
+  },
+  {
+    "date": "Tue, July 16",
+    "opponent": "Metro Knights",
+    "location": "Hamel",
+    "time": "7pm",
+    "sponsor": "",
+    "result": ""
+  },
+  {
+    "date": "Thu, July 18",
+    "opponent": "Champlin Park LoGators",
+    "location": "Hamel",
+    "time": "7pm",
+    "sponsor": "",
+    "result": ""
+  },
+  {
+    "date": "Sun, July 21",
+    "opponent": "Baseball 365",
+    "location": "Hamel",
+    "time": "1pm",
+    "sponsor": "",
+    "result": ""
+  },
+  {
+    "date": "Tue, July 23",
+    "opponent": "Princeton Panthers",
+    "location": "Hamel",
+    "time": "7pm",
+    "sponsor": "",
+    "result": ""
+  },
+  {
+    "date": "Fri, July 26",
+    "opponent": "Lyon's Pub Warriors",
+    "location": "Hamel",
+    "time": "7pm",
+    "sponsor": "Coach Komarek Announcer Night",
+    "result": ""
+  },
+  {
+    "date": "Sun, July 28",
+    "opponent": "Cold Spring Springers",
+    "location": "Hamel",
+    "time": "1pm",
+    "sponsor": "",
+    "result": ""
+  },
+  {
+    "date": "Tue, July 30",
+    "opponent": "Andover Aces",
+    "location": "Hamel",
+    "time": "7pm",
+    "sponsor": "",
+    "result": ""
+  },
+  {
+    "date": "Fri, August 3",
+    "opponent": "Section 2B Playoffs",
+    "location": "TBD",
+    "time": "7pm",
+    "sponsor": "",
+    "result": ""
+  }
+]
