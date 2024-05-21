@@ -1,0 +1,826 @@
+/* color: rgb(65, 105, 225); */
+
+body {
+    /* background-color: whitesmoke; */
+    /* background: none repeat scroll 0 0; */
+    font-family: "Inconsolata";
+    font-weight: 600;
+    line-height: 4em;
+    /* margin-top: 80px; */
+    margin: 0;
+    background-color: white;
+    /* overflow-x: auto; */
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Set the background color of the header */
+    z-index: 1000;
+    border-bottom: 1px solid #ccc;
+    /* Add any other styles you want for the header */
+}
+
+li{
+    list-style: none;
+}
+
+ul{
+    display: block;
+    margin: 0;
+}
+
+.home-item {
+    display: none;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    padding: 0 2rem 0 2rem;
+}
+
+.item {
+    position: relative;
+    color: rgb(65, 105, 225);
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    transition: color .3s;
+}
+
+.item:hover{
+    color: rgb(230, 4, 4);
+}
+
+/* Style for the underline */
+.item::after,
+.nav-menu .active a::after {
+    content: ""; /* Add content for pseudo-element */
+    position: absolute; /* Position the pseudo-element absolutely */
+    bottom: -.5rem; /* Adjust the position of the underline */
+    left: 0; /* Align the underline with the left edge of the item */
+    width: 0; /* Start with no width */
+    height: .25rem; /* Set the height of the underline */
+    background-color: rgb(230, 4, 4); /* Set the color of the underline */
+    transition: width 0.1s, transform .1s; /* Add transition effect for width change */
+}
+
+/* Add underline and spacing on hover */
+.item:hover::after {
+    width: 25%; /* Add spacing between underline and item element */
+}
+
+.logo_area {
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    height: 83px; /* Adjust the height of the logo area as needed */
+}
+
+.logo {
+    max-width: 100%; /* Ensure the image does not exceed the width of the logo area */
+    max-height: 100%; /* Ensure the image does not exceed the height of the logo area */
+}
+
+/* 
+.nav-menu :nth-child(1) { order: 1;}
+.nav-menu :nth-child(2) { order: 2;}
+.nav-menu :nth-child(3) { order: 4;}
+.nav-menu :nth-child(4) { order: 5;}
+.nav-menu :nth-child(5) { order: 6;}
+.nav-menu :nth-child(6) { order: 3;} */
+
+.nav-menu .contact-item { order: 6; display: none;}
+
+.nav-menu .active a {
+    color: red; /* Change color as desired */
+    position: relative;
+}
+
+.nav-menu .active a::after {
+    content: "";
+    position: absolute;
+    bottom: -.5rem;
+    left: 0;
+    width: 25%;
+    height: .25rem;
+    background-color: red;
+    z-index: -1; 
+}
+
+.container {
+    /* padding-top: 5em; */
+    background: black url(players.jpg);
+    color: white;
+    height: 600px;
+    max-width: 100%;
+    display:grid;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    /* align-content: flex-start; */
+    overflow: hidden;
+    padding: 20px 20px;
+    margin-top: 80px;
+}
+
+.color-overlay {
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: .6;
+    position: absolute;
+    overflow: hidden;
+}
+
+h1, .btn{
+    justify-self: center;
+    z-index: 1;
+}
+
+h1{
+    font-family: "Oleo Script Swash Caps";
+    text-align: center;
+    font-size: 5rem;
+    line-height: 5rem;
+    margin: 0;
+}
+
+.btn{
+    display: inline-block;
+    padding: 0 2rem;
+    font-size: 1.4rem;
+    /* border-radius: 8px; */
+    background-color:rgb(65, 105, 225);
+    color: white;
+    border: 3px solid white;
+    text-decoration: none;
+    font-family: "Inconsolata";
+    transition-duration: 0.3s;
+    position: relative;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 3px; /* Adjust this value to control the distance from the edge */
+    left: 2px; /* Adjust this value to control the distance from the edge */
+    right: 2px; /* Adjust this value to control the distance from the edge */
+    bottom: 3px; /* Adjust this value to control the distance from the edge */
+    border: 3px solid rgb(65, 105, 225); /* Adjust the border style and color as needed */
+    opacity: 0; /* Initially make it invisible */
+    transition: opacity 0.3s ease; /* Add a smooth transition */
+    background-color: white;
+    color: #4169e1;
+    z-index: -1;
+}
+
+/* On hover, make the border box visible */
+.btn:hover::before {
+    opacity: 1; /* Make the border box visible */
+}
+
+.btn:hover{
+    background-color: white;
+    color: #4169e1;
+}
+
+.hamburger {
+    position: absolute;
+    right: 1rem;
+    top: 2rem;
+    transform: translateY(-50%);
+    display: none;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.column {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust min-width and max-width as needed */
+    gap: 10px;
+    justify-items: center; /* Center items horizontally */
+    align-items: center;
+    margin: 2.5rem 2.5rem 1.5rem 2.5rem;
+}
+
+.column a img {
+    max-width: 150px;
+    /* width: 100%; */
+    height: auto;
+}
+
+.icons{
+    display: flex;
+    justify-self: center;
+    z-index: 1;
+    /* padding-top: 1rem; */
+    margin-bottom: 2rem;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 50rem;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.fa:hover{
+    color: rgb(230, 4, 4);
+}
+
+.fa-instagram {
+    color: white;
+}
+
+.fa-facebook {
+    color: white;
+}
+  
+.fa-twitter {
+    color: white;
+}
+
+.about-container{
+    background-color: rgb(65, 105, 225);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 2rem;
+}
+
+.about-container p {
+    margin: 0;
+    font-weight:100;
+    padding: 0 5rem 0 5rem;
+    line-height: 2rem;
+    /* min-width: 70%; */
+}
+
+.about__title{
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+.footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer__section {
+    margin-left: 8rem;
+    text-align: left;
+}
+
+.footer__section h2 {
+    margin-bottom: 10px;
+}
+
+.footer__section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer__section ul li {
+    margin-bottom: 5px;
+}
+
+.footer__copyright {
+    margin-top: 20px;
+}
+
+.footer__section a {
+    text-decoration: none; /* Remove text decoration */
+    cursor: pointer; /* Show pointer cursor */
+    color: inherit;
+}
+
+.footer__section ul li a:hover {
+    color: rgb(65, 105, 225); /* Change link color on hover */
+}
+
+.nav__ul a {
+    /* color: rgb(54, 52, 52); */
+    opacity: .7;
+    color: white;
+    }
+
+.legal {
+    /* display: flex;
+    flex-wrap: wrap; */
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    background-color: #4169e1;
+}
+  
+  
+  @media screen and (min-width: 24.375em) {
+    .legal {
+      margin-left: auto;
+    }
+  }
+  
+  @media screen and (min-width: 40.375em) {
+    .footer__nav > * {
+      flex: 1;
+    }
+    
+    .footer__nav {
+      flex: 2 0px;
+    }
+  }
+
+/* For screens smaller than 800px */
+@media screen and (max-width: 800px) {
+    .container {
+        margin: 0;
+    }
+
+    .navbar {
+        padding-left: 2rem; /* Adjust as needed */
+        padding-right: 2rem; /* Adjust as needed */
+    }
+
+    .header {
+        position: relative; /* Add this line */
+    }
+
+    .nav-menu .contact-item {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none; /* Hide the menu by default */
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Adjust according to your header height */
+        left: 0;
+        background-color: #333; /* Example background color */
+        z-index: 1000; /* Ensure it's above other elements */
+    }
+
+    .nav-menu.responsive {
+        display: flex; /* Show the menu when hamburger menu is clicked */
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        left: 60%;
+        opacity: .9;
+        background-color: white;
+    }
+
+    .nav-menu.responsive li{
+        display: block;
+        border-bottom: 1px solid #ccc;
+        width: 90%;
+    } 
+
+    .nav-menu.responsive li:not(:first-child) {
+        flex: 1; /* Distribute remaining items equally */
+        padding: .5rem 0;
+    }
+
+    /* Remove border bottom from the first child (logo) */
+    .nav-menu.responsive li:first-child {
+        border-bottom: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #fff; /* Example color */
+        margin: 6px auto; /* Adjust as needed */
+        transition: transform 0.3s, opacity .3s;
+        transform-origin: center; /* Set the same pivot point for all bars */
+    }
+
+    .blue {
+        background-color: rgb(65, 105, 225);
+    }
+
+    .section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section img {
+        min-width: 70%;
+    }
+
+    .description {
+        min-width: 80%;
+    }
+
+    .schedule-container, .roster-container {
+        width: 90% !important;
+        margin-top: 60px !important;
+    }
+
+    #schedule-table, #roster-table {
+        width: 80%;
+    }
+
+    .about-container p {
+        padding: 0 1rem 0 1rem;
+    }
+
+    #roster-table th:nth-child(6),
+    #roster-table td:nth-child(6),
+    #roster-table th:nth-child(7),
+    #roster-table td:nth-child(7),
+    #schedule-table th:nth-child(5),
+    #schedule-table td:nth-child(5) {
+        display: none;
+    }
+
+    .footer__section {
+        margin: 1rem;
+    }
+
+}
+
+/* For screens smaller than 500px */
+@media screen and (max-width: 500px) {
+    .footer__content {
+        justify-content: flex-start;
+    }
+    
+    .contact-btn {
+        justify-self: center;
+    }
+}
+
+/* Style for the schedule container */
+.schedule-container, .roster-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(235, 235, 235); /* Semi-transparent white background */
+    width: 70%;
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px;
+    margin-top: 124px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .8); /* Add drop shadow */
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+/* Style for the schedule table */
+.schedule-container #schedule-table, .roster-container #roster-table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse; /* Collapse borders between table cells */
+}
+
+/* Style for table header (th) */
+#schedule-table th, #roster-table th {
+    background-color: #f2f2f2; /* Background color for table header */
+    padding: 10px; /* Add padding to table header cells */
+    text-align: left; /* Align text to the left in table header cells */
+}
+
+/* Style for table data (td) */
+#schedule-table td, #roster-table td {
+    padding: 10px; /* Add padding to table data cells */
+    border-bottom: 1px solid #ddd; /* Add bottom border to separate table rows */
+}
+
+#schedule-table tbody td, #roster-table tbody td {
+    font-weight: normal; /* Make the font bold for table data cells */
+}
+
+/* Style for alternating table rows */
+#schedule-table tbody tr:nth-child(even), #roster-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Background color for even rows */
+}
+
+#roster-table td a {
+    color: inherit;
+    text-decoration: none; /* Remove underline */
+    /* Add any other styles you want */
+}
+
+#roster-table td a:hover {
+    color: rgb(65, 105, 225);
+    text-decoration: underline; /* Underline on hover */
+}
+
+.no-margin-h1{
+    margin-top: 0;
+}
+
+/* Style for the background image */
+.my-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Prevent stretching and maintain aspect ratio */
+    z-index: -1; /* Ensure it's behind other content */
+}
+
+/* Initially hide the logo */
+.logo_area {
+    display: none;
+}
+
+.sponsor-container {
+    margin-top: 124px;
+}
+
+.upgrades-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 124px;
+}
+
+.section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.section img {
+    max-width: 50%;
+    height: auto;
+}
+
+.description {
+    max-width: 45%;
+}
+
+.full-desc {
+    text-align: center;
+    padding: 0 4rem;
+}
+
+.contact-container {
+    text-align: center;
+}
+
+.styled-link {
+    text-decoration: underline; /* Add underline to the link text */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    color: white;
+}
+
+.top-margin {
+    margin-top: 124px;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.no-margin {
+    margin: 0;
+    padding-top: 1.5rem;
+}
+
+.margin-override {
+    margin-top: 1.5rem;
+}
+
+.contact-form {
+    display: grid;
+    grid-gap: 10px;
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    /* position: relative; */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.contact-btn {
+    /* display: inline-block; */
+    padding: .5rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    /* border-radius: 8px; */
+    background-color:white;
+    color: rgb(65, 105, 225);
+    border: 3px solid rgb(65, 105, 225);
+    text-decoration: none;
+    font-family: "Inconsolata";
+    transition-duration: 0.3s;
+    position: relative;
+    width: 10em;
+}
+
+.contact-btn:hover{
+    background-color: rgb(65, 105, 225);
+    color: white;
+    cursor: pointer;
+}
+
+.player-header-container {
+    width: 100%;
+    margin-top: 124px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-headshot {
+    max-width: 250px;
+    height: auto;
+    margin: 2rem 10rem;
+    background-color: #ebebeb;
+    border: 1px solid #cfcfcf;
+    padding: 2rem 1rem 0 1rem;
+}
+
+.player-bio {
+    padding: 2rem 0 0 1rem;
+}
+
+.back-button {
+    position: fixed;
+    top: 124px;
+    left: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.back-button:hover {
+    background-color: #f0f0f0;
+}
+
+.back-button .chevron-left {
+    width: 40px;
+    height: 40px;
+    fill: rgb(65, 105, 225);
+}
+
+/* styling for the tabs on stats page */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #dddddd;
+    border-top: 3px solid #dddddd;
+    background-color: #f1f1f1;
+}
+
+.tab-button {
+    background-color: #f1f1f1;
+    border: none;
+    padding: 14px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #555;
+}
+
+.tab-button:hover {
+    background-color: #ddd;
+}
+
+.tab-button.active {
+    background-color: #ccc;
+    color: #333;
+}
+
+/* Styles for the tab content */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Styles for the tables */
+.table-container {
+    max-width: 100vw; /* Adjust as needed */
+    overflow-x: auto; /* Horizontal scrollbar if needed */
+    overflow-y: auto; /* Vertical scrollbar if needed */
+    /* margin-top: 20px; */
+    padding: 0 2rem;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    font-size: 1rem;
+}
+
+.styled-table thead {
+    background-color: rgb(65, 105, 225);
+    color: #ffffff;
+    text-align: center;
+}
+
+.styled-table th {
+   border: none;
+   padding: 0;
+   line-height: 2;
+   white-space: nowrap;
+}
+.styled-table td {
+    padding: 0 .5rem;
+    border: 1px solid #dddddd;
+    white-space: nowrap;
+    font-weight: normal;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+    text-align: center;
+    line-height: 1;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #333;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Media query for screens larger than 800px */
+@media screen and (min-width: 801px) {
+    .logo_area {
+        display: block; /* Show the logo on larger screens */
+    }
+}
