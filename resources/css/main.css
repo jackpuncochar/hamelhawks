@@ -94,14 +94,6 @@ ul{
     max-height: 100%; /* Ensure the image does not exceed the height of the logo area */
 }
 
-/* 
-.nav-menu :nth-child(1) { order: 1;}
-.nav-menu :nth-child(2) { order: 2;}
-.nav-menu :nth-child(3) { order: 4;}
-.nav-menu :nth-child(4) { order: 5;}
-.nav-menu :nth-child(5) { order: 6;}
-.nav-menu :nth-child(6) { order: 3;} */
-
 .nav-menu .contact-item { order: 6; display: none;}
 
 .nav-menu .active a {
@@ -370,6 +362,10 @@ h1{
 
     .nav-menu .contact-item {
         display: block;
+    }
+
+    .nav-menu .home-item {
+        order: -1;
     }
 
     .nav-menu {
