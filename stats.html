@@ -6,55 +6,362 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">    
 
-        <title>Hamel Hawks Player Stats</title>
+        <title>Statistics | Hamel Hawks</title>
+        <meta name="description" content="2024 Statistics">
+        <link rel="canonical" href="https://www.hamelhawks.com/stats">
+        <meta property="og:title" content="Statistics | Hamel Hawks">
+        <meta property="og:description" content="2024 Statistics">
+        <meta property="og:image" content="field view.jpg">
+        <meta property="og:url" content="https://www.hamelhawks.com/stats">
+        <meta property="og:type" content="website">
+        <link rel="icon" type="image/png" sizes="16x16" href="h-script-favicon-small.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="h-script-favicon-large.png">
         <link href="./resources/css/main.css" type="text/css" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik&display=swap">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playball">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oleo Script Swash Caps">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="icon" href="jackpunch_icon.png">
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-
-
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
     </head>
+      
+      <body>
+        <!-- Header logo and navigation  -->
+        <header class="header">
+            <nav class="navbar">
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="logo-item">
+                        <div class="logo_area">
+                            <a href=""><img src="hawks logo.png" alt="Hamel Hawks amateur baseball logo"></a>
+                        </div>
+                    </li>
+                    <li><a href="./schedule" class="item">Schedule</a></li>
+                    <li><a href="./roster" class="item">Roster</a></li>
+                    <li><a href="./stats" class="item">Stats</a></li>
+                    <li><a href="./sponsors" class="item">Sponsors</a></li>
+                    <li><a href="./paul-fortin-memorial-field" class="item">Field</a></li>
+                    <li class="contact-item"><a href="./contact" class="item">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>    
+            </nav>
+        </header>
+        
+        <!-- Tab buttons -->
+        <div class="tabs top-margin">
+            <button class="tab-button" onclick="openTab(event, 'batting')">HITTING</button>
+            <button class="tab-button" onclick="openTab(event, 'pitching')">PITCHING</button>
+            <button class="tab-button" onclick="openTab(event, 'fielding')">FIELDING</button>
+        </div>
+    
+        <div id="batting" class="tab-content">
+            <div class="table-container">
+                <table id="batting-table" class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th></th>
+                            <th>GP</th>
+                            <th>PA</th>
+                            <th>AB</th>
+                            <th>H</th>
+                            <th>BA</th>
+                            <th>OBP</th>
+                            <th>SLG</th>
+                            <th>OPS</th>
+                            <th>1B</th>
+                            <th>2B</th>
+                            <th>3B</th>
+                            <th>HR</th>
+                            <th>SO</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    
+        <div id="pitching" class="tab-content">
+            <div class="table-container">
+                <table id="pitching-table" class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th></th>
+                            <th>ERA</th>
+                            <th>IP</th>
+                            <th>GP</th>
+                            <th>GS</th>
+                            <th>W</th>
+                            <th>L</th>
+                            <th>H</th>
+                            <th>ER</th>
+                            <th>BB</th>
+                            <th>SO</th>
+                            <th>WHIP</th>
+                            <th>BAA</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
 
-</html>
+        <div id="fielding" class="tab-content">
+            <div class="table-container">
+                <table id="fielding-table" class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th></th>
+                            <th>Fielding %</th>
+                            <th>TC</th>
+                            <th>A</th>
+                            <th>PO</th>
+                            <th>E</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
 
-<body>
-    <body>
-  <h1>Hamel Hawks Player Stats</h1>
+        <!-- Include PapaParse for CSV parsing -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        
+        <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Player Name</th>
-        <th>At Bats</th>
-        <th>Hits</th>
-        <th>Runs</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Populate table rows and cells dynamically using JavaScript or server-side language -->
-      <tr>
-        <td>Jack Puncochar</td>
-        <td>10</td>
-        <td>5</td>
-        <td>3</td>
-      </tr>
-      <tr>
-        <td>Jackson Sundt</td>
-        <td>8</td>
-        <td>4</td>
-        <td>2</td>
-      </tr>
-      <tr>
-        <td>Brayden Gray</td>
-        <td>13</td>
-        <td>4</td>
-        <td>2</td>
-      </tr>
-      <!-- Add more rows as needed -->
-    </tbody>
-  </table>
-</body>
+        <script>
+            const tableColumns = {
+                batting: ['Number', 'Name', 'GP', 'PA', 'AB', 'H', 'batting_avg', 'OBP', 'SLG', 'OPS', '1B', '2B', '3B', 'HR', 'SO'],
+                fielding: ['Number', 'Name', 'fielding_avg', 'TC', 'A', 'PO', 'E'],
+                pitching: ['Number', 'Name', 'ERA', 'IP', 'GP.1', 'GS', 'W', 'L', 'H.1', 'ER', 'BB.1', 'SO.1', 'WHIP', 'BAA']
+            };
+
+            const tableHeaders = {
+                batting: ['#', '', 'GP', 'PA', 'AB', 'H', 'BA', 'OBP', 'SLG', 'OPS', '1B', '2B', '3B', 'HR', 'SO'],
+                fielding: ['#', '', 'Fielding %', 'TC', 'A', 'PO', 'E'],
+                pitching: ['#', '', 'ERA', 'IP', 'GP', 'GS', 'W', 'L', 'H', 'ER', 'BB', 'SO', 'WHIP', 'BAA']
+            };
+
+            const minimumRequirements = {
+                batting: {
+                    PA: 1  // Minimum 1 plate appearance
+                },
+                pitching: {
+                    IP: 0.1  // Minimum .1 innings pitched
+                },
+                fielding: {
+                    TC: 1  // Minimum 1 total chance
+                }
+            };
+
+            // Function to switch between tabs
+            function openTab(evt, tabName) {
+                var i, tabcontent, tabbuttons;
+            
+                tabcontent = document.getElementsByClassName('tab-content');
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = 'none';
+                }
+            
+                tabbuttons = document.getElementsByClassName('tab-button');
+                for (i = 0; i < tabbuttons.length; i++) {
+                    tabbuttons[i].className = tabbuttons[i].className.replace(' active', '');
+                }
+            
+                document.getElementById(tabName).style.display = 'block';
+                evt.currentTarget.className += ' active';
+            }
+
+            // Show default tab on page load
+            document.getElementById("batting").style.display = "block";
+            document.getElementsByClassName("tab-button")[0].classList.add("active");
+
+            // Function to load CSV data and populate the tables
+            function loadCSVData() {
+                Papa.parse('cleaned_stats.csv', {
+                    download: true,
+                    header: true,
+                    complete: function(results) {
+                        var data = results.data;
+                        // Filter out rows with all empty values
+                        data = data.filter(row => Object.values(row).some(value => value.trim() !== ''));
+
+                        var battingData = filterData('batting', data);
+                        var fieldingData = filterData('fielding', data);
+                        var pitchingData = filterData('pitching', data);
+
+                        populateTable('batting', battingData);
+                        populateTable('fielding', fieldingData);
+                        populateTable('pitching', pitchingData);
+                    }
+                });
+            }
+
+            function filterData(tableType, data) {
+                return data.filter(row => {
+                    const requirements = minimumRequirements[tableType];
+                    for (const key in requirements) {
+                        if (row[key] === undefined || parseFloat(row[key]) < requirements[key]) {
+                            return false;
+                        }
+                    }
+                    return true;
+                });
+            }
+
+            function populateTable(tableType, data) {
+                var table = $('#' + tableType + '-table').DataTable({
+                    data: data,
+                    columns: getColumnNames(tableType), // Get column names from tableColumns
+                    order: [[3, "desc"]], // Sort by the first column by default
+                    searching: false, // disable search
+                    paging: false, // disable shown entries feature
+                    info: false // disable 'showing x of y entries'
+                });
+            }
+    
+            // Function to get column names from tableColumns
+            function getColumnNames(tableType) {
+                var columns = {};
+                $('#' + tableType + '-table thead th').each(function(index) {
+                    var thText = $(this).text().trim(); // Trim to remove any leading/trailing spaces
+                    var csvColumnName = mapToCSVColumnName(thText, tableType); // Map to corresponding CSV column name
+                    if (columns[csvColumnName]) {
+                        // If the column name already exists, add an index to make it unique
+                        csvColumnName += '_' + index;
+                    }
+                    columns[csvColumnName] = { title: thText, data: csvColumnName };
+                });
+                return Object.values(columns);
+            }
+    
+            // Function to map <th> text to corresponding CSV column name
+            function mapToCSVColumnName(thText, tableType) {
+                // Mapping logic to map <th> text to corresponding CSV column name
+                if (thText === '#') {
+                    return 'Number';
+                } else if (thText === '') {
+                    return 'Name';
+                } else if (thText === 'BA') {
+                    return 'batting_avg';
+                } else if (thText === 'Fielding %') {
+                    return 'fielding_avg';
+                } else if (thText === 'SO') {
+                    if (tableType === 'batting') {
+                        return 'batting_SO'; // Mapping 'SO' to 'SO' for the batting table
+                    } else if (tableType === 'pitching') {
+                        return 'pitching_SO'; // Mapping 'SO' to 'SO' for the pitching table
+                    }
+                } else if (thText === 'BB') {
+                    if (tableType === 'batting') {
+                        return 'batting_BB'; // Mapping 'SO' to 'SO' for the batting table
+                    } else if (tableType === 'pitching') {
+                        return 'pitching_BB'; // Mapping 'SO' to 'SO' for the pitching table
+                    }
+                } else if (thText === 'GP') {
+                    if (tableType === 'batting') {
+                        return 'batting_GP'; // Mapping 'SO' to 'SO' for the batting table
+                    } else if (tableType === 'pitching') {
+                        return 'pitching_GP'; // Mapping 'SO' to 'SO' for the pitching table
+                    }
+                } else if (thText === 'H') {
+                    if (tableType === 'batting') {
+                        return 'batting_H'; // Mapping 'SO' to 'SO' for the batting table
+                    } else if (tableType === 'pitching') {
+                        return 'pitching_H'; // Mapping 'SO' to 'SO' for the pitching table
+                    }
+                } else if (thText === 'HBP') {
+                    if (tableType === 'batting') {
+                        return 'batting_HBP'; // Mapping 'SO' to 'SO' for the batting table
+                    } else if (tableType === 'pitching') {
+                        return 'pitching_HBP'; // Mapping 'SO' to 'SO' for the pitching table
+                    }
+                }                                           
+                return thText;
+            }
+
+            // Load data and set the default tab
+            $(document).ready(function() {
+                loadCSVData();
+            });
+        </script>
+
+        <div class='column margin-override'>
+            <a href='https://icschillers.com/' target="_blank">
+                <img src='ics_chillers.png' alt="ICS Chillers logo">
+            </a>
+            <a href='https://secure.fsboh.com/Pages/Default.html' target="_blank">
+                <img src='farmers_bank_hamel.png' alt="Farmers State Bank of Hamel logo">
+            </a>
+            <a href='https://medinaentertainment.com/' target="_blank">
+                <img src='medina_entertainment.png' alt="Medina Entertainment Center logo">
+            </a>
+            <a href='https://www.innkahootsbar.com/' target="_blank">
+                <img src='inn_kahoots.png' alt="Inn Kahoots bar logo">
+            </a>
+            <a href='https://www.hamellions.org' target="_blank">
+                <img src='hamel_lions.png' alt="Hamel Lions logo">
+            </a>
+            <a href='https://www.55rental.com/' target="_blank">
+                <img src='hwy_55_rental.png' alt="Highway 55 Rental logo">
+            </a>
+        </div>
+        
+        <footer class="footer">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h2>Links</h2>
+                    <ul>
+                        <li>
+                            <a href="https://www.hamelbaseball.org/" target="_blank">Hamel Athletic Club</a>
+                        </li>
+
+                        <li>
+                        <a href="https://www.instagram.com/hamelhawks/" target="_blank">Instagram</a>
+                        </li>
+                        
+                        <li>
+                        <a href="https://twitter.com/mnhamelhawks" target="_blank">Twitter</a>
+                        </li>
+                        
+                        <li>
+                        <a href="https://www.facebook.com/hamelhawks" target="_blank">Facebook</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <a href="./contact"> <!-- Link to your contact page -->
+                        <h2>Contact</h2>
+                    </a>
+                    <ul>
+                        <li>Fortin Field, Hamel, MN 55340</li>
+                        <li>763-228-3136</li>
+                        <li>gregd.hamelhawks@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <p>&copy; 2024 Hamel Hawks Baseball.</p>
+            </div>
+        </footer>
+
+            <script>
+                const hamburger = document.querySelector(".hamburger");
+                const navMenu = document.querySelector(".nav-menu");
+
+                hamburger.addEventListener("click", mobileMenu);
+
+                function mobileMenu() {
+                    hamburger.classList.toggle("active");
+                    navMenu.classList.toggle("responsive");
+                }  
+
+            </script>
+      </body>
