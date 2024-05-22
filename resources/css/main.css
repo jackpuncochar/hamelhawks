@@ -462,6 +462,10 @@ h1{
         padding: 0 1rem 0 1rem;
     }
 
+    .player-bio {
+        margin: 0 !important;
+    }
+
     #roster-table th:nth-child(6),
     #roster-table td:nth-child(6),
     #roster-table th:nth-child(7),
@@ -514,9 +518,18 @@ h1{
 
 /* Style for table header (th) */
 #schedule-table th, #roster-table th {
-    background-color: #f2f2f2; /* Background color for table header */
+    background-color: rgb(65, 105, 225); /* Background color for table header */
+    color: white;
     padding: 10px; /* Add padding to table header cells */
     text-align: left; /* Align text to the left in table header cells */
+}
+
+#schedule-table thead th, #roster-table thead th {
+    line-height: 2;
+}
+
+#schedule-table tbody td, #roster-table tbody td {
+    line-height: 1.5;
 }
 
 /* Style for table data (td) */
@@ -687,14 +700,25 @@ textarea {
 .player-headshot {
     max-width: 250px;
     height: auto;
-    margin: 2rem 10rem;
+    margin: 2rem 6rem;
     background-color: #ebebeb;
     border: 1px solid #cfcfcf;
     padding: 2rem 1rem 0 1rem;
 }
 
 .player-bio {
-    padding: 2rem 0 0 1rem;
+    margin-top: 1rem;
+    align-self: baseline;
+}
+
+.player-bio h2 {
+    margin: 0;
+}
+
+.player-bio p {
+    margin: 0;
+    line-height: 1.5;
+    font-weight: normal;
 }
 
 .back-button {
