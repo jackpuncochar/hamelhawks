@@ -35,7 +35,7 @@
     "position": "1B",
     "handedness": "L/R",
     "hometown": "Maple Grove",
-    "college": "",
+    "college": "Augustana",
     "season": "1",
     "pageUrl":"brian_knight"
   },
@@ -53,7 +53,7 @@
     "number": "6",
     "player": "Americo Sculati",
     "position": "1B/OF",
-    "handedness": "",
+    "handedness": "R/R",
     "hometown": "",
     "college": "Crookston",
     "season": "1",
@@ -64,7 +64,7 @@
     "player": "Dominic Adkins",
     "position": "CF",
     "handedness": "R/R",
-    "hometown": "Maple Grove",
+    "hometown": "St. Paul",
     "college": "St. Thomas",
     "season": "2",
     "pageUrl":"dominic_adkins"
@@ -74,7 +74,7 @@
     "player": "Jayden Mersereau",
     "position": "3B/C",
     "handedness": "R/R",
-    "hometown": "Maple Grove",
+    "hometown": "Plymouth",
     "college": "",
     "season": "1",
     "pageUrl":"jayden_mersereau"
@@ -94,7 +94,7 @@
     "player": "Tyler Rose",
     "position": "2B/SS",
     "handedness": "L/R",
-    "hometown": "Orono",
+    "hometown": "Maple Grove",
     "college": "St. Olaf",
     "season": "1",
     "pageUrl":"tyler_rose"
@@ -114,7 +114,7 @@
     "player": "Michael Jacobs",
     "position": "OF",
     "handedness": "R/R",
-    "hometown": "Minnetonka",
+    "hometown": "Shorewood",
     "college": "Rockhurst",
     "season": "3",
     "pageUrl":"michael_jacobs"
@@ -124,7 +124,7 @@
     "player": "Sam Schultz",
     "position": "P",
     "handedness": "L/L",
-    "hometown": "Robbinsdale",
+    "hometown": "Plymouth",
     "college": "",
     "season": "1",
     "pageUrl":"sam_schultz"
@@ -154,7 +154,7 @@
     "player": "Dylan Kent",
     "position": "IF/P",
     "handedness": "L/R",
-    "hometown": "Hamel",
+    "hometown": "Plymouth",
     "college": "North Dakota",
     "season": "1",
     "pageUrl":"dylan_kent"
@@ -174,8 +174,8 @@
     "player": "Levi Miller",
     "position": "P/IF",
     "handedness": "L/R",
-    "hometown": "Orono",
-    "college": "North Central",
+    "hometown": "Long Lake",
+    "college": "",
     "season": "1",
     "pageUrl":"levi_miller"
   },
@@ -184,7 +184,7 @@
     "player": "Jake Vanyo",
     "position": "P/OF",
     "handedness": "L/L",
-    "hometown": "Maple Grove",
+    "hometown": "Orono",
     "college": "Creighton",
     "season": "2",
     "pageUrl":"jake_vanyo"
@@ -195,7 +195,7 @@
     "position": "P/OF",
     "handedness": "L/L",
     "hometown": "Chaska",
-    "college": "",
+    "college": "St. Thomas",
     "season": "7",
     "pageUrl":"alec_lonson"
   },
@@ -204,7 +204,7 @@
     "player": "Andrew Chlebeck",
     "position": "",
     "handedness": "",
-    "hometown": "",
+    "hometown": "Little Canada",
     "college": "",
     "season": "1",
     "pageUrl":"andrew_chlebeck"
@@ -214,7 +214,7 @@
     "player": "Harrison Boughton",
     "position": "C",
     "handedness": "R/R",
-    "hometown": "Robbinsdale",
+    "hometown": "Crystal",
     "college": "Augsburg",
     "season": "2",
     "pageUrl":"harrison_boughton"
@@ -224,7 +224,7 @@
     "player": "Ben Weber",
     "position": "C/OF",
     "handedness": "R/R",
-    "hometown": "",
+    "hometown": "Maple Grove",
     "college": "",
     "season": "1",
     "pageUrl":"ben_weber"
@@ -244,7 +244,7 @@
     "player": "Josh Gohl",
     "position": "3B/P",
     "handedness": "L/R",
-    "hometown": "",
+    "hometown": "Burnsville",
     "college": "",
     "season": "1",
     "pageUrl":"josh_gohl"
@@ -254,7 +254,7 @@
     "player": "Cavan Banks",
     "position": "P",
     "handedness": "",
-    "hometown": "",
+    "hometown": "Rogers",
     "college": "Bethel",
     "season": "1",
     "pageUrl":"cavan_banks"
@@ -274,7 +274,7 @@
     "player": "Jack Koss",
     "position": "OF",
     "handedness": "R/R",
-    "hometown": "Orono",
+    "hometown": "Dayton",
     "college": "University of Minnesota-Duluth",
     "season": "1",
     "pageUrl":"jack_koss"
@@ -304,7 +304,7 @@
     "player": "Jack Lewin",
     "position": "1B/OF",
     "handedness": "R/R",
-    "hometown": "",
+    "hometown": "Wayzata",
     "college": "",
     "season": "1",
     "pageUrl":"jack_lewin"
