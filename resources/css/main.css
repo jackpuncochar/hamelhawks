@@ -524,10 +524,7 @@ h1{
     text-align: left; /* Align text to the left in table header cells */
 }
 
-#schedule-table thead th, #roster-table thead th {
-    line-height: 2;
-}
-
+#schedule-table thead th, #roster-table thead th,
 #schedule-table tbody td, #roster-table tbody td {
     line-height: 1.5;
 }
