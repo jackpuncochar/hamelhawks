@@ -142,7 +142,7 @@
   {
     "number": "15",
     "player": "Jack Puncochar",
-    "position": "3B/SS",
+    "position": "SS/3B",
     "handedness": "L/R",
     "hometown": "Maple Grove",
     "college": "University of Minnesota",
@@ -152,7 +152,7 @@
   {
     "number": "16",
     "player": "Dylan Kent",
-    "position": "IF/P",
+    "position": "SS/P",
     "handedness": "L/R",
     "hometown": "Plymouth",
     "college": "North Dakota",
@@ -202,8 +202,8 @@
   {
     "number": "21",
     "player": "Andrew Chlebeck",
-    "position": "",
-    "handedness": "",
+    "position": "OF",
+    "handedness": "L/R",
     "hometown": "Little Canada",
     "college": "",
     "season": "1",
