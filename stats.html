@@ -5,10 +5,10 @@
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-RKV7RTETNL"></script>
         <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-RKV7RTETNL');
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-RKV7RTETNL');
         </script>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,7 +29,6 @@
         <meta name="twitter:image" content="field view.jpg">
         <link rel="icon" type="image/png" sizes="16x16" href="h-script-favicon-small.png">
         <link rel="icon" type="image/png" sizes="32x32" href="h-script-favicon-large.png">
-        <link href="./resources/css/main.css" type="text/css" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik&display=swap">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playball">
@@ -37,6 +36,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+        <link href="./resources/css/main.css" type="text/css" rel="stylesheet">
     </head>
       
       <body>
@@ -202,6 +202,7 @@
                 Papa.parse('cleaned_stats.csv', {
                     download: true,
                     header: true,
+                    dynamicTyping: false,
                     complete: function(results) {
                         var data = results.data;
                         // Filter out rows with all empty values
@@ -231,16 +232,44 @@
             }
 
             function populateTable(tableType, data) {
+                // Get the column names for the respective table type
+                const tableColumns = getColumnNames(tableType);
+
+                // Separate out the total row
+                const totalRow = data.find(row => row.Name === 'Total');
+
+                // Filter out the total row from the data
+                data = data.filter(row => row.Name !== 'Total');
+                
                 var table = $('#' + tableType + '-table').DataTable({
                     data: data,
-                    columns: getColumnNames(tableType), // Get column names from tableColumns
+                    columns: tableColumns, // Get column names from tableColumns
                     order: [[3, "desc"]], // Sort by the first column by default
                     searching: false, // disable search
                     paging: false, // disable shown entries feature
                     info: false // disable 'showing x of y entries'
                 });
+            
+                // Listen for the draw event to ensure the total row stays at the bottom
+                table.on('draw', function () {
+                    const tbody = $('#' + tableType + '-table tbody');
+                    const totalRowNode = tbody.find('.total-row');
+                    tbody.append(totalRowNode);
+                });
+
+                // If total row exists, add it at the bottom with special formatting
+                if (totalRow) {
+                    // Add the total row to the bottom of the table and apply special formatting
+                    table.row.add(totalRow).draw().node().classList.add('total-row');
+                }
+
+                // Append the total row to the bottom of the table body
+                const tbody = $('#' + tableType + '-table tbody');
+                const totalRowNode = tbody.find('.total-row');
+                tbody.append(totalRowNode);
+
             }
-    
+
             // Function to get column names from tableColumns
             function getColumnNames(tableType) {
                 var columns = {};
