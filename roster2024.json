@@ -230,16 +230,6 @@
     "pageUrl":"ben_weber"
   },
   {
-    "number": "24",
-    "player": "Joey Andrada",
-    "position": "",
-    "handedness": "",
-    "hometown": "Wayzata",
-    "college": "",
-    "season": "",
-    "pageUrl":"joey_andrada"
-  },
-  {
     "number": "26",
     "player": "Josh Gohl",
     "position": "3B/P",
@@ -258,6 +248,16 @@
     "college": "Bethel",
     "season": "1",
     "pageUrl":"cavan_banks"
+  },
+  {
+    "number": "28",
+    "player": "Josh Wilson",
+    "position": "OF",
+    "handedness": "",
+    "hometown": "Maple Grove",
+    "college": "",
+    "season": "1",
+    "pageUrl":"josh_wilson"
   },
   {
     "number": "29",
@@ -281,13 +281,13 @@
   },
   {
     "number": "33",
-    "player": "Josh Wilson",
-    "position": "OF",
+    "player": "Joey Andrada",
+    "position": "",
     "handedness": "",
-    "hometown": "Maple Grove",
+    "hometown": "Wayzata",
     "college": "",
-    "season": "1",
-    "pageUrl":"josh_wilson"
+    "season": "",
+    "pageUrl":"joey_andrada"
   },
   {
     "number": "38",
