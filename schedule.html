@@ -155,17 +155,24 @@
                     // Populate table rows with game data
                     data.forEach(game => {
                         const row = document.createElement('tr');
-                        // Split the result into score and record
-                        const [score, record] = game.result.split(' (');
-                        // Format the record to include the parentheses
-                        const formattedRecord = `&nbsp;(${record.replace(')', ')')})`;
+                        let resultHTML = '';
+                        // Check if the result is available
+                        if (game.result) {
+                            // Split the result into score and record
+                            const [score, record] = game.result.split(' (');
+                            // Format the record to include the parentheses
+                            const formattedRecord = `&nbsp;(${record.replace(')', ')')}`;
+                            resultHTML = `<b>${score}</b>${formattedRecord}`;
+                        } else {
+                            resultHTML = ''; // Or you can put a placeholder like 'TBD' or 'Upcoming'
+                        }
                         row.innerHTML = `
                             <td>${game.date}</td>
                             <td>${game.opponent}</td>
                             <td>${game.location}</td>
                             <td>${game.time}</td>
                             <td>${game.sponsor}</td>
-                            <td><b>${score}</b>${formattedRecord}</td>
+                            <td>${resultHTML}</td>
                         `;
                         tableBody.appendChild(row);
                     });
