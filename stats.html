@@ -87,10 +87,10 @@
                             <th>OBP</th>
                             <th>SLG</th>
                             <th>OPS</th>
-                            <th>1B</th>
                             <th>2B</th>
                             <th>3B</th>
                             <th>HR</th>
+                            <th>BB</th>
                             <th>SO</th>
                         </tr>
                     </thead>
@@ -152,13 +152,13 @@
 
         <script>
             const tableColumns = {
-                batting: ['Number', 'Name', 'GP', 'PA', 'AB', 'H', 'batting_avg', 'OBP', 'SLG', 'OPS', '1B', '2B', '3B', 'HR', 'SO'],
+                batting: ['Number', 'Name', 'GP', 'PA', 'AB', 'H', 'batting_avg', 'OBP', 'SLG', 'OPS', '2B', '3B', 'HR', 'SO', 'BB'],
                 fielding: ['Number', 'Name', 'fielding_avg', 'TC', 'A', 'PO', 'E'],
                 pitching: ['Number', 'Name', 'ERA', 'IP', 'GP.1', 'GS', 'W', 'L', 'H.1', 'ER', 'BB.1', 'SO.1', 'WHIP', 'BAA']
             };
 
             const tableHeaders = {
-                batting: ['#', '', 'GP', 'PA', 'AB', 'H', 'BA', 'OBP', 'SLG', 'OPS', '1B', '2B', '3B', 'HR', 'SO'],
+                batting: ['#', '', 'GP', 'PA', 'AB', 'H', 'BA', 'OBP', 'SLG', 'OPS', '2B', '3B', 'HR', 'SO', 'BB'],
                 fielding: ['#', '', 'Fielding %', 'TC', 'A', 'PO', 'E'],
                 pitching: ['#', '', 'ERA', 'IP', 'GP', 'GS', 'W', 'L', 'H', 'ER', 'BB', 'SO', 'WHIP', 'BAA']
             };
@@ -304,27 +304,27 @@
                     }
                 } else if (thText === 'BB') {
                     if (tableType === 'batting') {
-                        return 'batting_BB'; // Mapping 'SO' to 'SO' for the batting table
+                        return 'batting_BB'; // Mapping 'BB' to 'BB' for the batting table
                     } else if (tableType === 'pitching') {
-                        return 'pitching_BB'; // Mapping 'SO' to 'SO' for the pitching table
+                        return 'pitching_BB'; // Mapping 'BB' to 'BB' for the pitching table
                     }
                 } else if (thText === 'GP') {
                     if (tableType === 'batting') {
-                        return 'batting_GP'; // Mapping 'SO' to 'SO' for the batting table
+                        return 'batting_GP'; // Mapping 'GP' to 'GP' for the batting table
                     } else if (tableType === 'pitching') {
-                        return 'pitching_GP'; // Mapping 'SO' to 'SO' for the pitching table
+                        return 'pitching_GP'; // Mapping 'GP' to 'GP' for the pitching table
                     }
                 } else if (thText === 'H') {
                     if (tableType === 'batting') {
-                        return 'batting_H'; // Mapping 'SO' to 'SO' for the batting table
+                        return 'batting_H'; // Mapping 'H' to 'H' for the batting table
                     } else if (tableType === 'pitching') {
-                        return 'pitching_H'; // Mapping 'SO' to 'SO' for the pitching table
+                        return 'pitching_H'; // Mapping 'H' to 'H' for the pitching table
                     }
                 } else if (thText === 'HBP') {
                     if (tableType === 'batting') {
-                        return 'batting_HBP'; // Mapping 'SO' to 'SO' for the batting table
+                        return 'batting_HBP'; // Mapping 'HBP' to 'HBP' for the batting table
                     } else if (tableType === 'pitching') {
-                        return 'pitching_HBP'; // Mapping 'SO' to 'SO' for the pitching table
+                        return 'pitching_HBP'; // Mapping 'HBP' to 'HBP' for the pitching table
                     }
                 }                                           
                 return thText;
