@@ -120,16 +120,6 @@
     "pageUrl":"michael_jacobs"
   },
   {
-    "number": "13",
-    "player": "Sam Schultz",
-    "position": "P",
-    "handedness": "L/L",
-    "hometown": "Plymouth",
-    "college": "",
-    "season": "1",
-    "pageUrl":"sam_schultz"
-  },
-  {
     "number": "14",
     "player": "Dan Morrill",
     "position": "P",
@@ -188,6 +178,16 @@
     "college": "Creighton",
     "season": "2",
     "pageUrl":"jake_vanyo"
+  },
+  {
+    "number": "20",
+    "player": "Sam Schultz",
+    "position": "P",
+    "handedness": "L/L",
+    "hometown": "Plymouth",
+    "college": "",
+    "season": "1",
+    "pageUrl":"sam_schultz"
   },
   {
     "number": "21",
