@@ -1,4 +1,13 @@
-[
+[{
+  "number": "1",
+  "player": "Tim Flemming",
+  "position": "Manager",
+  "handedness": "R/R",
+  "hometown": "Plymouth",
+  "college": "",
+  "season": "46",
+  "pageUrl":"tim_flemming"
+  },
   {
     "number": "2",
     "player": "Dom Flemming",
@@ -42,7 +51,7 @@
   {
     "number": "6",
     "player": "Americo Sculati",
-    "position": "1B/OF",
+    "position": "OF",
     "handedness": "R/R",
     "hometown": "",
     "college": "Crookston",
@@ -202,7 +211,7 @@
   {
     "number": "23",
     "player": "Ben Weber",
-    "position": "C/OF",
+    "position": "C",
     "handedness": "R/R",
     "hometown": "Maple Grove",
     "college": "",
@@ -282,7 +291,7 @@
   {
     "number": "65",
     "player": "Jack Lewin",
-    "position": "1B/OF",
+    "position": "OF",
     "handedness": "R/R",
     "hometown": "Wayzata",
     "college": "",
