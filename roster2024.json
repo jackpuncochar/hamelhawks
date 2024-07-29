@@ -29,16 +29,6 @@
     "pageUrl":"brian_knight"
   },
   {
-    "number": "5",
-    "player": "Ian Farley",
-    "position": "IF",
-    "handedness": "R/R",
-    "hometown": "Maple Grove",
-    "college": "",
-    "season": "1",
-    "pageUrl":"ian_farley"
-  },
-  {
     "number": "6",
     "player": "Americo Sculati",
     "position": "OF",
@@ -67,16 +57,6 @@
     "college": "",
     "season": "1",
     "pageUrl":"jayden_mersereau"
-  },
-  {
-    "number": "9",
-    "player": "Jarett Briol",
-    "position": "3B/SS",
-    "handedness": "R/R",
-    "hometown": "St. Louis Park",
-    "college": "UW-Lacrosse",
-    "season": "7",
-    "pageUrl":"jarett_briol"
   },
   {
     "number": "10",
@@ -209,16 +189,6 @@
     "pageUrl":"ben_weber"
   },
   {
-    "number": "26",
-    "player": "Josh Gohl",
-    "position": "3B/P",
-    "handedness": "L/R",
-    "hometown": "Burnsville",
-    "college": "",
-    "season": "1",
-    "pageUrl":"josh_gohl"
-  },
-  {
     "number": "27",
     "player": "Cavan Banks",
     "position": "P",
@@ -267,16 +237,6 @@
     "college": "",
     "season": "1",
     "pageUrl":"joey_andrada"
-  },
-  {
-    "number": "38",
-    "player": "Eric Michelsen",
-    "position": "Assistant Coach",
-    "handedness": "",
-    "hometown": "",
-    "college": "",
-    "season": "1",
-    "pageUrl":"eric_michelsen"
   },
   {
     "number": "65",
