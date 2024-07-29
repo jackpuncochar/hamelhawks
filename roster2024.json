@@ -199,26 +199,6 @@
     "pageUrl":"cavan_banks"
   },
   {
-    "number": "28",
-    "player": "Josh Wilson",
-    "position": "OF",
-    "handedness": "",
-    "hometown": "Maple Grove",
-    "college": "",
-    "season": "1",
-    "pageUrl":"josh_wilson"
-  },
-  {
-    "number": "29",
-    "player": "Nick DeVos",
-    "position": "SS",
-    "handedness": "",
-    "hometown": "Plymouth",
-    "college": "",
-    "season": "2",
-    "pageUrl":"nick_devos"
-  },
-  {
     "number": "32",
     "player": "Jack Koss",
     "position": "OF",
@@ -227,16 +207,6 @@
     "college": "University of Minnesota-Duluth",
     "season": "1",
     "pageUrl":"jack_koss"
-  },
-  {
-    "number": "33",
-    "player": "Joey Andrada",
-    "position": "P",
-    "handedness": "R/R",
-    "hometown": "Wayzata",
-    "college": "",
-    "season": "1",
-    "pageUrl":"joey_andrada"
   },
   {
     "number": "65",
