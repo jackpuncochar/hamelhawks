@@ -15,7 +15,7 @@ body {
 }
 
 .header {
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -112,24 +112,36 @@ ul{
     z-index: -1; 
 }
 
-.container {
-    position: relative;
-    /* height: calc(100vh - 116px); */
+.background-wrapper {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
     height: 100vh;
     background-image: url('hamel_hawks_landing_page.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
+    position: relative;
+    width: 50%; /* Left half of the page */
+    height: 100%;
+    z-index: 1;
 }
 
 .content {
-    width: 50%; /* Occupy the left half */
-    text-align: center; /* Center the content inside this half */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Align content at the bottom */
+    align-items: center; /* Align to the left */
+    width: 100%;
+    text-align: left;
 }
-
 
 h1, .btn{
     justify-self: center;
@@ -346,7 +358,11 @@ h1{
     .container {
         margin: 0;
     }
-    
+
+    .background-wrapper {
+        top: 0;
+    }
+
     .btn {
         padding: 0 2rem;
     }
