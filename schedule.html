@@ -154,11 +154,17 @@
                     
                     // Populate table rows with game data
                     data.forEach(game => {
+                        const [weekday, date] = game.date.split(", ");
                         const row = document.createElement('tr');
                         row.innerHTML = `
-                            <td>${game.date}</td>
+                            <td>
+                                <div class="date-cell">
+                                    <div class="date">${date || ""}</div>
+                                    <div class="weekday">${weekday || ""}</div>
+                                </div>
+                            </td>
                             <td>${game.opponent}</td>
-                            <td>${game.location}</td>
+                            <td class="scrollable-cell">${game.location}</td>
                             <td>${game.time}</td>
                             <td>${game.sponsor}</td>
                             <td>${game.result}</td>
