@@ -519,8 +519,8 @@ h1{
 .schedule-container, .roster-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    /* justify-content: center; */
     background-color: rgba(235, 235, 235); /* Semi-transparent white background */
     width: 70%;
     margin: 0 auto; /* Center the container horizontally */
@@ -537,6 +537,18 @@ h1{
     width: 100%;
     max-width: 100%;
     border-collapse: collapse; /* Collapse borders between table cells */
+}
+
+/* style for schedule date cell */
+.date {
+    font-weight: bold;
+    font-size: 1.1rem; /* Larger font for the date */
+}
+
+.scrollable-cell {
+    max-width: 100px; /* Set the maximum width of the cell */
+    overflow: auto; /* Enables scrolling for content that exceeds the width */
+    white-space: nowrap; /* Prevents text wrapping */
 }
 
 /* Style for table header (th) */
