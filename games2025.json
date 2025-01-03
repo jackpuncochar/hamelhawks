@@ -1,6 +1,6 @@
 [
   {
-    "date": "Sun, June 1",
+    "date": "Sun, 6/1",
     "opponent": "Maple Lake Lakers",
     "location": "Hamel",
     "time": "1pm",
@@ -8,7 +8,7 @@
     "result": ""
   },
   {
-    "date": "Wed, June 4",
+    "date": "Wed, 6/4",
     "opponent": "Maple Plain Diamond Devils",
     "location": "Maple Plain",
     "time": "7pm",
@@ -16,7 +16,7 @@
     "result": ""
   },
   {
-    "date": "Fri, June 6",
+    "date": "Fri, 6/6",
     "opponent": "Montrose/Waverly Stingers",
     "location": "Hamel",
     "time": "7pm",
@@ -24,7 +24,7 @@
     "result": ""
   },
   {
-    "date": "Sun, June 8",
+    "date": "Sun, 6/8",
     "opponent": "Buffalo Bulldogs",
     "location": "Buffalo",
     "time": "1pm",
@@ -32,7 +32,7 @@
     "result": ""
   },
   {
-    "date": "Wed, June 11",
+    "date": "Wed, 6/11",
     "opponent": "Howard Lake Orphans",
     "location": "Howard Lake",
     "time": "7pm",
@@ -40,7 +40,7 @@
     "result": ""
   },
   {
-    "date": "Fri, June 13",
+    "date": "Fri, 6/13",
     "opponent": "Hutchinson Huskies",
     "location": "Hamel",
     "time": "7:30pm",
@@ -48,7 +48,7 @@
     "result": ""
   },
   {
-    "date": "Sun, June 15",
+    "date": "Sun, 6/15",
     "opponent": "Dassel-Cokato Saints",
     "location": "Dassel",
     "time": "1pm",
@@ -56,7 +56,7 @@
     "result": ""
   },
   {
-    "date": "Wed, June 18",
+    "date": "Wed, 6/18",
     "opponent": "Rockford Crows",
     "location": "Rockford",
     "time": "7pm",
@@ -64,7 +64,7 @@
     "result": ""
   },
   {
-    "date": "Fri, June 20",
+    "date": "Fri, 6/20",
     "opponent": "Litchfield Blues",
     "location": "Hamel",
     "time": "7:30pm",
@@ -72,7 +72,7 @@
     "result": ""
   },
   {
-    "date": "Sun, June 22",
+    "date": "Sun, 6/22",
     "opponent": "Loretto Larks",
     "location": "Loretto",
     "time": "1pm",
@@ -80,7 +80,7 @@
     "result": ""
   },
   {
-    "date": "Wed, June 25",
+    "date": "Wed, 6/25",
     "opponent": "Cokato Kernels",
     "location": "Cokato",
     "time": "7pm",
@@ -88,7 +88,7 @@
     "result": ""
   },
   {
-    "date": "Fri, June 27",
+    "date": "Fri, 6/27",
     "opponent": "Loretto Larks",
     "location": "Hamel",
     "time": "7:30pm",
@@ -96,7 +96,7 @@
     "result": ""
   },
   {
-    "date": "Sun, June 29",
+    "date": "Sun, 6/29",
     "opponent": "Maple Lake Lakers",
     "location": "Maple Lake",
     "time": "1pm",
@@ -104,7 +104,7 @@
     "result": ""
   },
   {
-    "date": "Wed, July 9",
+    "date": "Wed, 7/9",
     "opponent": "Hutchinson Huskies",
     "location": "Hutchinson",
     "time": "7pm",
@@ -112,7 +112,7 @@
     "result": ""
   },
   {
-    "date": "Fri, July 11",
+    "date": "Fri, 7/11",
     "opponent": "Maple Plain Diamond Devils",
     "location": "Hamel",
     "time": "7pm",
@@ -120,7 +120,7 @@
     "result": ""
   },
   {
-    "date": "Sun, July 13",
+    "date": "Sun, 7/13",
     "opponent": "Buffalo Bulldogs",
     "location": "Hamel",
     "time": "4pm",
@@ -128,7 +128,7 @@
     "result": ""
   },
   {
-    "date": "July 26-27",
+    "date": "7/26-27",
     "opponent": "League Playoffs",
     "location": "TBD",
     "time": "",
@@ -136,7 +136,7 @@
     "result": ""
   },
   {
-    "date": "July 30 - Aug 10",
+    "date": "7/30 - 8/10",
     "opponent": "Region Playoffs",
     "location": "TBD",
     "time": "",
@@ -144,7 +144,7 @@
     "result": ""
   },
   {
-    "date": "Aug 15 - Sept 1",
+    "date": "8/15 - 9/1",
     "opponent": "State Tournament",
     "location": "Brownton/Hutchinson/Gaylord",
     "time": "",
