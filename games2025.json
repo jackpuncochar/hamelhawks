@@ -104,14 +104,6 @@
     "result": ""
   },
   {
-    "date": "Wed, 7/9",
-    "opponent": "Hutchinson Huskies",
-    "location": "Hutchinson",
-    "time": "7pm",
-    "sponsor": "",
-    "result": ""
-  },
-  {
     "date": "Fri, 7/11",
     "opponent": "Maple Plain Diamond Devils",
     "location": "Hamel",
@@ -124,6 +116,14 @@
     "opponent": "Buffalo Bulldogs",
     "location": "Hamel",
     "time": "4pm",
+    "sponsor": "",
+    "result": ""
+  },
+  {
+    "date": "Fri, 7/18",
+    "opponent": "Hutchinson Huskies",
+    "location": "Hutchinson",
+    "time": "7:30pm",
     "sponsor": "",
     "result": ""
   },
