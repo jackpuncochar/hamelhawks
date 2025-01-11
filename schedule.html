@@ -15,16 +15,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">    
 
         <title>2025 Schedule | Hamel Hawks</title>
-        <meta name="description" content="Hamel Hawks 2024 schedule.">
+        <meta name="description" content="Hamel Hawks 2025 schedule.">
         <link rel="canonical" href="https://www.hamelhawks.com/schedule">
-        <meta property="og:title" content="2024 Schedule | Hamel Hawks">
-        <meta property="og:description" content="Check out our schedule for the 2024 season!">
+        <meta property="og:title" content="2025 Schedule | Hamel Hawks">
+        <meta property="og:description" content="Check out our schedule for the 2025 season!">
         <meta property="og:image" content="field view.jpg">
         <meta property="og:url" content="https://www.hamelhawks.com/schedule">
         <meta property="og:type" content="website">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@MNHamelHawks">
-        <meta name="twitter:title" content="2024 Schedule | Hamel Hawks">
+        <meta name="twitter:title" content="2025 Schedule | Hamel Hawks">
         <meta name="twitter:description" content="">
         <meta name="twitter:image" content="field view.jpg">
         <link rel="icon" type="image/png" sizes="16x16" href="h-script-favicon-small.png">
@@ -72,8 +72,7 @@
                 <thead>
                     <tr>
                         <th>Date</th>
-                        <th>Opp.</th>
-                        <th>Location</th>
+                        <th>Opponent</th>
                         <th>Time</th>
                         <th>Sponsor</th>
                         <th>Result</th>
@@ -145,34 +144,76 @@
         </footer>
 
         <script>
-            // Fetch game data from JSON file
+            // Function to determine which name and opponent to display as a single string
+            function getTeamDisplayName(game) {
+                // Determine opponent prefix based on location
+                let opponentPrefix = "";
+                if (game.location === "Away") {
+                    opponentPrefix = `@ `;
+                } else if (game.location === "Home") {
+                    opponentPrefix = `vs. `;
+                }
+
+                // Check if game has a shortname, otherwise use the full team name
+                let teamNameDisplay = game.shortName && window.innerWidth <= 768 ? game.shortName : game.opponent;
+
+                // If no shortname exists, just return team name or a placeholder for special cases (e.g., "League Playoffs")
+                if (!teamNameDisplay) {
+                    teamNameDisplay = game.opponent || ""; // Fallback in case no team name is provided
+                }
+
+                // Return the full display string combining the opponent prefix and team name
+                return `${opponentPrefix}${teamNameDisplay}`;
+            }
+
+            // Function to populate the table with data
+            function populateTable(data) {
+                const tableBody = document.querySelector('#schedule-table tbody');
+                tableBody.innerHTML = ''; // Clear the existing table content
+
+                data.forEach(game => {
+                    const [weekday, date] = game.date.split(", ");
+                    const teamDisplayName = getTeamDisplayName(game);
+
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>
+                            <div class="date-cell">
+                                <div class="date">${date || ""}</div>
+                                <div class="weekday">${weekday || ""}</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="team-cell">
+                                ${game.logo ? `<img class="team-logo" src="${game.logo}">` : ""}
+                                <div class="team-name">${teamDisplayName}</div>
+                            </div>
+                        </td>
+                        <td>${game.time}</td>
+                        <td>${game.sponsor}</td>
+                        <td>${game.result}</td>
+                    `;
+                    tableBody.appendChild(row);
+                });
+            }
+
+            // Fetch game data and populate the table initially
             fetch('games2025.json')
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data);
-                    const tableBody = document.querySelector('#schedule-table tbody');
-                    
-                    // Populate table rows with game data
-                    data.forEach(game => {
-                        const [weekday, date] = game.date.split(", ");
-                        const row = document.createElement('tr');
-                        row.innerHTML = `
-                            <td>
-                                <div class="date-cell">
-                                    <div class="date">${date || ""}</div>
-                                    <div class="weekday">${weekday || ""}</div>
-                                </div>
-                            </td>
-                            <td>${game.opponent}</td>
-                            <td class="scrollable-cell">${game.location}</td>
-                            <td>${game.time}</td>
-                            <td>${game.sponsor}</td>
-                            <td>${game.result}</td>
-                        `;
-                        tableBody.appendChild(row);
-                    });
+                    populateTable(data);
                 })
                 .catch(error => console.error('Error fetching data:', error));
+
+            // Add event listener to handle window resizing
+            window.addEventListener('resize', function() {
+                fetch('games2025.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        populateTable(data); // Re-populate table with the updated names based on screen size
+                    })
+                    .catch(error => console.error('Error fetching data on resize:', error));
+            });
         </script>
         
         <script>
