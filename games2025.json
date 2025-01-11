@@ -2,133 +2,165 @@
   {
     "date": "Sun, 6/1",
     "opponent": "Maple Lake Lakers",
-    "location": "Hamel",
+    "shortName": "Maple Lake",
+    "location": "Home",
     "time": "1pm",
     "sponsor": "",
-    "result": ""
+    "result": "",
+    "logo": "resources/images/maplelakelakers.png"
   },
   {
     "date": "Wed, 6/4",
     "opponent": "Maple Plain Diamond Devils",
-    "location": "Maple Plain",
+    "shortName": "Maple Plain",
+    "location": "Away",
     "time": "7pm",
     "sponsor": "",
-    "result": ""
+    "result": "",
+    "logo": "resources/images/mapleplaindiamonddevils.png"
   },
   {
     "date": "Fri, 6/6",
     "opponent": "Montrose/Waverly Stingers",
-    "location": "Hamel",
+    "shortName": "Montrose/Waverly",
+    "location": "Home",
     "time": "7pm",
     "sponsor": "",
-    "result": ""
+    "result": "",
+    "logo": "resources/images/waverlystingers.png"
   },
   {
     "date": "Sun, 6/8",
     "opponent": "Buffalo Bulldogs",
-    "location": "Buffalo",
+    "shortName": "Buffalo",
+    "location": "Away",
     "time": "1pm",
     "sponsor": "",
-    "result": ""
+    "result": "",
+    "logo": "resources/images/buffalobulldogs.png"
   },
   {
     "date": "Wed, 6/11",
     "opponent": "Howard Lake Orphans",
-    "location": "Howard Lake",
+    "shortName": "Howard Lake",
+    "location": "Away",
     "time": "7pm",
     "sponsor": "",
-    "result": ""
+    "result": "",
+    "logo": "resources/images/howardlakeorphans.png"
   },
   {
     "date": "Fri, 6/13",
     "opponent": "Hutchinson Huskies",
-    "location": "Hamel",
+    "shortName": "Hutchinson",
+    "location": "Home",
     "time": "7:30pm",
     "sponsor": "",
-    "result": ""
+    "result": "",
+    "logo": "resources/images/hutchinsonhuskies.png"
   },
   {
     "date": "Sun, 6/15",
     "opponent": "Dassel-Cokato Saints",
-    "location": "Dassel",
+    "shortName": "DC Saints",
+    "location": "Away",
     "time": "1pm",
     "sponsor": "",
-    "result": ""
+    "result": "",
+    "logo": "resources/images/dcsaints.png"
   },
   {
     "date": "Wed, 6/18",
     "opponent": "Rockford Crows",
-    "location": "Rockford",
+    "shortName": "Rockford",
+    "location": "Away",
     "time": "7pm",
     "sponsor": "",
-    "result": ""
+    "result": "",
+    "logo": "resources/images/rockfordcrows.png"
   },
   {
     "date": "Fri, 6/20",
     "opponent": "Litchfield Blues",
-    "location": "Hamel",
+    "shortName": "Litchfield",
+    "location": "Home",
     "time": "7:30pm",
     "sponsor": "",
-    "result": ""
+    "result": "",
+    "logo": "resources/images/litchfieldblues.png"
   },
   {
     "date": "Sun, 6/22",
     "opponent": "Loretto Larks",
-    "location": "Loretto",
+    "shortName": "Loretto",
+    "location": "Away",
     "time": "1pm",
     "sponsor": "",
-    "result": ""
+    "result": "",
+    "logo": "resources/images/lorettolarks.png"
   },
   {
     "date": "Wed, 6/25",
     "opponent": "Cokato Kernels",
-    "location": "Cokato",
+    "shortName": "Cokato",
+    "location": "Away",
     "time": "7pm",
     "sponsor": "",
-    "result": ""
+    "result": "",
+    "logo": "resources/images/cokatokernels.png"
   },
   {
     "date": "Fri, 6/27",
     "opponent": "Loretto Larks",
-    "location": "Hamel",
+    "shortName": "Loretto",
+    "location": "Home",
     "time": "7:30pm",
     "sponsor": "",
-    "result": ""
+    "result": "",
+    "logo": "resources/images/lorettolarks.png"
   },
   {
     "date": "Sun, 6/29",
     "opponent": "Maple Lake Lakers",
-    "location": "Maple Lake",
+    "shortName": "Maple Lake",
+    "location": "Away",
     "time": "1pm",
     "sponsor": "",
-    "result": ""
+    "result": "",
+    "logo": "resources/images/maplelakelakers.png"
   },
   {
     "date": "Fri, 7/11",
     "opponent": "Maple Plain Diamond Devils",
-    "location": "Hamel",
+    "shortName": "Maple Plain",
+    "location": "Home",
     "time": "7pm",
     "sponsor": "",
-    "result": ""
+    "result": "",
+    "logo": "resources/images/mapleplaindiamonddevils.png"
   },
   {
     "date": "Sun, 7/13",
     "opponent": "Buffalo Bulldogs",
-    "location": "Hamel",
+    "shortName": "Buffalo",
+    "location": "Home",
     "time": "4pm",
     "sponsor": "",
-    "result": ""
+    "result": "",
+    "logo": "resources/images/buffalobulldogs.png"
   },
   {
     "date": "Fri, 7/18",
     "opponent": "Hutchinson Huskies",
-    "location": "Hutchinson",
+    "shortName": "Hutchinson",
+    "location": "Away",
     "time": "7:30pm",
     "sponsor": "",
-    "result": ""
+    "result": "",
+    "logo": "resources/images/hutchinsonhuskies.png"
   },
   {
-    "date": "7/26-27",
+    "date": "Sat, 7/26",
     "opponent": "League Playoffs",
     "location": "TBD",
     "time": "",
@@ -136,19 +168,27 @@
     "result": ""
   },
   {
-    "date": "7/30 - 8/10",
-    "opponent": "Region Playoffs",
+    "date": "Sat, 8/2",
+    "opponent": "District Playoffs",
     "location": "TBD",
     "time": "",
     "sponsor": "",
-    "result": ""
+    "result": "Weekend 1"
   },
   {
-    "date": "8/15 - 9/1",
+    "date": "Sat, 8/9",
+    "opponent": "District Playoffs",
+    "location": "TBD",
+    "time": "",
+    "sponsor": "",
+    "result": "Weekend 2"
+  },
+  {
+    "date": "Fri, 8/15",
     "opponent": "State Tournament",
     "location": "Brownton/Hutchinson/Gaylord",
     "time": "",
     "sponsor": "",
-    "result": ""
+    "result": "8/15 - 9/1"
   }
 ]
