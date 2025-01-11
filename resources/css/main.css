@@ -481,12 +481,8 @@ h1{
         margin: 0 !important;
     }
 
-    #roster-table th:nth-child(6),
-    #roster-table td:nth-child(6),
-    #roster-table th:nth-child(7),
-    #roster-table td:nth-child(7),
-    #schedule-table th:nth-child(5),
-    #schedule-table td:nth-child(5) {
+    #schedule-table th:nth-child(4),
+    #schedule-table td:nth-child(4) {
         display: none;
     }
 
@@ -513,6 +509,11 @@ h1{
     .icons {
         font-size: 12px;
     }
+
+    /* remove schedule header on small screens */
+    h2 { 
+        display: none;
+    }
 }
 
 /* Style for the schedule container */
@@ -537,12 +538,6 @@ h1{
     width: 100%;
     max-width: 100%;
     border-collapse: collapse; /* Collapse borders between table cells */
-}
-
-/* style for schedule date cell */
-.date {
-    font-weight: bold;
-    font-size: 1.1rem; /* Larger font for the date */
 }
 
 .scrollable-cell {
@@ -880,4 +875,33 @@ textarea {
     .logo_area {
         display: block; /* Show the logo on larger screens */
     }
+}
+
+/* style for schedule date cell */
+.date-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.date {
+    font-weight: bold;
+    font-size: 1.1rem; /* Larger font for the date */
+}
+
+.team-cell {
+    display: flex;
+    align-items: center; /* Centers items vertically */
+    gap: 10px; /* Adds space between the logo and text */
+}
+
+.team-logo {
+    width: 40px; /* Adjust as needed */
+    height: 40px;
+    object-fit: contain; /* Ensures the logo scales without distortion */
+}
+
+.team-name {
+    font-size: 16px; /* Adjust font size */
+    white-space: nowrap;
 }
