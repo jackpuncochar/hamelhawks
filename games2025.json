@@ -1,5 +1,15 @@
 [
   {
+    "date": "Fri, 5/30",
+    "opponent": "Willmar Indians",
+    "shortName": "Willmar",
+    "location": "Home",
+    "time": "7:30pm",
+    "sponsor": "",
+    "result": "",
+    "logo": "resources/images/willmarindians.png"
+  },
+  {
     "date": "Sun, 6/1",
     "opponent": "Maple Lake Lakers",
     "shortName": "Maple Lake",
@@ -140,6 +150,26 @@
     "logo": "resources/images/maplelakelakers.png"
   },
   {
+    "date": "Tue, 7/1",
+    "opponent": "TBD",
+    "shortName": "",
+    "location": "Home",
+    "time": "7pm",
+    "sponsor": "",
+    "result": "",
+    "logo": ""
+  },
+  {
+    "date": "Tue, 7/8",
+    "opponent": "Andover Aces",
+    "shortName": "Andover",
+    "location": "Home",
+    "time": "7:15pm",
+    "sponsor": "",
+    "result": "",
+    "logo": "resources/images/andoveraces.png"
+  },
+  {
     "date": "Fri, 7/11",
     "opponent": "Maple Plain Diamond Devils",
     "shortName": "Maple Plain",
@@ -168,6 +198,16 @@
     "sponsor": "",
     "result": "",
     "logo": "resources/images/hutchinsonhuskies.png"
+  },
+  {
+    "date": "Sun, 7/20",
+    "opponent": "TBD",
+    "shortName": "",
+    "location": "Home",
+    "time": "1pm",
+    "sponsor": "",
+    "result": "",
+    "logo": ""
   },
   {
     "date": "Sat, 7/26",
