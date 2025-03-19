@@ -151,13 +151,13 @@
   },
   {
     "date": "Tue, 7/1",
-    "opponent": "TBD",
-    "shortName": "",
+    "opponent": "Hudson River Rats",
+    "shortName": "Hudson",
     "location": "Home",
     "time": "7pm",
     "sponsor": "",
     "result": "",
-    "logo": ""
+    "logo": "resources/images/hudsonriverrats.png"
   },
   {
     "date": "Tue, 7/8",
