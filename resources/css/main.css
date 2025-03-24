@@ -305,7 +305,7 @@ h1{
     color: inherit;
 }
 
-.footer__section ul li a:hover {
+.footer__section a:hover {
     color: rgb(65, 105, 225); /* Change link color on hover */
 }
 
