@@ -880,3 +880,22 @@ textarea {
     font-size: 16px; /* Adjust font size */
     white-space: nowrap;
 }
+
+/* Stats page year selector */
+.year-selector {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#year-select {
+    display: inline-block; /* Prevents full-width behavior */
+    width: auto;
+    cursor: pointer;
+    -webkit-appearance: menulist-button; /* Ensures dropdown arrow appears */
+    appearance: menulist-button; /* Standard property for dropdown styling */
+}
+
+.no-data {
+    font-size: 1.2em;
+    color: #555;
+}
