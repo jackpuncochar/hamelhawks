@@ -72,6 +72,14 @@
             <button class="tab-button" onclick="openTab(event, 'fielding')">FIELDING</button>
         </div>
     
+        <!-- Year Dropdown -->
+        <div class="year-selector">
+            <select id="year-select" onchange="loadStatsForYear()">
+                <option value="2025" selected>2025</option>
+                <option value="2024">2024</option>
+            </select>
+        </div>
+
         <div id="batting" class="tab-content">
             <div class="table-container">
                 <table id="batting-table" class="styled-table">
@@ -144,6 +152,11 @@
             </div>
         </div>
 
+        <!-- Placeholder for no-data message -->
+        <div id="no-data-message" class="no-data" style="display: none; text-align: center; margin: 20px;">
+            <p>Check back on Opening Day!! (May 30, 2025)</p>
+        </div>
+
         <!-- Include PapaParse for CSV parsing -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -177,20 +190,33 @@
 
             // Function to switch between tabs
             function openTab(evt, tabName) {
-                var i, tabcontent, tabbuttons;
-            
-                tabcontent = document.getElementsByClassName('tab-content');
-                for (i = 0; i < tabcontent.length; i++) {
-                    tabcontent[i].style.display = 'none';
+                const selectedYear = document.getElementById('year-select').value;
+                const noDataMessage = document.getElementById('no-data-message');
+                const tabContent = document.getElementsByClassName('tab-content');
+                const tabButtons = document.getElementsByClassName('tab-button');
+        
+                if (selectedYear === '2025') {
+                    // For 2025, keep all tabs hidden and show no-data message
+                    for (let i = 0; i < tabContent.length; i++) {
+                        tabContent[i].style.display = 'none';
+                    }
+                    noDataMessage.style.display = 'block';
+                    // Remove 'active' class from all tab buttons
+                    for (let i = 0; i < tabButtons.length; i++) {
+                        tabButtons[i].className = tabButtons[i].className.replace(' active', '');
+                    }
+                } else {
+                    // For archived years (e.g., 2024), proceed with normal tab behavior
+                    for (let i = 0; i < tabContent.length; i++) {
+                        tabContent[i].style.display = 'none';
+                    }
+                    for (let i = 0; i < tabButtons.length; i++) {
+                        tabButtons[i].className = tabButtons[i].className.replace(' active', '');
+                    }
+                    document.getElementById(tabName).style.display = 'block';
+                    evt.currentTarget.className += ' active';
+                    noDataMessage.style.display = 'none';
                 }
-            
-                tabbuttons = document.getElementsByClassName('tab-button');
-                for (i = 0; i < tabbuttons.length; i++) {
-                    tabbuttons[i].className = tabbuttons[i].className.replace(' active', '');
-                }
-            
-                document.getElementById(tabName).style.display = 'block';
-                evt.currentTarget.className += ' active';
             }
 
             // Show default tab on page load
@@ -198,25 +224,58 @@
             document.getElementsByClassName("tab-button")[0].classList.add("active");
 
             // Function to load CSV data and populate the tables
-            function loadCSVData() {
-                Papa.parse('cleaned_stats.csv', {
-                    download: true,
-                    header: true,
-                    dynamicTyping: false,
-                    complete: function(results) {
-                        var data = results.data;
-                        // Filter out rows with all empty values
-                        data = data.filter(row => Object.values(row).some(value => value.trim() !== ''));
-
-                        var battingData = filterData('batting', data);
-                        var fieldingData = filterData('fielding', data);
-                        var pitchingData = filterData('pitching', data);
-
-                        populateTable('batting', battingData);
-                        populateTable('fielding', fieldingData);
-                        populateTable('pitching', pitchingData);
+            function loadStatsForYear() {
+                const selectedYear = document.getElementById('year-select').value;
+                const csvFile = `cleaned_stats_${selectedYear}.csv`;
+                const noDataMessage = document.getElementById('no-data-message');
+                const tabContent = document.getElementsByClassName('tab-content');
+                const tabButtons = document.getElementsByClassName('tab-button');
+        
+                // Destroy and clear existing DataTables
+                ['batting', 'pitching', 'fielding'].forEach(table => {
+                    if ($.fn.DataTable.isDataTable(`#${table}-table`)) {
+                        $(`#${table}-table`).DataTable().destroy();
                     }
+                    $(`#${table}-table tbody`).empty(); // Clear table body
                 });
+        
+                if (selectedYear === '2025') {
+                    // Hide all tab content and show no-data message
+                    for (let i = 0; i < tabContent.length; i++) {
+                        tabContent[i].style.display = 'none';
+                    }
+                    noDataMessage.style.display = 'block';
+                    // Remove 'active' class from all tab buttons
+                    for (let i = 0; i < tabButtons.length; i++) {
+                        tabButtons[i].className = tabButtons[i].className.replace(' active', '');
+                    }
+                } else {
+                    // Load archived data (e.g., 2024)
+                    noDataMessage.style.display = 'none';
+                    document.getElementById('batting').style.display = 'block'; // Default tab
+                    tabButtons[0].className += ' active';
+        
+                    Papa.parse(csvFile, {
+                        download: true,
+                        header: true,
+                        dynamicTyping: false,
+                        complete: function(results) {
+                            var data = results.data || [];
+                            data = data.filter(row => Object.values(row).some(value => value.trim() !== ''));
+        
+                            var battingData = filterData('batting', data);
+                            var fieldingData = filterData('fielding', data);
+                            var pitchingData = filterData('pitching', data);
+        
+                            populateTable('batting', battingData);
+                            populateTable('fielding', fieldingData);
+                            populateTable('pitching', pitchingData);
+                        },
+                        error: function() {
+                            console.error(`Failed to load ${csvFile}`);
+                        }
+                    });
+                }
             }
 
             function filterData(tableType, data) {
@@ -332,7 +391,7 @@
 
             // Load data and set the default tab
             $(document).ready(function() {
-                loadCSVData();
+                loadStatsForYear();
             });
         </script>
 
