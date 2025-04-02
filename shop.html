@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shop | Hamel Hawks</title>
+    <meta name="description" content="Shop official Hamel Hawks merchandise.">
+    <link href="./resources/css/main.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <script src="https://js.stripe.com/v3/"></script> <!-- Stripe JS -->
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <ul class="nav-menu" id="nav-menu">
+                <li class="logo-item">
+                    <div class="logo_area">
+                        <a href="https://www.hamelhawks.com"><img src="hawks logo.png" alt="Hamel Hawks logo"></a>
+                    </div>
+                </li>
+                <li><a href="https://www.hamelhawks.com/schedule" class="item">Schedule</a></li>
+                <li><a href="https://www.hamelhawks.com/roster" class="item">Roster</a></li>
+                <li><a href="https://www.hamelhawks.com/stats" class="item">Stats</a></li>
+                <li><a href="https://www.hamelhawks.com/sponsors" class="item">Sponsors</a></li>
+                <li><a href="https://www.hamelhawks.com/paul-fortin-memorial-field" class="item">Field</a></li>
+                <li><a href="https://www.hamelhawks.com/news" class="item">News</a></li>
+                <li><a href="https://www.hamelhawks.com/shop" class="item">Shop</a></li>
+                <li class="home-item"><a href="https://www.hamelhawks.com" class="item">Home</a></li>
+                <li class="contact-item"><a href="https://www.hamelhawks.com/contact" class="item">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar blue"></span>
+                <span class="bar blue"></span>
+                <span class="bar blue"></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="shop-container top-margin">
+        <h1>Hawks Merch Shop</h1>
+        <div id="products" class="product-grid"></div>
+        <div id="cart" class="cart">
+            <h2>Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: $<span id="cart-total">0.00</span></p>
+            <button id="checkout-btn" disabled>Checkout</button>
+        </div>
+    </div>
+
+    <script src="shop.js"></script>
+</body>
+</html>
