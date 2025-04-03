@@ -15,20 +15,26 @@ fetch(`${API_BASE_URL}/products`)
   })
   .then(data => {
     const productsDiv = document.getElementById('products');
+    if (!Array.isArray(data) || data.length === 0) {
+      productsDiv.innerHTML = '<p>No products available.</p>';
+      return;
+    }
     data.forEach(product => {
-      const price = (product.sync_variants[0].retail_price || 20.00).toFixed(2);
+      const variant = product.sync_variants && product.sync_variants.length > 0 ? product.sync_variants[0] : {};
+      const price = variant.retail_price ? parseFloat(variant.retail_price) : 25.00;
+      console.log(`Product: ${product.sync_product.name}, API Price: ${variant.retail_price}, Displayed: ${price}`);
       productsDiv.innerHTML += `
         <div class="product">
-          <img src="${product.thumbnail_url}" alt="${product.name}">
-          <h2>${product.name}</h2>
-          <p>$${price}</p>
-          <button onclick="addToCart('${product.id}', '${product.name}', ${price})">Add to Cart</button>
+          <img src="${product.sync_product.thumbnail_url}" alt="${product.sync_product.name}">
+          <h2>${product.sync_product.name}</h2>
+          <p>$${price.toFixed(2)}</p>
+          <button onclick="addToCart('${product.sync_product.id}', '${product.sync_product.name}', ${price})">Add to Cart</button>
         </div>`;
     });
   })
   .catch(error => {
     console.error('Error fetching products:', error);
-    document.getElementById('products').innerHTML = '<p>Sorry, unable to load products right now.</p>';
+    productsDiv.innerHTML = '<p>Sorry, unable to load products right now.</p>';
   });
 
 // Cart functions
