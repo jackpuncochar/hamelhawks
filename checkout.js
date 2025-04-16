@@ -21,7 +21,7 @@ const shippingFields = ['shipping-name', 'shipping-street', 'shipping-city', 'sh
 const billingFieldIds = ['billing-name', 'billing-street', 'billing-city', 'billing-state', 'billing-zip', 'billing-country'];
 
 const USE_GOOGLE_API = true;
-const googleApiKey = prcoess.env.GOOGLE_MAPS_API_KEY;
+const googleApiKey = process.env.GOOGLE_MAPS_API_KEY;
 let shippingAutocomplete, billingAutocomplete;
 
 // Global state objects
