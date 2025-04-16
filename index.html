@@ -35,45 +35,52 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playball">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oleo Script Swash Caps">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
       
       <body>
         <header class="header">
+            <div class="logo_area">
+                <a href="https://www.hamelhawks.com"><img src="hawks logo.png" alt="Hamel Hawks logo"></a>
+            </div>
             <nav class="navbar">
-                <ul class="nav-menu" id="nav-menu">
-                    <li class="logo-item">
-                        <div class="logo_area">
-                            <a href="https://www.hamelhawks.com"><img src="hawks logo.png" alt="Hamel Hawks town ball logo"></a>
-                        </div>
-                    </li>
+                <ul class="nav-menu" id="nav-menu">  
                     <li><a href="https://www.hamelhawks.com/schedule" class="item">Schedule</a></li>
                     <li><a href="https://www.hamelhawks.com/roster" class="item">Roster</a></li>
                     <li><a href="https://www.hamelhawks.com/stats" class="item">Stats</a></li>
                     <li><a href="https://www.hamelhawks.com/sponsors" class="item">Sponsors</a></li>
                     <li><a href="https://www.hamelhawks.com/paul-fortin-memorial-field" class="item">Field</a></li>
                     <li><a href="https://www.hamelhawks.com/news" class="item">News</a></li>
+                    <li><a href="https://www.hamelhawks.com/shop" class="item">Shop</a></li>
                     <li class="contact-item"><a href="https://www.hamelhawks.com/contact" class="item">Contact</a></li>
                 </ul>
                 <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>    
+                    <span class="bar blue"></span>
+                    <span class="bar blue"></span>
+                    <span class="bar blue"></span>
+                </div>
             </nav>
+            <div id="cart-icon" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cart-count">0</span>
+            </div>
         </header>
 
+        <div class="cart-popup" id="cart-popup"></div>
+
         <div class="background-wrapper">
-            <!-- Header logo and navigation  -->
-            
             <div class="container">
-                <!-- <img src="hamel_hawks_landing_page.png" class="background-image"> -->
+                <div class="background-image"></div>
                 <div class="content">
-                    <a class="btn" href="https://www.hamelhawks.com/schedule">2025 SCHEDULE</a>
+                    <div class="content-buttons">
+                        <a class="btn" href="https://www.hamelhawks.com/schedule">Schedule</a>
+                        <a class="btn" href="https://www.hamelhawks.com/shop">Shop</a>
+                    </div>
                     <div class="icons">
-                        <a href="https://www.instagram.com/hamelhawks/" class="fa fa-instagram fa-3x" target="_blank"></a>
-                        <a href="https://twitter.com/mnhamelhawks" class="fa fa-twitter fa-3x" target="_blank"></a>
-                        <a href="https://www.facebook.com/hamelhawks" class="fa fa-facebook fa-3x" target="_blank"></a>
+                        <a href="https://www.instagram.com/hamelhawks/" class="fab fa-instagram" target="_blank"></a>
+                        <a href="https://twitter.com/mnhamelhawks" class="fab fa-twitter" target="_blank"></a>
+                        <a href="https://www.facebook.com/hamelhawks" class="fab fa-facebook-f" target="_blank"></a>
                     </div>
                 </div>
             </div>
@@ -117,7 +124,7 @@
 
                     *New in 2025!* The Hamel Hawks now compete as a Class B team in the North Star League, bringing exciting summer baseball 
                     to the west metro. Our 16-game league schedule includes two matchups against each of the other five Class B teams and 
-                    one game against each Class C opponent. Catch the action at Paul Fortin Memorial Field in Hamel—<a href="https://www.hamelhawks.com/schedule"
+                    one game against each Class C opponent. Catch the action at Paul Fortin Memorial Field in Hamel — <a href="https://www.hamelhawks.com/schedule"
                     class="styled-link" >check out the 2025 schedule</a> and plan your visit from Maple Grove, Medina, or beyond. 
                     Whether you're a local from Hamel or a fan making the short trip from Minneapolis, join us for a summer of baseball that 
                     celebrates community and competition!
@@ -165,17 +172,7 @@
 
             </footer>
         </div>
-
-            <script>
-                const hamburger = document.querySelector(".hamburger");
-                const navMenu = document.querySelector(".nav-menu");
-
-                hamburger.addEventListener("click", mobileMenu);
-
-                function mobileMenu() {
-                    hamburger.classList.toggle("active");
-                    navMenu.classList.toggle("responsive");
-                };
-            </script>
+        <script src="/cart.js" type="module"></script>
+        <script src="navigation.js"></script>
       </body>
         

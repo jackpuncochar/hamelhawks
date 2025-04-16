@@ -1,122 +1,150 @@
-// Initialize Stripe with your Publishable Key
-const stripe = Stripe('pk_test_your_publishable_key_here'); // Replace with your Stripe Publishable Key
+import { renderVariants, groupVariantsByColorAndSize } from './variants.js';
+import { addToCart } from './cart.js';
+import { API_BASE_URL } from './config.js';
 
-// Base URL for Vercel API (update after deployment)
-const API_BASE_URL = 'https://hamel-hawks-api.vercel.app';
-
-// Cart state
-let cart = [];
-
-// Fetch products from Vercel API
-fetch(`${API_BASE_URL}/products`)
-  .then(response => {
-    if (!response.ok) throw new Error('Failed to fetch products');
-    return response.json();
-  })
-  .then(data => {
-    const productsDiv = document.getElementById('products');
-    if (!Array.isArray(data) || data.length === 0) {
-      productsDiv.innerHTML = '<p>No products available.</p>';
-      return;
-    }
-    data.forEach(product => {
-      const variant = product.sync_variants && product.sync_variants.length > 0 ? product.sync_variants[0] : {};
-      const price = variant.retail_price ? parseFloat(variant.retail_price) : 25.00;
-      console.log(`Product: ${product.sync_product.name}, API Price: ${variant.retail_price}, Displayed: ${price}`);
-      productsDiv.innerHTML += `
-        <div class="product">
-          <img src="${product.sync_product.thumbnail_url}" alt="${product.sync_product.name}">
-          <h2>${product.sync_product.name}</h2>
-          <p>$${price.toFixed(2)}</p>
-          <button onclick="addToCart('${product.sync_product.id}', '${product.sync_product.name}', ${price})">Add to Cart</button>
-        </div>`;
-    });
-  })
-  .catch(error => {
-    console.error('Error fetching products:', error);
-    productsDiv.innerHTML = '<p>Sorry, unable to load products right now.</p>';
-  });
-
-// Cart functions
-function addToCart(id, name, price) {
-  cart.push({ id, name, price: parseFloat(price) });
-  updateCart();
+async function fetchProducts() {
+    const response = await fetch(`${API_BASE_URL}/api/products`);
+    const data = await response.json();
+    return data;
 }
 
-function updateCart() {
-  const cartItems = document.getElementById('cart-items');
-  const cartTotal = document.getElementById('cart-total');
-  const checkoutBtn = document.getElementById('checkout-btn');
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const products = await fetchProducts();
+        const productsDiv = document.getElementById('products');
 
-  cartItems.innerHTML = '';
-  let total = 0;
-  cart.forEach(item => {
-    total += item.price;
-    cartItems.innerHTML += `<li>${item.name} - $${item.price.toFixed(2)}</li>`;
-  });
-  cartTotal.textContent = total.toFixed(2);
-  checkoutBtn.disabled = cart.length === 0;
-}
+        if (!Array.isArray(products) || products.length === 0) {
+            productsDiv.innerHTML = '<p>No products available.</p>';
+            return;
+        }
 
-// Checkout with Stripe
-document.getElementById('checkout-btn').addEventListener('click', async () => {
-  if (cart.length === 0) return;
+        window.productsData = products;
+        // console.log("PRODUCTS DATA", products);
+        productsDiv.innerHTML = '';
+        products.forEach(product => {
+            const defaultVariant = product.sync_variants[0];
+            const defaultPrice = parseFloat(defaultVariant.retail_price);
+            const previewUrl = defaultVariant.files.find(f => f.type === 'preview')?.preview_url || product.sync_product.thumbnail_url;
 
-  try {
-    // Create Payment Intent
-    const response = await fetch(`${API_BASE_URL}/payment-intent`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ 
-        amount: Math.round(cart.reduce((sum, item) => sum + item.price, 0) * 100) // In cents
-      })
-    });
-    if (!response.ok) throw new Error('Failed to create payment intent');
-    const { clientSecret } = await response.json();
+            productsDiv.innerHTML += `
+                <div class="product" data-product-id="${product.sync_product.id}" data-default-price="${defaultPrice}">
+                    <div class="product-content">
+                        <img src="${previewUrl}" alt="${product.sync_product.name}" class="main-image" data-variant-id="${defaultVariant.id}">
+                        <h3 class="product-name">${product.sync_product.name}</h3>
+                        <p class="price">$${defaultPrice.toFixed(2)}</p>
+                        <div class="variant-container"></div>
+                    </div>
+                    <button class="add-to-cart" disabled>Select a size</button>
+                </div>
+            `;
 
-    // Confirm payment (test mode; add Stripe Elements later)
-    const { error } = await stripe.confirmCardPayment(clientSecret, {
-      payment_method: {
-        card: { token: 'tok_visa' } // Test token
-      }
-    });
+            const variantContainer = productsDiv.querySelector(`[data-product-id="${product.sync_product.id}"] .variant-container`);
+            renderVariants(variantContainer, product.sync_variants, defaultVariant.id, product);
+        });
 
-    if (error) {
-      alert('Payment failed: ' + error.message);
-    } else {
-      // Submit order to Printful
-      const orderResponse = await fetch(`${API_BASE_URL}/order`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ items: cart })
-      });
-      const orderData = await orderResponse.json();
-      if (orderResponse.ok) {
-        alert('Order placed successfully! Order ID: ' + orderData.orderId);
-        cart = [];
-        updateCart();
-      } else {
-        alert('Order submission failed: ' + orderData.error);
-      }
+        productsDiv.addEventListener('click', (e) => {
+            const productDiv = e.target.closest('.product');
+            if (!productDiv) return;
+            const productId = productDiv.dataset.productId;
+            const product = products.find(p => String(p.sync_product.id) === String(productId));
+            const addToCartBtn = productDiv.querySelector('.add-to-cart');
+            const priceElement = productDiv.querySelector('.price');
+            const defaultPrice = parseFloat(productDiv.dataset.defaultPrice);
+
+            const box = e.target.closest('.size-box');
+            if (box) {
+                const variantId = box.dataset.variantId;
+                // console.log('Size click for', product.sync_product.name, 'variantId:', variantId);
+                const variant = product.sync_variants.find(v => String(v.id) === String(variantId));
+                if (!variant) {
+                    console.error('Variant not found for ID:', variantId);
+                    return;
+                }
+                addToCartBtn.disabled = false;
+                addToCartBtn.textContent = 'Add to Cart';
+                addToCartBtn.dataset.variantId = variantId;
+                productDiv.querySelectorAll('.size-box').forEach(b => {
+                    b.style.border = b === box ? '2px solid #4169e1' : '1px solid #ddd';
+                });
+
+                // Update price
+                const newPrice = parseFloat(variant.retail_price);
+                priceElement.textContent = `$${newPrice.toFixed(2)}`;
+                updatePriceWarning(productDiv, newPrice, defaultPrice);
+            }
+
+            const img = e.target.closest('.variant-image');
+            if (img) {
+                // console.log('Variant image clicked for', product.sync_product.name, 'variantId:', img.dataset.variantId);
+                const mainImage = productDiv.querySelector('.main-image');
+                const variantId = img.dataset.variantId;
+                const selectedVariant = product.sync_variants.find(v => String(v.id) === String(variantId));
+                const selectedColor = selectedVariant.color || 'Default';
+
+                mainImage.src = img.src;
+                mainImage.dataset.variantId = variantId;
+
+                productDiv.querySelectorAll('.variant-image').forEach(v => {
+                    v.style.border = v.dataset.variantId === variantId ? '2px solid #4169e1' : '1px solid #ddd';
+                });
+
+                const sizeBoxes = productDiv.querySelector('.size-boxes');
+                const { sizes, isOneSize } = groupVariantsByColorAndSize(product.sync_variants);
+                if (sizeBoxes && !isOneSize) {
+                    const filteredSizes = sizes.filter(size => size.color === selectedColor);
+                    sizeBoxes.innerHTML = filteredSizes.map(size => `
+                        <div class="size-box" data-variant-id="${size.variant_id}">
+                            ${size.name}
+                        </div>
+                    `).join('') || '<p>No sizes for this color</p>';
+                    addToCartBtn.disabled = true;
+                    addToCartBtn.textContent = 'Select a size';
+                    delete addToCartBtn.dataset.variantId;
+                } else if (isOneSize) {
+                    addToCartBtn.dataset.variantId = variantId;
+                }
+
+                // Update price
+                const newPrice = parseFloat(selectedVariant.retail_price);
+                priceElement.textContent = `$${newPrice.toFixed(2)}`;
+                updatePriceWarning(productDiv, newPrice, defaultPrice);
+            }
+
+            if (e.target.classList.contains('add-to-cart') && !e.target.disabled) {
+                const variantId = e.target.dataset.variantId;
+                const variant = product.sync_variants.find(v => String(v.id) === String(variantId));
+                const thumbnail = variant.files.find(f => f.type === 'preview')?.preview_url || product.sync_product.thumbnail_url;
+                addToCart(
+                    product.sync_product.id,
+                    product.sync_product.name,
+                    parseFloat(variant.retail_price),
+                    variantId,
+                    thumbnail,
+                    variant.name,
+                    variant.color,
+                    variant.size
+                );
+                // console.log('Added to cart:', product.sync_product.name, 'Variant:', variantId);
+            }
+        }, { passive: true });
+    } catch (error) {
+        console.error('Fetch error:', error);
+        productsDiv.innerHTML = '<p>Error loading products.</p>';
     }
-  } catch (error) {
-    console.error('Checkout error:', error);
-    alert('Checkout failed. Please try again.');
-  }
 });
 
-// Hamburger menu
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
-  navMenu.classList.toggle('responsive');
-});
+function updatePriceWarning(productDiv, newPrice, defaultPrice) {
+    let warningElement = productDiv.querySelector('.price-warning');
+    const priceElement = productDiv.querySelector('.price');
 
-// Highlight active nav
-const navLinks = document.querySelectorAll('.nav-menu .item');
-navLinks.forEach(link => {
-  if (link.href === window.location.href) {
-    link.parentElement.classList.add('active');
-  }
-});
+    if (newPrice > defaultPrice) {
+        if (!warningElement) {
+            warningElement = document.createElement('p');
+            warningElement.className = 'price-warning';
+            priceElement.insertAdjacentElement('afterend', warningElement); // Insert after price
+        }
+        warningElement.textContent = 'This product variant costs more than the default';
+    } else if (warningElement) {
+        warningElement.remove();
+    }
+}
