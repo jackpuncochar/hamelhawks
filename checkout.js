@@ -606,7 +606,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
             const script = document.createElement('script');
-            script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCqp7qsORheJdFejFY6lGk5fYZKu2sVZKY&libraries=places&v=weekly`;
+            script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCO3Tw7s4q05CNB1-TWF6kzooFnNDGDj1g&libraries=places&v=weekly`;
             script.async = true;
             script.onload = async () => {
                 await google.maps.importLibrary('places');
