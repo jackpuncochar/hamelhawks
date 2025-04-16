@@ -90,7 +90,7 @@ export async function updateCart() {
             <div class="cart-items">
                 ${totalItems === 0 ? `
                     <p>Your cart is empty</p>
-                    <button class="return-button" onclick="window.location.href='/shop.html'">Go to shop</button>
+                    <button class="return-button" onclick="window.location.href='https://www.hamelhawks.com/shop'">Go to shop</button>
                 ` : updatedCart.map((item, index) => `
                     <div class="cart-item">
                         <img src="${item.thumbnail}" alt="${item.variantName}">
