@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RKV7RTETNL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RKV7RTETNL');
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <title>Order Confirmation - Hamel Hawks</title>
+    <link href="./resources/css/main.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" sizes="16x16" href="h-script-favicon-small.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="h-script-favicon-large.png">
+</head>
+
+<header class="header">
+    <div class="logo_area">
+        <a href="https://www.hamelhawks.com"><img src="hawks logo.png" alt="Hamel Hawks logo"></a>
+    </div>
+    <nav class="navbar">
+        <ul class="nav-menu" id="nav-menu">  
+            <li><a href="https://www.hamelhawks.com/schedule" class="item">Schedule</a></li>
+            <li><a href="https://www.hamelhawks.com/roster" class="item">Roster</a></li>
+            <li><a href="https://www.hamelhawks.com/stats" class="item">Stats</a></li>
+            <li><a href="https://www.hamelhawks.com/sponsors" class="item">Sponsors</a></li>
+            <li><a href="https://www.hamelhawks.com/paul-fortin-memorial-field" class="item">Field</a></li>
+            <li><a href="https://www.hamelhawks.com/news" class="item">News</a></li>
+            <li><a href="https://www.hamelhawks.com/shop" class="item">Shop</a></li>
+            <li class="contact-item"><a href="https://www.hamelhawks.com/contact" class="item">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar blue"></span>
+            <span class="bar blue"></span>
+            <span class="bar blue"></span>
+        </div>
+    </nav>
+    <div id="cart-icon" class="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count" id="cart-count">0</span>
+    </div>
+</header>
+
+<body>
+    <div class="full-desc-container top-margin">
+        <div class="confirmation">
+            <h1>Thank you!</h1>
+            <p>Your order has been placed successfully. You will receive an order confirmation email shortly.</p>
+            <div class="order-details">
+                <p style="margin-bottom: 16px; text-decoration: underline; text-underline-offset: 8px;"><strong>Order Details</strong></p>
+                <p><strong>Order ID: </strong><span id="order-id"></span></p>
+                <p><strong>Estimated Delivery: </strong><span id="delivery-range"></span></p>
+                <p><strong>Delivering to: </strong><span id="shipping-address"></span></p>
+            </div>
+            
+            <p style="margin-top: 24px;">In the meantime, <a href="news.html">check out the latest Hawks' news!</a></p>
+          </div>
+    </div>
+  
+  <script>
+    const orderId = localStorage.getItem('orderId');
+    const deliveryRange = localStorage.getItem('deliveryRange');
+    const shippingAddress = localStorage.getItem('shippingAddress');
+
+    document.getElementById('order-id').textContent = orderId || 'N/A';
+    document.getElementById('delivery-range').textContent = deliveryRange || 'TBD';
+    document.getElementById('shipping-address').textContent = shippingAddress || 'TBD';
+  </script>
+
+  <script src="cart.js" type="module"></script>
+  <script src="navigation.js"></script>
+</body>
+</html>
