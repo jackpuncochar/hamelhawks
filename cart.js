@@ -114,16 +114,16 @@ export async function updateCart() {
                     </div>
                 `).join('')}
             </div>
-            ${totalItems > 0 ? `
-                <div class="cart-summary">
-                  <p>Subtotal: $${subtotal.toFixed(2)}</p>
-                  <p>Shipping: <span class="shipping-cost">adjusts at checkout</span></p>
-                  <button class="estimate-shipping-btn">Estimate Shipping</button>
-                  <p><strong>Total: $${total.toFixed(2)}</strong></p>
-                  <button class="checkout-btn">Proceed to Checkout</button>
-                </div>
-              ` : ''}
         </div>
+        ${totalItems > 0 ? `
+            <div class="cart-summary">
+                <p>Subtotal: $${subtotal.toFixed(2)}</p>
+                <p>Shipping: <span class="shipping-cost">adjusts at checkout</span></p>
+                <button class="estimate-shipping-btn">Estimate Shipping</button>
+                <p><strong>Total: $${total.toFixed(2)}</strong></p>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        ` : ''}
     `;
 
     const closeCart = document.querySelector('.close-cart');
