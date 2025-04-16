@@ -1,2 +1,2 @@
 // config.js
-export const API_BASE_URL = 'http://localhost:3000'; // Change to prod URL as needed
+export const API_BASE_URL = 'https://hamel-hawks-api.vercel.app/'; // 'http://localhost:3000';
