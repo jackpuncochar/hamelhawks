@@ -21,7 +21,6 @@ const shippingFields = ['shipping-name', 'shipping-street', 'shipping-city', 'sh
 const billingFieldIds = ['billing-name', 'billing-street', 'billing-city', 'billing-state', 'billing-zip', 'billing-country'];
 
 const USE_GOOGLE_API = true;
-const googleApiKey = process.env.GOOGLE_MAPS_API_KEY;
 let shippingAutocomplete, billingAutocomplete;
 
 // Global state objects
@@ -607,7 +606,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
             const script = document.createElement('script');
-            script.src = `https://maps.googleapis.com/maps/api/js?key=${googleApiKey}AIzaSyCqp7qsORheJdFejFY6lGk5fYZKu2sVZKY&libraries=places&v=weekly`;
+            script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCqp7qsORheJdFejFY6lGk5fYZKu2sVZKY&libraries=places&v=weekly`;
             script.async = true;
             script.onload = async () => {
                 await google.maps.importLibrary('places');
