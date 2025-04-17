@@ -133,7 +133,7 @@ ul{
     top: 0px;
     left: 0;
     width: 100%;
-    height: calc(100% - 100px);
+    height: calc(100% - 115px);
     background-image: url('Fortin Field Drone Shot 3.jpg');
     background-size: cover;
     background-position: center;
@@ -1956,6 +1956,10 @@ label {
     .container {
         margin: 0;
         top: 0px;
+    }
+
+    .background-image {
+        height: 100%;
     }
 
     .navbar {
