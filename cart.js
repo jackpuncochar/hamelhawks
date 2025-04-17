@@ -142,7 +142,7 @@ export async function updateCart() {
             if (window.location.pathname.startsWith('/news/')) {
                 observer.disconnect();
             }
-            window.location.href = `${BASE_URL}/checkout.html`;
+            window.location.href = `${BASE_URL}/checkout`;
         });
     }
 
