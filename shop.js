@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         const products = await fetchProducts();
         const productDetails = await fetchProductDetails();
         const productsDiv = document.getElementById('products');
-        console.log(products);
         if (!Array.isArray(products) || products.length === 0) {
             productsDiv.innerHTML = '<p>No products available.</p>';
             return;
@@ -68,9 +67,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             const details = window.productDetailsData.find(p => String(p.sync_product_id) === String(syncProductId));
             const activeColor = activeVariant.color || 'Default';
             const variantDetails = details?.variants?.find(v => v.color === activeColor);
-
-            console.log("Active color", activeColor);
-            console.log("details", variantDetails);
 
             const popup = document.getElementById('productPopup');
             if (!popup) {
@@ -131,12 +127,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             document.getElementById('productPopup').style.display = 'none';
         });
 
-        console.log(document.getElementById('productPopup'));
         productsDiv.addEventListener('click', (e) => {
             const productDiv = e.target.closest('.product');
             if (!productDiv) return;
             const productId = productDiv.dataset.productId;
-            console.log("product id", productId);
             const product = products.find(p => String(p.sync_product.id) === String(productId));
             const addToCartBtn = productDiv.querySelector('.add-to-cart');
             const priceElement = productDiv.querySelector('.price');
@@ -152,7 +146,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             const box = e.target.closest('.size-box');
             if (box) {
                 const variantId = box.dataset.variantId;
-                // console.log('Size click for', product.sync_product.name, 'variantId:', variantId);
                 const variant = product.sync_variants.find(v => String(v.id) === String(variantId));
                 if (!variant) {
                     console.error('Variant not found for ID:', variantId);
@@ -173,7 +166,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             const img = e.target.closest('.variant-image');
             if (img) {
-                // console.log('Variant image clicked for', product.sync_product.name, 'variantId:', img.dataset.variantId);
                 const mainImage = productDiv.querySelector('.main-image');
                 const variantId = img.dataset.variantId;
                 const selectedVariant = product.sync_variants.find(v => String(v.id) === String(variantId));
@@ -222,7 +214,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                     variant.color,
                     variant.size
                 );
-                // console.log('Added to cart:', product.sync_product.name, 'Variant:', variantId);
             }
         }, { passive: true });
     } catch (error) {
