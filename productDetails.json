@@ -1,0 +1,259 @@
+{
+    "products": [
+        {
+            "sync_product_id": "380458727",
+            "variants": [
+                {
+                    "color": "Heather True Royal",
+                    "description": "Bella + Canvas 3001 unisex tee. Soft and lightweight, 100% combed and ring-spun cotton (Heather colors contain polyester). Direct-to-garment (DTG) printing.",
+                    "mockup_images": []
+                }
+            ]
+        },
+        {
+            "sync_product_id": "380458450",
+            "variants": [
+                {
+                    "color": "Athletic Heather",
+                    "description": "Bella + Canvas 3001 unisex tee (athletic heather). Soft and lightweight, 100% combed and ring-spun cotton (Heather colors contain polyester). Direct-to-garment (DTG) printing.",
+                    "mockup_images": []
+                },
+                {
+                    "color": "Ash",
+                    "description": "Bella + Canvas 3001 unisex tee (ash). Soft and lightweight, 100% combed and ring-spun cotton. Direct-to-garment (DTG) printing.",
+                    "mockup_images": []
+                },
+                {
+                    "color": "Vintage White",
+                    "description": "Bella + Canvas 3001 unisex tee (vintage white). Soft and lightweight, 100% combed and ring-spun cotton. Direct-to-garment (DTG) printing.",
+                    "mockup_images": []
+                }
+            ]
+        },
+        {
+            "sync_product_id": "380458282",
+            "variants": [
+                {
+                    "color": "Royal Blue",
+                    "description": "Yupoong 6089M Wool Blend Snapback (royal blue). Flat embroidered logo. Structured with a classic fit, flat brim, and full buckram. The adjustable snap closure makes it a comfortable, one-size-fits-most hat. 80% acrylic, 20% wool.",
+                    "mockup_images": [
+                        "/resources/images/mockups/classic-snapback-royal-blue-back-6802a7df15fc2.png",
+                        "/resources/images/mockups/classic-snapback-royal-blue-product-details-6802a7df15b61.png",
+                        "/resources/images/mockups/classic-snapback-royal-blue-logo-embroidered.png"
+                    ]
+                }
+            ]
+        },
+        {
+            "sync_product_id": "380458222",
+            "variants": [
+                {
+                    "color": "Natural/ Black",
+                    "description": "Yupoong 6089M Wool Blend Snapback (natural with black brim). Flat embroidered logo. Structured with a classic fit, flat brim, and full buckram. The adjustable snap closure makes it a comfortable, one-size-fits-most hat. 80% acrylic, 20% wool.",
+                    "mockup_images": [
+                        "/resources/images/mockups/classic-snapback-natural-black-back-6802658e53c1b.png",
+                        "/resources/images/mockups/classic-snapback-natural-black-product-details-2-6802658e539ab.png",
+                        "/resources/images/mockups/classic-snapback-natural-black-logo-embroidered.png"
+                    ]
+                }
+            ]
+        },
+        {
+            "sync_product_id": "380458080",
+            "variants": [
+                {
+                    "color": "Team Royal",
+                    "description": "Cotton Heritage M2580 unisex premium hoodie (royal). 100% cotton face. 65% ring-spun cotton, 35% polyester. Front pouch pocket. Self-fabric patch on the back. Matching flat drawstrings. This hoodie runs small. For the perfect fit, we recommend ordering one size larger than your usual size. Direct-to-garment (DTG) printing.",
+                    "mockup_images": []
+                }
+            ]
+        },
+        {
+            "sync_product_id": "380457798",
+            "variants": [
+                {
+                    "color": "Carbon Grey",
+                    "description": "Cotton Heritage M2580 unisex premium hoodie (carbon grey). 100% cotton face. 65% ring-spun cotton, 35% polyester. Front pouch pocket. Matching flat drawstrings. This hoodie runs small. For the perfect fit, we recommend ordering one size larger than your usual size. Direct-to-garment (DTG) printing.",
+                    "mockup_images": []
+                },
+                {
+                    "color": "Bone",
+                    "description": "Cotton Heritage M2580 unisex premium hoodie (bone). 100% cotton face. 65% ring-spun cotton, 35% polyester. Front pouch pocket. Matching flat drawstrings. This hoodie runs small. For the perfect fit, we recommend ordering one size larger than your usual size. Direct-to-garment (DTG) printing.",
+                    "mockup_images": []
+                },
+                {
+                    "color": "White",
+                    "description": "Cotton Heritage M2580 unisex premium hoodie (white). 100% cotton face. 65% ring-spun cotton, 35% polyester. Front pouch pocket. Matching flat drawstrings. This hoodie runs small. For the perfect fit, we recommend ordering one size larger than your usual size. Direct-to-garment (DTG) printing.",
+                    "mockup_images": []
+                }
+            ]
+        },
+      {
+        "sync_product_id": "380457652",
+        "variants": [
+            {
+                "color": "Pink",
+                "description": "Pink dad hat with embroidered logo. Adjustable strap.",
+                "mockup_images": [
+                        "/resources/images/mockups/classic-dad-hat-pink-back-680264e24e763.png"
+                    ]
+            },
+            {
+                "color": "Light Blue",
+                "description": "Soft light blue dad hat with embroidered logo. Adjustable strap.",
+                "mockup_images": [
+                        "/resources/images/mockups/classic-dad-hat-light-blue-back-680264e24f11a.png"
+                    ]
+            },
+            {
+                "color": "White",
+                "description": "Classic white dad hat with embroidered logo. Adjustable strap.",
+                "mockup_images": [
+                        "/resources/images/mockups/classic-dad-hat-white-back-680264e24f5c1.png"
+                    ]
+            }
+        ]
+      },
+      {
+        "sync_product_id": "380457567",
+        "variants": [
+            {
+                "color": "Royal Blue",
+                "description": "Embroidered Champion Packable Jacket CO200. Wind and rain resistant polyester jacket with a detailed embroidery design has a practical hood, front kangaroo pocket, and zipped pouch pocket which you can pull out and use to scrunch the jacket into for convenient storage. 100% polyester micro poplin.",
+                "mockup_images": [
+                    "/resources/images/mockups/embroidered-champion-packable-jacket-royal-blue-front-6802640d1871b.png",
+                    "/resources/images/mockups/embroidered-champion-packable-jacket-royal-blue-product-details-6802640d18a9c.png"
+                ]
+            }
+        ]
+    },
+
+    {
+        "sync_product_id": "380457408",
+        "variants": [
+            {
+                "color": "Heather True Royal",
+                "description": "Bella + Canvas 3001 unisex tee. Soft and lightweight, 100% combed and ring-spun cotton (Heather colors contain polyester). Direct-to-garment (DTG) printing.",
+                "mockup_images": []
+            }
+        ]
+    },
+    {
+        "sync_product_id": "380136301",
+        "variants": [
+            {
+                "color": "Athletic Heather",
+                "description": "Bella + Canvas 3001 unisex tee (athletic heather). Soft and lightweight, 100% combed and ring-spun cotton (Heather colors contain polyester). Direct-to-garment (DTG) printing.",
+                "mockup_images": []
+            },
+            {
+                "color": "Ash",
+                "description": "Bella + Canvas 3001 unisex tee (ash). Soft and lightweight, 100% combed and ring-spun cotton. Direct-to-garment (DTG) printing.",
+                "mockup_images": []
+            },
+            {
+                "color": "Vintage White",
+                "description": "Bella + Canvas 3001 unisex tee (vintage white). Soft and lightweight, 100% combed and ring-spun cotton. Direct-to-garment (DTG) printing.",
+                "mockup_images": []
+            }
+        ]
+    },
+    {
+        "sync_product_id": "380457155",
+        "variants": [
+            {
+                "color": "Royal Blue",
+                "description": "Yupoong 6089M Wool Blend Snapback (royal blue). Flat embroidered logo. Structured with a classic fit, flat brim, and full buckram. The adjustable snap closure makes it a comfortable, one-size-fits-most hat. 80% acrylic, 20% wool.",
+                "mockup_images": [
+                    "/resources/images/mockups/classic-snapback-royal-blue-back-6802a7df15fc2.png",
+                    "/resources/images/mockups/classic-snapback-royal-blue-product-details-6802a7df15b61.png",
+                    "/resources/images/mockups/classic-snapback-royal-blue-logo-hawk-embroidered.png"
+                ]
+            }
+        ]
+    },
+    {
+        "sync_product_id": "380456964",
+        "variants": [
+            {
+                "color": "Natural/ Black",
+                "description": "Yupoong 6089M Wool Blend Snapback (natural with black brim). Flat embroidered logo. Structured with a classic fit, flat brim, and full buckram. The adjustable snap closure makes it a comfortable, one-size-fits-most hat. 80% acrylic, 20% wool.",
+                "mockup_images": [
+                    "/resources/images/mockups/classic-snapback-natural-black-back-6802658e53c1b.png",
+                    "/resources/images/mockups/classic-snapback-natural-black-product-details-2-6802658e539ab.png",
+                    "/resources/images/mockups/classic-snapback-natural-black-front-6802658e52f41.png"
+                ]
+            }
+        ]
+    },
+    {
+        "sync_product_id": "380456546",
+        "variants": [
+            {
+                "color": "Team Royal",
+                "description": "Cotton Heritage M2580 unisex premium hoodie (royal). 100% cotton face. 65% ring-spun cotton, 35% polyester. Front pouch pocket. Self-fabric patch on the back. Matching flat drawstrings. This hoodie runs small. For the perfect fit, we recommend ordering one size larger than your usual size. Direct-to-garment (DTG) printing.",
+                "mockup_images": []
+            }
+        ]
+    },
+    {
+        "sync_product_id": "380456803",
+        "variants": [
+            {
+                "color": "Carbon Grey",
+                "description": "Cotton Heritage M2580 unisex premium hoodie (carbon grey). 100% cotton face. 65% ring-spun cotton, 35% polyester. Front pouch pocket. Matching flat drawstrings. This hoodie runs small. For the perfect fit, we recommend ordering one size larger than your usual size. Direct-to-garment (DTG) printing.",
+                "mockup_images": []
+            },
+            {
+                "color": "Bone",
+                "description": "Cotton Heritage M2580 unisex premium hoodie (bone). 100% cotton face. 65% ring-spun cotton, 35% polyester. Front pouch pocket. Matching flat drawstrings. This hoodie runs small. For the perfect fit, we recommend ordering one size larger than your usual size. Direct-to-garment (DTG) printing.",
+                "mockup_images": []
+            },
+            {
+                "color": "White",
+                "description": "Cotton Heritage M2580 unisex premium hoodie (white). 100% cotton face. 65% ring-spun cotton, 35% polyester. Front pouch pocket. Matching flat drawstrings. This hoodie runs small. For the perfect fit, we recommend ordering one size larger than your usual size. Direct-to-garment (DTG) printing.",
+                "mockup_images": []
+            }
+        ]
+    },
+   {
+        "sync_product_id": "380456212",
+        "variants": [
+            {
+                "color": "Pink",
+                "description": "Pink dad hat with embroidered logo. Adjustable strap.",
+                "mockup_images": [
+                        "/resources/images/mockups/classic-dad-hat-pink-back-680264e24e763.png"
+                    ]
+            },
+            {
+                "color": "Light Blue",
+                "description": "Soft light blue dad hat with embroidered logo. Adjustable strap.",
+                "mockup_images": [
+                        "/resources/images/mockups/classic-dad-hat-light-blue-back-680264e24f11a.png"
+                    ]
+            },
+            {
+                "color": "White",
+                "description": "Classic white dad hat with embroidered logo. Adjustable strap.",
+                "mockup_images": [
+                        "/resources/images/mockups/classic-dad-hat-white-back-680264e24f5c1.png"
+                    ]
+            }
+        ]
+    },
+    {
+        "sync_product_id": "380456011",
+        "variants": [
+            {
+                "color": "Royal Blue",
+                "description": "Embroidered Champion Packable Jacket CO200. Wind and rain resistant polyester jacket with a detailed embroidery design has a practical hood, front kangaroo pocket, and zipped pouch pocket which you can pull out and use to scrunch the jacket into for convenient storage. 100% polyester micro poplin.",
+                "mockup_images": [
+                    "/resources/images/mockups/embroidered-champion-packable-jacket-royal-blue-front-hawk.png",
+                    "/resources/images/mockups/embroidered-champion-packable-jacket-royal-blue-product-details-6802640d18a9c.png"
+                ]
+            }
+        ]
+    }
+    ]
+  }

@@ -8,18 +8,31 @@ async function fetchProducts() {
     return data;
 }
 
+// fetch product details from json
+async function fetchProductDetails() {
+    try {
+        const response = await fetch('/productDetails.json');
+        const data = await response.json();
+        return data.products || [];
+    } catch (error) {
+        console.error('Error fetching product details:', error);
+        return [];
+    }
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         const products = await fetchProducts();
+        const productDetails = await fetchProductDetails();
         const productsDiv = document.getElementById('products');
-
+        console.log(products);
         if (!Array.isArray(products) || products.length === 0) {
             productsDiv.innerHTML = '<p>No products available.</p>';
             return;
         }
 
         window.productsData = products;
-        // console.log("PRODUCTS DATA", products);
+        window.productDetailsData = productDetails;
         productsDiv.innerHTML = '';
         products.forEach(product => {
             const defaultVariant = product.sync_variants[0];
@@ -42,14 +55,99 @@ document.addEventListener('DOMContentLoaded', async () => {
             renderVariants(variantContainer, product.sync_variants, defaultVariant.id, product);
         });
 
+        // Function to open popup
+        function openProductPopup(syncProductId, variantId) {
+            const product = window.productsData.find(p => String(p.sync_product.id) === String(syncProductId));
+
+            const activeVariant = product.sync_variants.find(v => String(v.id) === String(variantId));
+            if (!activeVariant) {
+                console.error('Variant not found for ID:', variantId);
+                return;
+            }
+
+            const details = window.productDetailsData.find(p => String(p.sync_product_id) === String(syncProductId));
+            const activeColor = activeVariant.color || 'Default';
+            const variantDetails = details?.variants?.find(v => v.color === activeColor);
+
+            console.log("Active color", activeColor);
+            console.log("details", variantDetails);
+
+            const popup = document.getElementById('productPopup');
+            if (!popup) {
+                console.error('Popup element #productPopup not found in DOM');
+                return;
+            }
+
+            const title = popup.querySelector('.product-title');
+            const description = popup.querySelector('.product-description');
+            const mainPopupImage = popup.querySelector('.main-popup-image');
+            const thumbnails = popup.querySelector('.thumbnails');
+
+            if (!mainPopupImage || !title || !description || !thumbnails) {
+                console.error('Missing required popup elements:', { mainPopupImage, title, description, thumbnails });
+                return;
+            }
+
+            title.textContent = product.sync_product.name;
+            description.textContent = variantDetails?.description || details?.variants?.[0]?.description || 'No description available.';
+            
+            // Populate images
+            const defaultImage = activeVariant.files.find(f => f.type === 'preview')?.preview_url || product.sync_product.thumbnail_url || 'https://via.placeholder.com/400';
+            const mockupImages = variantDetails?.mockup_images || [];
+            const images = [defaultImage, ...mockupImages];
+
+            // Set main popup image
+            mainPopupImage.src = defaultImage;
+            mainPopupImage.alt = `${product.sync_product.name}`;
+            
+            // Populate thumbnails only if mockup images exist
+            if (mockupImages.length > 0) {
+                thumbnails.style.display = 'flex';
+                thumbnails.innerHTML = images.map((img, index) => `
+                    <img src="${img}" alt="${product.sync_product.name} thumbnail ${index + 1}" 
+                         class="${index === 0 ? 'active' : ''}" 
+                         data-image="${img}" 
+                         loading="lazy">
+                `).join('');
+
+                // Add click handlers for thumbnails
+                thumbnails.querySelectorAll('img').forEach(thumb => {
+                    thumb.addEventListener('click', () => {
+                        mainPopupImage.src = thumb.dataset.image;
+                        thumbnails.querySelectorAll('img').forEach(t => t.classList.remove('active'));
+                        thumb.classList.add('active');
+                    });
+                });
+            } else {
+                thumbnails.style.display = 'none';
+                thumbnails.innerHTML = '';
+            }
+
+            popup.style.display = 'block';
+        }
+
+        // Close popup
+        document.querySelector('.close-btn').addEventListener('click', () => {
+            document.getElementById('productPopup').style.display = 'none';
+        });
+
+        console.log(document.getElementById('productPopup'));
         productsDiv.addEventListener('click', (e) => {
             const productDiv = e.target.closest('.product');
             if (!productDiv) return;
             const productId = productDiv.dataset.productId;
+            console.log("product id", productId);
             const product = products.find(p => String(p.sync_product.id) === String(productId));
             const addToCartBtn = productDiv.querySelector('.add-to-cart');
             const priceElement = productDiv.querySelector('.price');
             const defaultPrice = parseFloat(productDiv.dataset.defaultPrice);
+
+           // Handle main image click
+           if (e.target.classList.contains('main-image')) {
+            const variantId = e.target.dataset.variantId;
+            openProductPopup(productId, variantId);
+            return;
+        }
 
             const box = e.target.closest('.size-box');
             if (box) {
