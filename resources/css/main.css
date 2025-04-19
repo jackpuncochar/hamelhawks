@@ -2106,6 +2106,7 @@ label {
     flex: 1;
     display: flex;
     gap: 10px;
+    align-items: center;
   }
 
   .thumbnails {
@@ -2152,7 +2153,7 @@ label {
     line-height: 2rem;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     .modal-content {
       margin: 10% auto;
       padding: 15px;
