@@ -2091,9 +2091,9 @@ label {
   .close-btn {
     cursor: pointer;
     position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 24px;
+    top: -4px;
+    right: 8px;
+    font-size: 36px;
     color: #333;
   }
 
@@ -2152,13 +2152,18 @@ label {
     line-height: 2rem;
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 600px) {
     .modal-content {
       margin: 10% auto;
       padding: 15px;
     }
+    .product-info {
+        text-align: center;
+        padding: 0 1rem;
+    }
     .product-details {
       flex-direction: column;
+      gap: 0;
     }
     .image-gallery {
       flex-direction: column;
@@ -2168,6 +2173,12 @@ label {
       max-width: none;
       overflow-x: auto;
       gap: 5px;
+      order: 2;
+      justify-content: center;
+    }
+    .main-image-container {
+        order: 1;
+        padding: 1rem;
     }
     .thumbnails img {
       width: 60px;
