@@ -311,9 +311,12 @@ async function calculateShipping() {
         const isMinnesotaCustomer = shippingAddress.state.toUpperCase() === 'MN';
         const applyFreeShipping = freeShipping && isMinnesotaCustomer;
 
+        // Calculate effective shipping cost (what the customer pays)
+        const effectiveShippingCost = applyFreeShipping ? 0 : shippingCost;
+
         // Calculate total and display shipping cost
         const displayedShippingCost = applyFreeShipping ? 'FREE' : `$${shippingCost.toFixed(2)}`;
-        const total = applyFreeShipping ? subtotal : subtotal + shippingCost;
+        const total = subtotal + effectiveShippingCost;
 
         elements.shippingValue.textContent = displayedShippingCost;
         elements.shippingValue.setAttribute('data-label', displayedShippingCost);
@@ -330,7 +333,7 @@ async function calculateShipping() {
             elements.errorDiv.textContent = '';
         }
 
-        shippingData = { shippingCost, minDeliveryDate, maxDeliveryDate, deliveryRange };
+        shippingData = { shippingCost, effectiveShippingCost, minDeliveryDate, maxDeliveryDate, deliveryRange };
         shippingCalculated = true;
         updateSubmitButton();
     } catch (error) {
@@ -422,7 +425,10 @@ async function checkout(event) {
         }
 
         const subtotal = updatedCart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-        const total = (subtotal + shippingData.shippingCost).toFixed(2);
+        
+        // Use effectiveShippingCost for the customer's total
+        const effectiveShippingCost = shippingData.effectiveShippingCost;
+        const total = subtotal + effectiveShippingCost;
         const amount = Math.round(total * 100);
 
         const paymentResponse = await fetch(`${API_BASE_URL}/api/payment-intent`, {
