@@ -11,6 +11,7 @@ const cardCvc = elements.create('cardCvc');
 
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 const submitButton = document.getElementById('submit');
+let freeShipping = true; // enable/disable free shipping globally
 let shippingCalculated = false;
 let updatedCart = null; // Cache updated cart
 let shippingData = null; // Cache shipping cost and dates
@@ -253,7 +254,6 @@ function resetCheckoutDisplay(subtotal, errorMessage) {
 
 async function calculateShipping() {
     submitButton.disabled = true;
-    // clearErrors();
     const shippingAddress = {
         name: document.getElementById('shipping-name').value,
         address1: document.getElementById('shipping-street').value,
@@ -273,6 +273,7 @@ async function calculateShipping() {
     };
     elements.shippingValue.textContent = 'Calculating...';
     elements.deliveryValue.textContent = 'Calculating...';
+    elements.errorDiv.style.color = 'red';
     elements.errorDiv.textContent = 'Calculating shipping costs...';
     elements.toggleTotal.textContent = 'Calculating...';
     elements.shippingValue.classList.remove('calculated');
@@ -305,15 +306,29 @@ async function calculateShipping() {
             return isNaN(date.getTime()) ? dateStr : date.toLocaleString('en-US', { month: 'short', day: '2-digit' });
         };
         const deliveryRange = `${formatDate(minDeliveryDate)} - ${formatDate(maxDeliveryDate)}`;
-        const total = subtotal + shippingCost;
+        
+        // Determine if free shipping applies
+        const isMinnesotaCustomer = shippingAddress.state.toUpperCase() === 'MN';
+        const applyFreeShipping = freeShipping && isMinnesotaCustomer;
 
-        elements.shippingValue.textContent = `$${shippingCost.toFixed(2)}`;
+        // Calculate total and display shipping cost
+        const displayedShippingCost = applyFreeShipping ? 'FREE' : `$${shippingCost.toFixed(2)}`;
+        const total = applyFreeShipping ? subtotal : subtotal + shippingCost;
+
+        elements.shippingValue.textContent = displayedShippingCost;
+        elements.shippingValue.setAttribute('data-label', displayedShippingCost);
         elements.shippingValue.classList.add('calculated');
         elements.deliveryValue.textContent = deliveryRange;
         elements.deliveryValue.classList.add('calculated');
         elements.totalValue.textContent = `$${total.toFixed(2)}`;
         elements.toggleTotal.textContent = `$${total.toFixed(2)}`;
-        elements.errorDiv.textContent = '';
+        
+        if (applyFreeShipping) {
+            elements.errorDiv.textContent = 'Free shipping applied for Minnesota customers!';
+            elements.errorDiv.style.color = '#28a745';
+        } else {
+            elements.errorDiv.textContent = '';
+        }
 
         shippingData = { shippingCost, minDeliveryDate, maxDeliveryDate, deliveryRange };
         shippingCalculated = true;

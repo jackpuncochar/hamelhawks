@@ -21,10 +21,21 @@ async function fetchProductDetails() {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
+    const productsDiv = document.getElementById('products');
+    const loadingSpinner = document.getElementById('loading-spinner');
+
     try {
-        const products = await fetchProducts();
-        const productDetails = await fetchProductDetails();
-        const productsDiv = document.getElementById('products');
+        // Ensure spinner is visible initially
+        if (loadingSpinner) {
+            loadingSpinner.style.display = 'flex';
+        }
+        
+        // Fetch products and product details concurrently
+        const [products, productDetails] = await Promise.all([
+            fetchProducts(),
+            fetchProductDetails()
+        ]);
+
         if (!Array.isArray(products) || products.length === 0) {
             productsDiv.innerHTML = '<p>No products available.</p>';
             return;
@@ -67,7 +78,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             const details = window.productDetailsData.find(p => String(p.sync_product_id) === String(syncProductId));
             const activeColor = activeVariant.color || 'Default';
             const variantDetails = details?.variants?.find(v => v.color === activeColor);
-
             const popup = document.getElementById('productPopup');
             if (!popup) {
                 console.error('Popup element #productPopup not found in DOM');
@@ -219,6 +229,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     } catch (error) {
         console.error('Fetch error:', error);
         productsDiv.innerHTML = '<p>Error loading products.</p>';
+    } finally {
+        // Hide the spinner regardless of success or failure
+        if (loadingSpinner) {
+            loadingSpinner.style.display = 'none';
+        }
     }
 });
 
