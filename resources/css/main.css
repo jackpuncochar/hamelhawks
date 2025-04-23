@@ -1,5 +1,44 @@
+/* Fonts */
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('/resources/fonts/Inconsolata-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('/resources/fonts/Inconsolata-Bold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: bold;
+    font-display: swap;
+}
+
+/* Icons */
+@font-face {
+    font-family: 'CustomIcons';
+    src: url('/resources/fonts/fontello.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.icon {
+    font-family: 'CustomIcons';
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-shopping-cart:before { content: '\e800'; }
+.icon-instagram:before { content: '\f16d'; }
+.icon-twitter:before { content: '\f099'; }
+.icon-facebook-f:before { content: '\f09a'; }
+
 body {
-    font-family: "Inconsolata";
+    font-family: "Inconsolata", monospace;
     line-height: 3em;
     margin: 0;
     background-color: white;
@@ -88,11 +127,12 @@ ul{
 }
 
 .logo_area {
-    font-size: 83px; /* Adjust the height of the logo area as needed */
+    font-size: 83px;
 }
 
 .logo_area img {
-    height: 64px; /* Adjust the height of the logo area as needed */
+    height: 64px;
+    width: 123px;
 }
 
 .logo {
@@ -134,11 +174,12 @@ ul{
     left: 0;
     width: 100%;
     height: calc(100% - 115px);
-    background-image: url('Fortin Field Drone Shot 3.jpg');
+    background-image: url('/resources/images/Fortin Field Drone Shot 3.jpg');
+    background-image: url('/resources/images/Fortin Field Drone Shot 3.avif');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.7; /* Opacity only for image */
+    opacity: 0.7;
     z-index: 1;
 }
 
@@ -174,7 +215,7 @@ h1{
     background-color:rgb(65, 105, 225);
     color: white;
     text-decoration: none;
-    font-family: "Inconsolata";
+    /* font-family: "Inconsolata"; */
     position: relative;
     line-height: 2.25;
     margin-bottom: 20px;
@@ -248,7 +289,7 @@ h1{
 }
 
 .about-container{
-    background-color: rgb(65, 105, 225);
+    background-color: #4169e1;
     color: white;
     text-align: center;
     margin: 0;
@@ -478,18 +519,39 @@ h1{
 }
 
 /* Style for the schedule container */
+.schedule-wrapper, .roster-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+}
+
+.h-background {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-image: url('/resources/images/H background.avif');
+    background-size: cover;
+    background-repeat: repeat;
+    z-index: 1;
+}
+
 .schedule-container, .roster-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     background-color: rgba(235, 235, 235); /* Semi-transparent white background */
     width: 70%;
+    height: 100%;
     margin: 0 auto; /* Center the container horizontally */
     padding: 20px;
-    /* margin-top: 124px; */
     margin-bottom: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, .8); /* Add drop shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .5);
     overflow-x: auto;
     max-width: 100%;
+    min-height: 1200px;
+    z-index: 2;
 }
 
 /* Style for the schedule table */
@@ -497,6 +559,7 @@ h1{
     width: 100%;
     max-width: 100%;
     border-collapse: collapse; /* Collapse borders between table cells */
+    min-height: 1200px;
 }
 
 .scrollable-cell {
@@ -602,17 +665,6 @@ h1{
     margin-top: 0;
 }
 
-/* Style for the background image */
-.my-img {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Prevent stretching and maintain aspect ratio */
-    z-index: -1; /* Ensure it's behind other content */
-}
-
 .upgrades-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -703,7 +755,6 @@ h1{
 
 .no-margin {
     margin: 0;
-    padding-top: 1.5rem;
 }
 
 .margin-override {
@@ -744,7 +795,7 @@ textarea {
     color: rgb(65, 105, 225);
     border: 3px solid rgb(65, 105, 225);
     text-decoration: none;
-    font-family: "Inconsolata";
+    /* font-family: "Inconsolata"; */
     transition-duration: 0.3s;
     position: relative;
     width: 10em;
@@ -1334,7 +1385,7 @@ textarea {
     color: white;
     border: none;
     border-radius: 5px;
-    font-family: "Inconsolata";
+    /* font-family: "Inconsolata"; */
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
@@ -1448,7 +1499,7 @@ body.no-scroll {
     border: 1px solid #4169e1;
     border-radius: 5px;
     cursor: pointer;
-    font-family: "Inconsolata";
+    /* font-family: "Inconsolata"; */
     font-size: 14px;
     margin: 10px 0;
 }
@@ -2053,7 +2104,8 @@ label {
     }
 
     .logo_area img {
-        height: 48px; /* smaller logo on small screens */
+        height: 48px;
+        width: 93px;
     }
 
     .hamburger.active .bar:nth-child(1) {
