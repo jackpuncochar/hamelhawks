@@ -3,13 +3,13 @@
 <html>
     <head>
         <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RKV7RTETNL"></script>
+        <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-RKV7RTETNL"></script>
         <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-RKV7RTETNL');
-        </script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-RKV7RTETNL');
+        </script> -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">    
@@ -30,13 +30,9 @@
         <link rel="icon" type="image/png" sizes="16x16" href="h-script-favicon-small.png">
         <link rel="icon" type="image/png" sizes="32x32" href="h-script-favicon-large.png">
         <link href="./resources/css/main.css" type="text/css" rel="stylesheet">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik&display=swap">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playball">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oleo Script Swash Caps">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+        <link rel="preload" href="hawks logo.png" as="image">
+        <link rel="preload" href="/resources/images/H background.avif" as="image">
+        <link rel="preload" href="/games2025.json" as="fetch" crossorigin="anonymous">
     </head>
 
     <body class="bg-container">
@@ -63,62 +59,61 @@
                 </div>
             </nav>
             <div id="cart-icon" class="cart-icon">
-                <i class="fas fa-shopping-cart"></i>
+                <i class="icon icon-shopping-cart"></i>
                 <span class="cart-count" id="cart-count">0</span>
             </div>
         </header>
 
         <div class="cart-popup" id="cart-popup"></div>
 
-        <div>
-            <img class="my-img" src="H background.png" alt="Background Image">
-        </div>
-        <div class="schedule-container top-margin">
-            <div class="schedule-header">
-                <h2>2025 Hamel Hawks Schedule</h2>
-                <div class="schedule-btn-container">
-                    <a 
-                        href="webcal://api.team-manager.gc.com/ics-calendar-documents/user/9a625c06-07cc-424b-85a1-33dbdc9bdf22.ics?teamId=ec5c0d40-8178-421a-99e1-e0188930731b&token=42a26ab5235239a530b2fad43ff841a32ea5e143059a5b0b5106b66599b7c17b"
-                        class="add-schedule-btn" aria-label="Add schedule to calendar">
-                        <span class="plus-icon">+</span>
-                    </a>
-                    <span class="tooltip">Add our schedule to your mobile calendar!</span>
+        <div class="schedule-wrapper">
+            <div class="h-background"></div>
+            <div class="schedule-container top-margin">
+                <div class="schedule-header">
+                    <h2>2025 Hamel Hawks Schedule</h2>
+                    <div class="schedule-btn-container">
+                        <a 
+                            href="webcal://api.team-manager.gc.com/ics-calendar-documents/user/9a625c06-07cc-424b-85a1-33dbdc9bdf22.ics?teamId=ec5c0d40-8178-421a-99e1-e0188930731b&token=42a26ab5235239a530b2fad43ff841a32ea5e143059a5b0b5106b66599b7c17b"
+                            class="add-schedule-btn" aria-label="Add schedule to calendar">
+                            <span class="plus-icon">+</span>
+                        </a>
+                        <span class="tooltip">Add our schedule to your mobile calendar!</span>
+                    </div>
                 </div>
+                <table id="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Opponent</th>
+                            <th>Time</th>
+                            <th>Sponsor</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
             </div>
-            <table id="schedule-table">
-                <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Opponent</th>
-                        <th>Time</th>
-                        <th>Sponsor</th>
-                        <th>Result</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
         </div>
-        
 
         <div class='column bg-white no-margin'>
             <a href='https://icschillers.com/' target="_blank">
-                <img src='ics_chillers.png' alt="ICS Chillers logo">
+                <img src='ics_chillers.png' alt="ICS Chillers logo" loading="lazy">
             </a>
             <a href='https://secure.fsboh.com/Pages/Default.html' target="_blank">
-                <img src='farmers_bank_hamel.png' alt="Farmers State Bank of Hamel logo">
+                <img src='farmers_bank_hamel.png' alt="Farmers State Bank of Hamel logo" loading="lazy">
             </a>
             <a href='https://medinaentertainment.com/' target="_blank">
-                <img src='medina_entertainment.png' alt="Medina Entertainment Center logo">
+                <img src='medina_entertainment.png' alt="Medina Entertainment Center logo" loading="lazy">
             </a>
             <a href='https://www.innkahootsbar.com/' target="_blank">
-                <img src='inn_kahoots.png' alt="Inn Kahoots bar logo">
+                <img src='inn_kahoots.png' alt="Inn Kahoots bar logo" loading="lazy">
             </a>
             <a href='https://www.hamellions.org' target="_blank">
-                <img src='hamel_lions.png' alt="Hamel Lions logo">
+                <img src='hamel_lions.png' alt="Hamel Lions logo" loading="lazy">
             </a>
             <a href='https://www.55rental.com/' target="_blank">
-                <img src='hwy_55_rental.png' alt="Highway 55 Rental logo">
+                <img src='hwy_55_rental.png' alt="Highway 55 Rental logo" loading="lazy">
             </a>
         </div>
 
@@ -235,7 +230,7 @@
             });
         </script>
         <script src="/cart.js" type="module"></script>
-        <script src="navigation.js"></script>
+        <script defer src="/navigation.js"></script>
     </body>
 </html>
 

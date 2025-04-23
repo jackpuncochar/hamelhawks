@@ -30,15 +30,10 @@
         <link rel="icon" type="image/png" sizes="16x16" href="h-script-favicon-small.png">
         <link rel="icon" type="image/png" sizes="32x32" href="h-script-favicon-large.png">
         <link href="./resources/css/main.css" type="text/css" rel="stylesheet">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik&display=swap">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playball">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oleo Script Swash Caps">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preload" href="hawks logo.png" as="image">
+        <link rel="preload" href="/resources/images/H background.avif" as="image">
+        <link rel="preload" href="/roster2025.json" as="fetch" crossorigin="anonymous">
     </head>
-
 </html>
 
 <body class="bg-container">
@@ -65,34 +60,35 @@
             </div>
         </nav>
         <div id="cart-icon" class="cart-icon">
-            <i class="fas fa-shopping-cart"></i>
+            <i class="icon icon-shopping-cart"></i>
             <span class="cart-count" id="cart-count">0</span>
         </div>
     </header>
 
     <div class="cart-popup" id="cart-popup"></div>
 
-    <div class="roster-container top-margin">
-        <h2 class="no-margin-h1">2025 Hamel Hawks Roster</h2>
-        <table id="roster-table">
-            <thead>
-                <tr>
-                    <th>No.</th>
-                    <th>Name</th>
-                    <th>Pos.</th>
-                    <th>B/T</th>
-                    <th>Hometown</th>
-                    <th>College</th>
-                    <th>Season with Hamel</th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
+    <div class="roster-wrapper">
+        <div class="h-background"></div>
+        <div class="roster-container top-margin">
+            <h2 class="no-margin-h1">2025 Hamel Hawks Roster</h2>
+            <table id="roster-table">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>Pos.</th>
+                        <th>B/T</th>
+                        <th>Hometown</th>
+                        <th>College</th>
+                        <th>Season with Hamel</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
     </div>
-    <div>
-        <img class="my-img" src="H background.png" alt="Background Image">
-    </div>
+    
 
     <div class='column bg-white no-margin'>
         <a href='https://icschillers.com/' target="_blank">
