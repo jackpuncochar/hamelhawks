@@ -247,6 +247,16 @@ h1{
     color: white;
 }
 
+.story-full .btn {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    margin-bottom: 0;
+}
+
+.news-shop img:hover {
+    transform: scale(1.05)
+}
+
 .hamburger {
     position: relative;
     display: none;
@@ -504,6 +514,7 @@ h1{
     /* only display iCalendar link on mobile */
     .schedule-btn-container {
         display: flex !important;
+        width: 500px;
     }
 
     .cart-summary {
@@ -515,6 +526,17 @@ h1{
 
     .cart-popup { 
         padding: 0;
+    }
+
+    .schedule-header {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
+    .schedule-header-items {
+        align-items: flex-start;
+        text-align: left;
+        font-size: 0.8rem;
     }
 }
 
@@ -571,14 +593,24 @@ h1{
 /* iCal link */
 .schedule-header {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     margin-bottom: 1rem;
     gap: 16px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .schedule-header h2 {
     margin: 0;
     line-height: 2rem;
+}
+
+.schedule-header-items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.25rem;
+    flex-wrap: nowrap;
 }
 
 .schedule-btn-container {
@@ -618,7 +650,7 @@ h1{
     left: 24px;
     padding: 5px 10px;
     border-radius: 4px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     z-index: 10;
     line-height: 1rem;
 }
@@ -1045,7 +1077,7 @@ textarea {
 
 /* News page sidebar thumbnail */
 .news-sidebar .headline-thumb {
-    width: 117px;
+    width: 88px;
     height: 66px;
     object-fit: cover;
     margin: 0 10px;
