@@ -348,7 +348,7 @@ async function checkout(event) {
     event.preventDefault();
     submitButton.disabled = true;
     submitButton.textContent = 'Processing...';
-    clearErrors();
+    // clearErrors();
 
     const shippingAddress = {
         name: document.getElementById('shipping-name').value,
