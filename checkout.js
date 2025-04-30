@@ -124,7 +124,7 @@ function showError(errorId, message) {
     const errorDiv = document.getElementById(errorId);
     if (errorDiv) {
         errorDiv.textContent = message;
-        errorDiv.style.display = 'block !important';
+        errorDiv.style.setProperty('display', 'block', 'important');
     }
 }
 
@@ -568,9 +568,12 @@ function setupFieldListeners() {
 
     [cardNumber, cardExpiry, cardCvc].forEach(element => {
         element.on('change', (event) => {
-            clearErrors('card-error');
             if (event.error) {
                 showError('card-error', event.error.message);
+            } else if (!event.complete) {
+                showError('card-error', 'Please complete all card details.');
+            } else {
+                clearErrors(['card-error']);
             }
             updateSubmitButton();
         });
