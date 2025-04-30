@@ -436,7 +436,7 @@ async function checkout(event) {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ amount })
         });
-        const { clientSecret } = await paymentResponse.json();
+        const { clientSecret, paymentIntentId } = await paymentResponse.json();
 
         const result = await stripe.confirmCardPayment(clientSecret, {
             payment_method: {
@@ -461,13 +461,20 @@ async function checkout(event) {
             return;
         }
 
+        if (result.paymentIntent.status !== 'requires_capture') {
+            showError('card-error', 'Payment authorization failed. Please try again.');
+            resetButton();
+            return;
+        }
+
         const orderPayload = {
             items: updatedCart,
             shippingAddress: formData.shippingAddress,
             billingAddress: formData.billingAddress,
             email: formData.email,
             total,
-            deliveryRange: shippingData.deliveryRange
+            deliveryRange: shippingData.deliveryRange,
+            paymentIntentId // Include for capture/cancel in order.js
         };
         const orderResponse = await fetch(`${API_BASE_URL}/api/order`, {
             method: 'POST',
@@ -477,7 +484,7 @@ async function checkout(event) {
 
         if (!orderResponse.ok) {
             const orderError = await orderResponse.json();
-            showError('general-error', `Order error: ${orderError.error || 'Failed to process order'}`);
+            showError('general-error', `Order error: ${orderError.error || 'Failed to process order'} You were not charged.`);
             resetButton();
             return;
         }
