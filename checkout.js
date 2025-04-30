@@ -2,7 +2,7 @@ import { fetchProductsData, fetchShippingRates, updateCartPrices } from './utils
 import { API_BASE_URL } from './config.js';
 import { initAutocomplete } from './autocomplete.js';
 
-const stripe = Stripe('pk_test_51R9nu3R4KBWzqdH5CO044KnKJFR5bZ9Mx9USVpHJq0EgqhSlJbwWh3f10gNPgCAOhqu90DV0evXX7gdQvYhBnz0r00f8IFFEcX');
+const stripe = Stripe('pk_live_51R9ntrJZJy0o2UfjZhZT1KKyUY8vNQ1yGNHN52i4Qh0gErkzjtLN32qIfZtSi3L1owoirPmeC01PAEquWpUfas2o00Q2FaCEc3');
 const elements = stripe.elements();
 // Create card Elements
 const cardNumber = elements.create('cardNumber');
