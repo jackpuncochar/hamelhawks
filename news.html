@@ -71,6 +71,12 @@
                 <h2>Recent Headlines</h2>
                 <ul class="headlines-list">
                     <li>
+                        <a href="/news/hamel-hawks-open-team-store" class="headline-link" data-slug="hamel-hawks-open-team-store">
+                            <img src="Hamel Hawks Team Store.PNG" alt="Hamel Hawks open year-round team store!" class="headline-thumb">
+                            Hamel Hawks open year-round team store!
+                        </a>
+                    </li>
+                    <li>
                         <a href="/news/hawks-announce-2025-season-opener" class="headline-link" data-slug="hawks-announce-2025-season-opener">
                             <img src="Fortin Field Home Plate View.jpg" alt="Hawks announce 2025 season opener" class="headline-thumb">
                             Hawks announce 2025 season opener
@@ -92,11 +98,39 @@
 
             <!-- Main Content: Stories -->
             <main class="news-main">
+                <article class="news-story" data-slug="hamel-hawks-open-team-store">
+                    <h1>Hamel Hawks open year-round team store!</h1>
+                    <a class="news-shop" href="https://hamelhawks.com/shop">
+                        <img src="Hamel Hawks Team Store.PNG" alt="Hamel Hawks open year-round team store!" class="story-image">
+                    </a>
+                    <div class="story-meta">
+                        <span class="author">By Hamel Hawks</span> | <span class="date">May 2, 2025</span>
+                    </div>
+                    <p class="story-preview">
+                        Gear up Hamel baseball fans! The Hamel Hawks team store is now live. <a href="https://www.hamelhawks.com/shop" class="styled-link" style="color:rgb(65, 105, 225)" >Get your apparel just in time for the 2025 season</a>!
+                    </p>
+                    <p class="story-full" style="display: none;">
+                        <strong>Print On-Demand</strong><br>
+                        All products are custom made-to-order. No need to place bulk orders. Buy now and get your merch 2 weeks later!<br><br>
+
+                        <strong>FREE Shipping</strong><br>
+                        We are excited to provide FREE shipping for all Minnesota customers!<br><br>
+                        
+                        <strong>Year-Round Shopping</strong><br>
+                        Our store is open 365 days a year, so you can grab your gear whenever the mood strikes. New designs? We’ll keep ‘em coming, so check back for the latest drops!<br><br>
+
+                        <strong>Support Hamel Baseball</strong><br>
+                        All proceeds help the Hamel Hawks' town ball team purchase new equipment and upgrade our field. Thank you for your support!
+                        <br><a class="btn" href="https://www.hamelhawks.com/shop">SHOP NOW</a>
+                    </p>
+                    <button class="continue-reading">Continue Reading</button>
+                </article>
+
                 <article class="news-story" data-slug="hawks-announce-2025-season-opener">
                     <h1>Hawks announce 2025 season opener</h1>
                     <img src="2025 Opening Day Graphic.png" alt="Hawks announce 2025 season opener" class="story-image">
                     <div class="story-meta">
-                        <span class="author">By John Doe</span> | <span class="date">April 01, 2025</span>
+                        <span class="author">By Hamel Hawks</span> | <span class="date">April 01, 2025</span>
                     </div>
                     <p class="story-preview">
                         The Hamel Hawks are gearing up for an exciting 2025 season, with the home opener scheduled for May 30th at Paul Fortin Memorial Field. Fans can expect a thrilling matchup against the newly-formed Willmar Indians.
@@ -258,7 +292,7 @@
                 window.addEventListener('load', () => {
                     const path = window.location.pathname;
                     const slugMatch = path.match(/\/news\/(.+)/);
-                    const slug = slugMatch ? slugMatch[1] : 'hawks-announce-2025-season-opener';
+                    const slug = slugMatch ? slugMatch[1] : 'hamel-hawks-open-team-store';
                     scrollToStory(slug);
                     setTimeout(() => {
                         stories.forEach(story => observer.observe(story));
