@@ -1,14 +1,4 @@
 [{
-  "number": "",
-  "player": "Jeff Ruhr",
-  "position": "Manager",
-  "handedness": "",
-  "hometown": "",
-  "college": "",
-  "season": "1",
-  "pageUrl":"jeff_ruhr"
-  },
-  {
     "number": "3",
     "player": "Matt Kramer",
     "position": "C/1B",
@@ -20,13 +10,13 @@
   },
   {
     "number": "6",
-    "player": "Americo Sculati",
-    "position": "OF",
-    "handedness": "R/R",
+    "player": "Jeff Ruhr",
+    "position": "Manager",
+    "handedness": "",
     "hometown": "",
-    "college": "Crookston",
-    "season": "2",
-    "pageUrl":"americo_sculati"
+    "college": "",
+    "season": "1",
+    "pageUrl":"jeff_ruhr"
   },
   {
     "number": "7",
