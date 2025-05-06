@@ -9,6 +9,16 @@
     "pageUrl":"matt_kramer"
   },
   {
+    "number": "5",
+    "player": "Jack Lewin",
+    "position": "OF",
+    "handedness": "R/R",
+    "hometown": "Wayzata",
+    "college": "",
+    "season": "2",
+    "pageUrl":"jack_lewin"
+  },
+  {
     "number": "6",
     "player": "Jeff Ruhr",
     "position": "Manager",
@@ -178,16 +188,6 @@
     "college": "",
     "season": "1",
     "pageUrl":"brady_zackrison"
-  },
-  {
-    "number": "65",
-    "player": "Jack Lewin",
-    "position": "OF",
-    "handedness": "R/R",
-    "hometown": "Wayzata",
-    "college": "",
-    "season": "2",
-    "pageUrl":"jack_lewin"
   },
   {
     "number": "99",
