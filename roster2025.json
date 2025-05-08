@@ -1,4 +1,14 @@
 [{
+    "number": "0",
+    "player": "Owen Nathe",
+    "position": "",
+    "handedness": "",
+    "hometown": "",
+    "college": "",
+    "season": "1",
+    "pageUrl":"owen_nathe"
+  },
+  {
     "number": "3",
     "player": "Matt Kramer",
     "position": "C/1B",
@@ -160,6 +170,16 @@
     "pageUrl":"josh_delange"
   },
   {
+    "number": "30",
+    "player": "Aidan Frye",
+    "position": "",
+    "handedness": "L/L",
+    "hometown": "",
+    "college": "",
+    "season": "1",
+    "pageUrl":"aidan_frye"
+  },
+  {
     "number": "32",
     "player": "Evan O'Dwyer",
     "position": "",
@@ -190,6 +210,16 @@
     "pageUrl":"brady_zackrison"
   },
   {
+    "number": "39",
+    "player": "Ian Schock",
+    "position": "",
+    "handedness": "",
+    "hometown": "",
+    "college": "",
+    "season": "1",
+    "pageUrl":"ian_schock"
+  },
+  {
     "number": "99",
     "player": "Vann Olson",
     "position": "",
@@ -201,16 +231,6 @@
   },
   {
     "number": "",
-    "player": "Owen Nathe",
-    "position": "",
-    "handedness": "",
-    "hometown": "",
-    "college": "",
-    "season": "1",
-    "pageUrl":"owen_nathe"
-  },
-  {
-    "number": "",
     "player": "Ronan Barrett",
     "position": "",
     "handedness": "",
@@ -218,16 +238,6 @@
     "college": "",
     "season": "1",
     "pageUrl":"ronan_barrett"
-  },
-  {
-    "number": "",
-    "player": "Aidan Frye",
-    "position": "",
-    "handedness": "",
-    "hometown": "",
-    "college": "",
-    "season": "1",
-    "pageUrl":"aidan_frye"
   },
   {
     "number": "",
