@@ -41,7 +41,7 @@
   {
     "number": "7",
     "player": "Dominic Adkins",
-    "position": "CF",
+    "position": "OF",
     "handedness": "R/R",
     "hometown": "St. Paul",
     "college": "St. Thomas",
@@ -51,7 +51,7 @@
   {
     "number": "8",
     "player": "Jayden Mersereau",
-    "position": "3B/C",
+    "position": "C/1B",
     "handedness": "R/R",
     "hometown": "Plymouth",
     "college": "",
@@ -101,7 +101,7 @@
   {
     "number": "15",
     "player": "Jack Puncochar",
-    "position": "SS/3B",
+    "position": "3B",
     "handedness": "L/R",
     "hometown": "Maple Grove",
     "college": "",
@@ -220,6 +220,16 @@
     "pageUrl":"ian_schock"
   },
   {
+    "number": "65",
+    "player": "Anthony O'Bryant",
+    "position": "",
+    "handedness": "",
+    "hometown": "",
+    "college": "",
+    "season": "1",
+    "pageUrl":"anthony_obryant"
+  },
+  {
     "number": "99",
     "player": "Vann Olson",
     "position": "",
@@ -231,22 +241,22 @@
   },
   {
     "number": "",
-    "player": "Ronan Barrett",
+    "player": "Cameron Pittman",
     "position": "",
     "handedness": "",
     "hometown": "",
     "college": "",
     "season": "1",
-    "pageUrl":"ronan_barrett"
+    "pageUrl":"cameron_pittman"
   },
   {
     "number": "",
-    "player": "Anthony O'Bryant",
+    "player": "Sam Hagen",
     "position": "",
     "handedness": "",
     "hometown": "",
     "college": "",
     "season": "1",
-    "pageUrl":"anthony_obryant"
+    "pageUrl":"sam_hagen"
   }
 ]
