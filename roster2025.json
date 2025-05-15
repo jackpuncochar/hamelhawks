@@ -210,6 +210,16 @@
     "pageUrl":"brady_zackrison"
   },
   {
+    "number": "37",
+    "player": "Sam Hagen",
+    "position": "",
+    "handedness": "R/R",
+    "hometown": "",
+    "college": "",
+    "season": "1",
+    "pageUrl":"sam_hagen"
+  },
+  {
     "number": "39",
     "player": "Ian Schock",
     "position": "",
@@ -238,25 +248,5 @@
     "college": "",
     "season": "1",
     "pageUrl":"vann_olson"
-  },
-  {
-    "number": "",
-    "player": "Cameron Pittman",
-    "position": "",
-    "handedness": "L/L",
-    "hometown": "",
-    "college": "",
-    "season": "1",
-    "pageUrl":"cameron_pittman"
-  },
-  {
-    "number": "",
-    "player": "Sam Hagen",
-    "position": "",
-    "handedness": "R/R",
-    "hometown": "",
-    "college": "",
-    "season": "1",
-    "pageUrl":"sam_hagen"
   }
 ]
