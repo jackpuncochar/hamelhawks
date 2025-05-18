@@ -254,6 +254,27 @@
                 ]
             }
         ]
+    },
+    {
+        "sync_product_id": "382594860",
+        "variants": [
+            {
+                "color": "Vintage Royal",
+                "description": "Women's racerback tank top. Next Level 6733. (vintage royal color). Soft, lightweight, and form-fitting. 50% polyester, 25% combed ring-spun cotton, 25% rayon.",
+                "mockup_images": [
+                        "/resources/images/mockups/womens-racerback-tank-top-vintage-royal-front-6829e74e5cee2.png",
+                        "/resources/images/mockups/womens-racerback-tank-top-vintage-royal-back-6829e74e5cfd0.png"
+                    ]
+            },
+            {
+                "color": "Premium Heather",
+                "description": "Women's racerback tank top. Next Level 6733. (premium heather color). Soft, lightweight, and form-fitting. 50% polyester, 25% combed ring-spun cotton, 25% rayon.",
+                "mockup_images": [
+                        "/resources/images/mockups/womens-racerback-tank-top-premium-heather-front-6829e74e5d041.png",
+                        "/resources/images/mockups/womens-racerback-tank-top-premium-heather-back-6829e74e5d26a.png"
+                    ]
+            }
+        ]
     }
     ]
   }
