@@ -265,17 +265,21 @@
                         }
                     });
                 }
-    
-                function scrollToStory(slug) {
+
+                function scrollToStory(slug, updateHistory = true) {
                     const targetStory = document.querySelector(`.news-story[data-slug="${slug}"]`);
                     if (targetStory) {
                         const storyTop = targetStory.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
                         window.scrollTo({ top: storyTop, behavior: 'smooth' });
-                        window.history.replaceState(null, '', `/news/${slug}`);
+                        if (updateHistory) {
+                            window.history.replaceState(null, '', `/news/${slug}`);
+                        }
                         setActiveHeadline(slug);
+                    } else {
+                        console.warn(`scrollToStory: No story found for slug=${slug}`);
                     }
                 }
-    
+
                 const observer = new IntersectionObserver(entries => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
@@ -288,14 +292,24 @@
                     rootMargin: `-${headerHeight + 20}px 0px -50% 0px`,
                     threshold: 0.1
                 });
-    
+
                 window.addEventListener('load', () => {
                     const path = window.location.pathname;
                     const slugMatch = path.match(/\/news\/(.+)/);
-                    const slug = slugMatch ? slugMatch[1] : 'hamel-hawks-open-team-store';
-                    scrollToStory(slug);
+                    
+                    if (slugMatch) {
+                        const slug = slugMatch[1];
+                        scrollToStory(slug, false);
+                    } else {
+                        window.history.replaceState(null, '', '/news');
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                        setActiveHeadline('hamel-hawks-open-team-store');
+                    }
+
                     setTimeout(() => {
-                        stories.forEach(story => observer.observe(story));
+                        stories.forEach(story => {
+                            observer.observe(story);
+                        });
                     }, 100);
                 });
     
