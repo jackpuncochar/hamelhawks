@@ -281,36 +281,19 @@
                     }
                 }
 
-                const observer = new IntersectionObserver(entries => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            const slug = entry.target.getAttribute('data-slug');
-                            window.history.replaceState(null, '', `/news/${slug}`);
-                            setActiveHeadline(slug);
-                        }
-                    });
-                }, {
-                    rootMargin: `-${headerHeight + 20}px 0px -50% 0px`,
-                    threshold: 0.1
-                });
-
                 window.addEventListener('load', () => {
-                    const path = window.location.pathname;
-                    const slugMatch = path.match(/\/news\/(.+)/);
+                    console.log(`News script loaded: v6, pathname=${window.location.pathname}`);
                     
-                    if (slugMatch) {
+                    const path = window.location.pathname;
+                    if (path !== '/news' && path !== '/news/') {
+                        console.log(`Redirecting ${path} to /news`);
                         window.location.replace('/news');
                         return;
-                    } 
-
-                    window.history.replaceState(null, '', `/news/${TOP_ARTICLE_SLUG}`);
+                    }
+                    
+                    console.log(`Loading /news, scrolling to top article=${TOP_ARTICLE_SLUG}`);
+                    window.history.replaceState(null, '', '/news');
                     scrollToStory(TOP_ARTICLE_SLUG, false);
-
-                    setTimeout(() => {
-                        stories.forEach(story => {
-                            observer.observe(story);
-                        });
-                    }, 100);
                 });
     
                 headlineLinks.forEach(link => {
