@@ -251,6 +251,7 @@
                 const headlineLinks = document.querySelectorAll('.headline-link');
                 const headerHeight = document.querySelector('.header').offsetHeight || 115; // Default to 60px if header not found
                 const isMobile = () => window.innerWidth <= 800; // Matches CSS breakpoint
+                const TOP_ARTICLE_SLUG = 'hamel-hawks-open-team-store';
 
                 function setActiveHeadline(slug) {
                     headlineLinks.forEach(link => {
@@ -298,13 +299,12 @@
                     const slugMatch = path.match(/\/news\/(.+)/);
                     
                     if (slugMatch) {
-                        const slug = slugMatch[1];
-                        scrollToStory(slug, false);
-                    } else {
-                        window.history.replaceState(null, '', '/news');
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
-                        setActiveHeadline('hamel-hawks-open-team-store');
-                    }
+                        window.location.replace('/news');
+                        return;
+                    } 
+
+                    window.history.replaceState(null, '', `/news/${TOP_ARTICLE_SLUG}`);
+                    scrollToStory(TOP_ARTICLE_SLUG, false);
 
                     setTimeout(() => {
                         stories.forEach(story => {
