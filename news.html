@@ -285,7 +285,7 @@
                     console.log(`News script loaded: v6, pathname=${window.location.pathname}`);
                     
                     const path = window.location.pathname;
-                    if (path !== '/news' && path !== '/news/') {
+                    if (path !== '/news' && path !== '/news/' && !path.endsWith('/news.html')) {
                         console.log(`Redirecting ${path} to /news`);
                         window.location.replace('/news');
                         return;
