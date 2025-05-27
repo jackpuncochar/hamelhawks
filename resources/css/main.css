@@ -32,6 +32,12 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.table-icon {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+}
+
 .icon-shopping-cart:before { content: '\e800'; }
 .icon-instagram:before { content: '\f16d'; }
 .icon-twitter:before { content: '\f099'; }
@@ -453,11 +459,10 @@ h1{
         padding: 0;
     }
 
-    #schedule-table th:nth-child(4),
-    #schedule-table td:nth-child(4) {
-        display: none;
+    .table-icon {
+        width: 20px;
+        height: 20px;
     }
-
     .footer__section {
         margin: 1rem;
     }
@@ -593,10 +598,8 @@ h1{
 /* iCal link */
 .schedule-header {
     display: flex;
-    /* flex-direction: column; */
     margin-bottom: 1rem;
     gap: 16px;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -679,7 +682,7 @@ h1{
 }
 
 /* Style for alternating table rows */
-#schedule-table tbody tr:nth-child(even), #roster-table tbody tr:nth-child(even) {
+#schedule-table tbody tr:nth-child(odd), #roster-table tbody tr:nth-child(odd) {
     background-color: #f9f9f9; /* Background color for even rows */
 }
 
