@@ -170,17 +170,17 @@
     "pageUrl":"anthony_obryant"
   },
   {
-    "number": "28",
-    "player": "Josh Wilson",
+    "number": "27",
+    "player": "Brady Zackrison",
     "position": "",
-    "handedness": "",
+    "handedness": "R/R",
     "hometown": "",
     "college": "",
-    "season": "2",
-    "pageUrl":"josh_wilson"
+    "season": "1",
+    "pageUrl":"brady_zackrison"
   },
   {
-    "number": "30",
+    "number": "",
     "player": "Aidan Frye",
     "position": "",
     "handedness": "L/L",
@@ -188,6 +188,16 @@
     "college": "",
     "season": "1",
     "pageUrl":"aidan_frye"
+  },
+  {
+    "number": "",
+    "player": "Vann Olson",
+    "position": "",
+    "handedness": "L/L",
+    "hometown": "",
+    "college": "",
+    "season": "1",
+    "pageUrl":"vann_olson"
   },
   {
     "number": "32",
@@ -200,6 +210,16 @@
     "pageUrl":"evan_odwyer"
   },
   {
+    "number": "33",
+    "player": "Sam Hagen",
+    "position": "",
+    "handedness": "R/R",
+    "hometown": "",
+    "college": "",
+    "season": "1",
+    "pageUrl":"sam_hagen"
+  },
+  {
     "number": "34",
     "player": "Zac Ruhr",
     "position": "",
@@ -208,26 +228,6 @@
     "college": "",
     "season": "1",
     "pageUrl":"zac_ruhr"
-  },
-  {
-    "number": "36",
-    "player": "Brady Zackrison",
-    "position": "",
-    "handedness": "R/R",
-    "hometown": "",
-    "college": "",
-    "season": "1",
-    "pageUrl":"brady_zackrison"
-  },
-  {
-    "number": "37",
-    "player": "Sam Hagen",
-    "position": "",
-    "handedness": "R/R",
-    "hometown": "",
-    "college": "",
-    "season": "1",
-    "pageUrl":"sam_hagen"
   },
   {
     "number": "39",
@@ -240,13 +240,13 @@
     "pageUrl":"ian_schock"
   },
   {
-    "number": "99",
-    "player": "Vann Olson",
+    "number": "",
+    "player": "Josh Wilson",
     "position": "",
-    "handedness": "L/L",
+    "handedness": "",
     "hometown": "",
     "college": "",
-    "season": "1",
-    "pageUrl":"vann_olson"
+    "season": "2",
+    "pageUrl":"josh_wilson"
   }
 ]
