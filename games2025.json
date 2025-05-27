@@ -7,7 +7,12 @@
     "time": "1pm",
     "sponsor": "",
     "result": "",
-    "logo": "resources/images/willmarindians.png"
+    "logo": "resources/images/willmarindians.png",
+    "status": "upcoming",
+    "streamLink": "https://www.sporfie.com/event/-OOmj3eWsALbbLN_Uwfx",
+    "boxScoreLink": "",
+    "address": "https://maps.google.com/?q=Fortin+Field,+Hamel,+MN+55340",
+    "fieldName": "Paul Fortin Memorial Field"
   },
   {
     "date": "Sun, 6/1",
@@ -17,7 +22,12 @@
     "time": "1pm",
     "sponsor": "",
     "result": "",
-    "logo": "resources/images/maplelakelakers.png"
+    "logo": "resources/images/maplelakelakers.png",
+    "status": "upcoming",
+    "streamLink": "https://www.sporfie.com/event/-OOmlXfSDAs6WdVSy43A",
+    "boxScoreLink": "",
+    "address": "https://maps.google.com/?q=Fortin+Field,+Hamel,+MN+55340",
+    "fieldName": "Paul Fortin Memorial Field"
   },
   {
     "date": "Wed, 6/4",
@@ -27,7 +37,12 @@
     "time": "7pm",
     "sponsor": "",
     "result": "",
-    "logo": "resources/images/mapleplaindiamonddevils.png"
+    "logo": "resources/images/mapleplaindiamonddevils.png",
+    "status": "upcoming",
+    "streamLink": "",
+    "boxScoreLink": "",
+    "address": "https://maps.app.goo.gl/fQLSZbRCRGWxt9129",
+    "fieldName": "Don Timpe Field"
   },
   {
     "date": "Fri, 6/6",
@@ -37,7 +52,12 @@
     "time": "7pm",
     "sponsor": "",
     "result": "",
-    "logo": "resources/images/waverlystingers.png"
+    "logo": "resources/images/waverlystingers.png",
+    "status": "upcoming",
+    "streamLink": "https://www.sporfie.com/event/-OOmlnWskUei7o4kS9xn",
+    "boxScoreLink": "",
+    "address": "https://maps.google.com/?q=Fortin+Field,+Hamel,+MN+55340",
+    "fieldName": "Paul Fortin Memorial Field"
   },
   {
     "date": "Sun, 6/8",
@@ -47,7 +67,12 @@
     "time": "1pm",
     "sponsor": "",
     "result": "",
-    "logo": "resources/images/buffalobulldogs.png"
+    "logo": "resources/images/buffalobulldogs.png",
+    "status": "upcoming",
+    "streamLink": "",
+    "boxScoreLink": "",
+    "address": "https://g.co/kgs/XZmC647",
+    "fieldName": "Bentfield Mills Park"
   },
   {
     "date": "Wed, 6/11",
@@ -57,7 +82,12 @@
     "time": "7pm",
     "sponsor": "",
     "result": "",
-    "logo": "resources/images/howardlakeorphans.png"
+    "logo": "resources/images/howardlakeorphans.png",
+    "status": "upcoming",
+    "streamLink": "",
+    "boxScoreLink": "",
+    "address": "https://maps.app.goo.gl/aHwB32cWUPdAGdfG6",
+    "fieldName": "Memorial Park"
   },
   {
     "date": "Fri, 6/13",
@@ -67,7 +97,12 @@
     "time": "7:30pm",
     "sponsor": "",
     "result": "",
-    "logo": "resources/images/hutchinsonhuskies.png"
+    "logo": "resources/images/hutchinsonhuskies.png",
+    "status": "upcoming",
+    "streamLink": "https://www.sporfie.com/event/-OOmm0GYXQVBSjjsEnsA",
+    "boxScoreLink": "",
+    "address": "https://maps.google.com/?q=Fortin+Field,+Hamel,+MN+55340",
+    "fieldName": "Paul Fortin Memorial Field"
   },
   {
     "date": "Sun, 6/15",
@@ -77,7 +112,12 @@
     "time": "1pm",
     "sponsor": "",
     "result": "",
-    "logo": "resources/images/dcsaints.png"
+    "logo": "resources/images/dcsaints.png",
+    "status": "upcoming",
+    "streamLink": "",
+    "boxScoreLink": "",
+    "address": "https://g.co/kgs/xSGHafB",
+    "fieldName": "Saints Field"
   },
   {
     "date": "Wed, 6/18",
@@ -87,7 +127,12 @@
     "time": "7pm",
     "sponsor": "",
     "result": "",
-    "logo": "resources/images/rockfordcrows.png"
+    "logo": "resources/images/rockfordcrows.png",
+    "status": "upcoming",
+    "streamLink": "",
+    "boxScoreLink": "",
+    "address": "https://maps.app.goo.gl/yUYdo5LAspntQxmt8",
+    "fieldName": "Rockford High School"
   },
   {
     "date": "Fri, 6/20",
@@ -97,7 +142,12 @@
     "time": "7:30pm",
     "sponsor": "",
     "result": "",
-    "logo": "resources/images/litchfieldblues.png"
+    "logo": "resources/images/litchfieldblues.png",
+    "status": "upcoming",
+    "streamLink": "https://www.sporfie.com/event/-OOmmDXvFe9m3QCnzEoM",
+    "boxScoreLink": "",
+    "address": "https://maps.google.com/?q=Fortin+Field,+Hamel,+MN+55340",
+    "fieldName": "Paul Fortin Memorial Field"
   },
   {
     "date": "Sun, 6/22",
@@ -107,7 +157,12 @@
     "time": "1pm",
     "sponsor": "",
     "result": "",
-    "logo": "resources/images/lorettolarks.png"
+    "logo": "resources/images/lorettolarks.png",
+    "status": "upcoming",
+    "streamLink": "",
+    "boxScoreLink": "",
+    "address": "https://maps.app.goo.gl/3F1Senu7k9uqiP7y8",
+    "fieldName": "Arnold Klaers Baseball Fields"
   },
   {
     "date": "Wed, 6/25",
@@ -117,7 +172,12 @@
     "time": "7pm",
     "sponsor": "",
     "result": "",
-    "logo": "resources/images/cokatokernels.png"
+    "logo": "resources/images/cokatokernels.png",
+    "status": "upcoming",
+    "streamLink": "",
+    "boxScoreLink": "",
+    "address": "https://maps.app.goo.gl/6a2euoML7aUns9867",
+    "fieldName": "Veterans Memorial Park"
   },
   {
     "date": "Fri, 6/27",
@@ -127,7 +187,12 @@
     "time": "7pm",
     "sponsor": "",
     "result": "",
-    "logo": "resources/images/lorettolarks.png"
+    "logo": "resources/images/lorettolarks.png",
+    "status": "upcoming",
+    "streamLink": "https://www.sporfie.com/event/-OOmmPshaJ1XQNKnf_8B",
+    "boxScoreLink": "",
+    "address": "https://maps.google.com/?q=Fortin+Field,+Hamel,+MN+55340",
+    "fieldName": "Paul Fortin Memorial Field"
   },
   {
     "date": "Sat, 6/28",
@@ -137,7 +202,12 @@
     "time": "",
     "sponsor": "",
     "result": "NSL vs. CRVL - Dassel",
-    "logo": "resources/images/northstarleague.png"
+    "logo": "resources/images/northstarleague.png",
+    "status": "upcoming",
+    "streamLink": "",
+    "boxScoreLink": "",
+    "address": "https://g.co/kgs/xSGHafB",
+    "fieldName": "Saints Field"
   },
   {
     "date": "Sun, 6/29",
@@ -147,7 +217,12 @@
     "time": "1pm",
     "sponsor": "",
     "result": "",
-    "logo": "resources/images/maplelakelakers.png"
+    "logo": "resources/images/maplelakelakers.png",
+    "status": "upcoming",
+    "streamLink": "",
+    "boxScoreLink": "",
+    "address": "https://maps.app.goo.gl/bKgU1aoY4gcWVch56",
+    "fieldName": "Irish Stadium"
   },
   {
     "date": "Tue, 7/1",
@@ -157,7 +232,12 @@
     "time": "7pm",
     "sponsor": "",
     "result": "",
-    "logo": "resources/images/hudsonriverrats.png"
+    "logo": "resources/images/hudsonriverrats.png",
+    "status": "upcoming",
+    "streamLink": "https://www.sporfie.com/event/-OOmmdX-LsaAmBO2zua0",
+    "boxScoreLink": "",
+    "address": "https://maps.google.com/?q=Fortin+Field,+Hamel,+MN+55340",
+    "fieldName": "Paul Fortin Memorial Field"
   },
   {
     "date": "Tue, 7/8",
@@ -167,7 +247,12 @@
     "time": "7:15pm",
     "sponsor": "",
     "result": "",
-    "logo": "resources/images/andoveraces.png"
+    "logo": "resources/images/andoveraces.png",
+    "status": "upcoming",
+    "streamLink": "https://www.sporfie.com/event/-OOmmzNHPfRZCHWvYu37",
+    "boxScoreLink": "",
+    "address": "https://maps.google.com/?q=Fortin+Field,+Hamel,+MN+55340",
+    "fieldName": "Paul Fortin Memorial Field"
   },
   {
     "date": "Fri, 7/11",
@@ -177,7 +262,12 @@
     "time": "7pm",
     "sponsor": "",
     "result": "",
-    "logo": "resources/images/mapleplaindiamonddevils.png"
+    "logo": "resources/images/mapleplaindiamonddevils.png",
+    "status": "upcoming",
+    "streamLink": "https://www.sporfie.com/event/-OOmnAfFxcCNZaOF2QEN",
+    "boxScoreLink": "",
+    "address": "https://maps.google.com/?q=Fortin+Field,+Hamel,+MN+55340",
+    "fieldName": "Paul Fortin Memorial Field"
   },
   {
     "date": "Sun, 7/13",
@@ -187,7 +277,12 @@
     "time": "4pm",
     "sponsor": "",
     "result": "",
-    "logo": "resources/images/buffalobulldogs.png"
+    "logo": "resources/images/buffalobulldogs.png",
+    "status": "upcoming",
+    "streamLink": "https://www.sporfie.com/event/-OOmnNnxeapnR3AXbNN_",
+    "boxScoreLink": "",
+    "address": "https://maps.google.com/?q=Fortin+Field,+Hamel,+MN+55340",
+    "fieldName": "Paul Fortin Memorial Field"
   },
   {
     "date": "Fri, 7/18",
@@ -197,7 +292,12 @@
     "time": "7:30pm",
     "sponsor": "",
     "result": "",
-    "logo": "resources/images/hutchinsonhuskies.png"
+    "logo": "resources/images/hutchinsonhuskies.png",
+    "status": "upcoming",
+    "streamLink": "",
+    "boxScoreLink": "",
+    "address": "https://maps.app.goo.gl/Qjntxj7h4tLwCCS46",
+    "fieldName": "Veterans Memorial Field"
   },
   {
     "date": "Sun, 7/20",
@@ -207,7 +307,12 @@
     "time": "1pm",
     "sponsor": "",
     "result": "",
-    "logo": "resources/images/centennialcougars.png"
+    "logo": "resources/images/centennialcougars.png",
+    "status": "upcoming",
+    "streamLink": "https://www.sporfie.com/event/-OOmnelDEaTx_aQOOm6X",
+    "boxScoreLink": "",
+    "address": "https://maps.google.com/?q=Fortin+Field,+Hamel,+MN+55340",
+    "fieldName": "Paul Fortin Memorial Field"
   },
   {
     "date": "Sat, 7/26",

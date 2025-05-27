@@ -85,7 +85,7 @@
                     </div>
                 </div>
                 <table id="schedule-table">
-                    <thead>
+                    <!-- <thead>
                         <tr>
                             <th>Date</th>
                             <th>Opponent</th>
@@ -93,7 +93,7 @@
                             <th>Sponsor</th>
                             <th>Result</th>
                         </tr>
-                    </thead>
+                    </thead> -->
                     <tbody>
                     </tbody>
                 </table>
@@ -194,6 +194,8 @@
                     const teamDisplayName = getTeamDisplayName(game);
 
                     const row = document.createElement('tr');
+
+                    // always show date and opponent
                     row.innerHTML = `
                         <td>
                             <div class="date-cell">
@@ -207,10 +209,37 @@
                                 <div class="team-name">${teamDisplayName}</div>
                             </div>
                         </td>
-                        <td>${game.time}</td>
-                        <td>${game.sponsor}</td>
-                        <td>${game.result}</td>
-                    `;
+                        `
+                        // For completed games: show only result linked to box score
+                        if (!game.status==="future") {
+                            row.innerHTML += `
+                                <td><a href="${game.boxScoreLink}">${game.result}</a></td>
+                            `;
+                        } else {
+                            // show time, sponsor, location, and stream link for future games
+                            row.innerHTML += `
+                                <td>${game.time}</td>
+                                <td>
+                                    <a href=${game.address} target="_blank">
+                                        <img src="/resources/images/baseball-field-icon.png" alt="Baseball Field icon" class="table-icon" title="Directions to ${game.fieldName}">
+                                    </a>
+                                </td>
+                                `;
+                                // Only add stream icon if streamLink is non-empty
+                                if (game.streamLink && game.streamLink.trim() !== "") {
+                                    row.innerHTML += `
+                                        <td>
+                                            <a href=${game.streamLink} target="_blank">
+                                                <img src="/resources/images/sporfie-icon.png" alt="Hamel baseball stream" class="table-icon" title="Link to Sporfie stream">
+                                            </a>
+                                        </td>
+                                    `;
+                                } else {
+                                    row.innerHTML += `<td></td>`; // Empty cell if no stream link
+                                }
+                        }
+                        row.innerHTML += `<td>${game.sponsor}</td>`
+                    ;
                     tableBody.appendChild(row);
                 });
             }

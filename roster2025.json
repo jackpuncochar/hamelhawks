@@ -160,6 +160,16 @@
     "pageUrl":"josh_delange"
   },
   {
+    "number": "24",
+    "player": "Anthony O'Bryant",
+    "position": "",
+    "handedness": "R/R",
+    "hometown": "",
+    "college": "",
+    "season": "1",
+    "pageUrl":"anthony_obryant"
+  },
+  {
     "number": "28",
     "player": "Josh Wilson",
     "position": "",
@@ -228,16 +238,6 @@
     "college": "",
     "season": "1",
     "pageUrl":"ian_schock"
-  },
-  {
-    "number": "65",
-    "player": "Anthony O'Bryant",
-    "position": "",
-    "handedness": "R/R",
-    "hometown": "",
-    "college": "",
-    "season": "1",
-    "pageUrl":"anthony_obryant"
   },
   {
     "number": "99",
