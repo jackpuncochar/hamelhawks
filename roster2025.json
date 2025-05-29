@@ -1,14 +1,4 @@
 [{
-    "number": "0",
-    "player": "Owen Nathe",
-    "position": "",
-    "handedness": "R/R",
-    "hometown": "",
-    "college": "",
-    "season": "1",
-    "pageUrl":"owen_nathe"
-  },
-  {
     "number": "3",
     "player": "Matt Kramer",
     "position": "C/1B",
@@ -109,6 +99,16 @@
     "pageUrl":"jack_puncochar"
   },
   {
+    "number": "16",
+    "player": "Zac Ruhr",
+    "position": "",
+    "handedness": "L/R",
+    "hometown": "",
+    "college": "",
+    "season": "1",
+    "pageUrl":"zac_ruhr"
+  },
+  {
     "number": "18",
     "player": "Levi Miller",
     "position": "P/IF",
@@ -128,7 +128,16 @@
     "season": "3",
     "pageUrl":"jake_vanyo"
   },
-  
+  {
+    "number": "20",
+    "player": "Owen Nathe",
+    "position": "",
+    "handedness": "R/R",
+    "hometown": "",
+    "college": "",
+    "season": "1",
+    "pageUrl":"owen_nathe"
+  },
   {
     "number": "21",
     "player": "Andrew Chlebeck",
@@ -170,6 +179,16 @@
     "pageUrl":"anthony_obryant"
   },
   {
+    "number": "26",
+    "player": "Ian Schock",
+    "position": "",
+    "handedness": "R/L",
+    "hometown": "",
+    "college": "",
+    "season": "1",
+    "pageUrl":"ian_schock"
+  },
+  {
     "number": "27",
     "player": "Brady Zackrison",
     "position": "",
@@ -180,7 +199,7 @@
     "pageUrl":"brady_zackrison"
   },
   {
-    "number": "",
+    "number": "28",
     "player": "Aidan Frye",
     "position": "",
     "handedness": "L/L",
@@ -190,7 +209,7 @@
     "pageUrl":"aidan_frye"
   },
   {
-    "number": "",
+    "number": "29",
     "player": "Vann Olson",
     "position": "",
     "handedness": "L/L",
@@ -218,26 +237,6 @@
     "college": "",
     "season": "1",
     "pageUrl":"sam_hagen"
-  },
-  {
-    "number": "34",
-    "player": "Zac Ruhr",
-    "position": "",
-    "handedness": "L/R",
-    "hometown": "",
-    "college": "",
-    "season": "1",
-    "pageUrl":"zac_ruhr"
-  },
-  {
-    "number": "39",
-    "player": "Ian Schock",
-    "position": "",
-    "handedness": "R/L",
-    "hometown": "",
-    "college": "",
-    "season": "1",
-    "pageUrl":"ian_schock"
   },
   {
     "number": "",
