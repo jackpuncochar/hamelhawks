@@ -23,7 +23,7 @@
     "player": "Jeff Ruhr",
     "position": "Manager",
     "handedness": "",
-    "hometown": "",
+    "hometown": "Maple Grove",
     "college": "",
     "season": "1",
     "pageUrl":"jeff_ruhr"
@@ -53,7 +53,7 @@
     "player": "Hayden Potratz",
     "position": "",
     "handedness": "L/R",
-    "hometown": "",
+    "hometown": "Osseo",
     "college": "",
     "season": "1",
     "pageUrl":"hayden_potratz"
@@ -73,7 +73,7 @@
     "player": "Alex Wattermann",
     "position": "",
     "handedness": "R/R",
-    "hometown": "",
+    "hometown": "Plymouth",
     "college": "UMD",
     "season": "1",
     "pageUrl":"alex_wattermann"
@@ -103,7 +103,7 @@
     "player": "Zac Ruhr",
     "position": "",
     "handedness": "L/R",
-    "hometown": "",
+    "hometown": "Maple Grove",
     "college": "",
     "season": "1",
     "pageUrl":"zac_ruhr"
@@ -144,7 +144,7 @@
     "position": "OF",
     "handedness": "L/R",
     "hometown": "Little Canada",
-    "college": "",
+    "college": "Iowa State",
     "season": "2",
     "pageUrl":"andrew_chlebeck"
   },
@@ -163,7 +163,7 @@
     "player": "Josh Delange",
     "position": "",
     "handedness": "R/R",
-    "hometown": "",
+    "hometown": "Hamel",
     "college": "",
     "season": "1",
     "pageUrl":"josh_delange"
@@ -183,7 +183,7 @@
     "player": "Ian Schock",
     "position": "",
     "handedness": "R/L",
-    "hometown": "",
+    "hometown": "Maple Grove",
     "college": "",
     "season": "1",
     "pageUrl":"ian_schock"
@@ -193,7 +193,7 @@
     "player": "Brady Zackrison",
     "position": "",
     "handedness": "R/R",
-    "hometown": "",
+    "hometown": "Rogers",
     "college": "",
     "season": "1",
     "pageUrl":"brady_zackrison"
@@ -203,7 +203,7 @@
     "player": "Aidan Frye",
     "position": "",
     "handedness": "L/L",
-    "hometown": "",
+    "hometown": "Minneapolis",
     "college": "",
     "season": "1",
     "pageUrl":"aidan_frye"
@@ -213,7 +213,7 @@
     "player": "Vann Olson",
     "position": "",
     "handedness": "L/L",
-    "hometown": "",
+    "hometown": "Maple Grove",
     "college": "",
     "season": "1",
     "pageUrl":"vann_olson"
@@ -223,7 +223,7 @@
     "player": "Evan O'Dwyer",
     "position": "",
     "handedness": "R/R",
-    "hometown": "",
+    "hometown": "Maple Grove",
     "college": "",
     "season": "1",
     "pageUrl":"evan_odwyer"
@@ -233,8 +233,8 @@
     "player": "Sam Hagen",
     "position": "",
     "handedness": "R/R",
-    "hometown": "",
-    "college": "",
+    "hometown": "Maple Grove",
+    "college": "Crookston",
     "season": "1",
     "pageUrl":"sam_hagen"
   },
