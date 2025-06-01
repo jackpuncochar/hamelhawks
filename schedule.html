@@ -211,9 +211,11 @@
                         </td>
                         `
                         // For completed games: show only result linked to box score
-                        if (!game.status==="future") {
+                        if (game.status==="complete") {
                             row.innerHTML += `
-                                <td><a href="${game.boxScoreLink}">${game.result}</a></td>
+                                <td>${game.result}</a></td>
+                                <td></td>
+                                <td></td>
                             `;
                         } else {
                             // show time, sponsor, location, and stream link for future games
