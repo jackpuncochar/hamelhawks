@@ -51,7 +51,7 @@
   {
     "number": "10",
     "player": "Hayden Potratz",
-    "position": "",
+    "position": "1B",
     "handedness": "L/R",
     "hometown": "Osseo",
     "college": "",
@@ -71,7 +71,7 @@
   {
     "number": "12",
     "player": "Alex Wattermann",
-    "position": "",
+    "position": "SS",
     "handedness": "R/R",
     "hometown": "Plymouth",
     "college": "UMD",
@@ -101,7 +101,7 @@
   {
     "number": "16",
     "player": "Zac Ruhr",
-    "position": "",
+    "position": "C",
     "handedness": "L/R",
     "hometown": "Maple Grove",
     "college": "",
@@ -131,7 +131,7 @@
   {
     "number": "20",
     "player": "Owen Nathe",
-    "position": "",
+    "position": "P/IF",
     "handedness": "R/R",
     "hometown": "",
     "college": "",
@@ -161,7 +161,7 @@
   {
     "number": "23",
     "player": "Josh Delange",
-    "position": "",
+    "position": "OF",
     "handedness": "R/R",
     "hometown": "Hamel",
     "college": "",
@@ -171,7 +171,7 @@
   {
     "number": "24",
     "player": "Anthony O'Bryant",
-    "position": "",
+    "position": "OF",
     "handedness": "R/R",
     "hometown": "",
     "college": "",
@@ -181,7 +181,7 @@
   {
     "number": "26",
     "player": "Ian Schock",
-    "position": "",
+    "position": "OF",
     "handedness": "R/L",
     "hometown": "Maple Grove",
     "college": "",
@@ -191,7 +191,7 @@
   {
     "number": "27",
     "player": "Brady Zackrison",
-    "position": "",
+    "position": "OF",
     "handedness": "R/R",
     "hometown": "Rogers",
     "college": "",
@@ -201,7 +201,7 @@
   {
     "number": "28",
     "player": "Aidan Frye",
-    "position": "",
+    "position": "P",
     "handedness": "L/L",
     "hometown": "Minneapolis",
     "college": "",
@@ -211,7 +211,7 @@
   {
     "number": "29",
     "player": "Vann Olson",
-    "position": "",
+    "position": "P",
     "handedness": "L/L",
     "hometown": "Maple Grove",
     "college": "",
@@ -221,7 +221,7 @@
   {
     "number": "32",
     "player": "Evan O'Dwyer",
-    "position": "",
+    "position": "P",
     "handedness": "R/R",
     "hometown": "Maple Grove",
     "college": "",
@@ -231,7 +231,7 @@
   {
     "number": "33",
     "player": "Sam Hagen",
-    "position": "",
+    "position": "P/IF",
     "handedness": "R/R",
     "hometown": "Maple Grove",
     "college": "Crookston",
