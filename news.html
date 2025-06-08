@@ -71,6 +71,12 @@
                 <h2>Recent Headlines</h2>
                 <ul class="headlines-list">
                     <li>
+                        <a href="/news/hawks-weekly-recap-06-01-06-08" class="headline-link" data-slug="hawks-weekly-recap-06-01-06-08">
+                            <img src="resources/images/Weekly Recap 6.1 - 6.8 graphic.png" alt="Hamel Hawks Weekly Recap 6/1 - 6/8" class="headline-thumb">
+                            Hamel Hawks Weekly Recap 6/1 - 6/8
+                        </a>
+                    </li>
+                    <li>
                         <a href="/news/hawks-win-season-opener" class="headline-link" data-slug="hawks-win-season-opener">
                             <img src="/resources/images/willmar_5_31_2025.jfif" alt="Hamel Hawks win 2025 season opener" class="headline-thumb">
                             Hawks win season opener 14-4 in 7 innings!
@@ -104,6 +110,49 @@
 
             <!-- Main Content: Stories -->
             <main class="news-main">
+                <article class="news-story" data-slug="hawks-weekly-recap-06-01-06-08">
+                    <h1>Hamel Hawks Weekly Roundup 6/1 - 6/8</h1>
+                    <img src="resources/images/Weekly Recap 6.1 - 6.8 graphic.png" alt="Hamel Hawks Weekly Recap 6/1 - 6/8" class="story-image">
+                    <div class="story-meta">
+                        <span class="author">By Hamel Hawks</span> | <span class="date">June 8, 2025</span>
+                    </div>
+                    <p class="story-preview">
+                        Hamel played 4 games and went 1-2 in their first full week of the 2025 season. Their game vs. Maple Plain will resume in the top of the 10th inning on 7/11 in Hamel.<br><br>
+                        <strong style="text-decoration:underline;">Record</strong><br>
+                        Overall: 2-2<br>
+                        Class B North Star League: 0-2<br>
+                        Overall North Star League: 1-2<br>
+                    </p>
+                    <p class="story-full" style="display: none;">
+                        <strong>Sunday, 6/1 vs. Maple Lake Lakers</strong><br><br>
+
+                        Jake Vanyo pitched 6 quality innings, giving up only 2 earned runs on 6 hits, but it wasn't enough as the Hawks lost their inaugural North Star League matchup 11-5.  
+
+                        The Hawks strung together 11 hits, matching the Lakers' total, but Maple Lake's aggression on the basepaths was too much for Hamel to handle. The Lakers stole 10 bases, including a steal of home in the 2nd inning.
+                        LF Ian Schock went 3 for 6 in his Hawks debut.<br><br>
+
+                        <strong>Wednesday, 6/4 at Maple Plain Diamond Devils</strong><br><br>
+                        Hamel traveled west on Highway 12 on a Wednesday night for another North Star League battle at Don Timpe Field. The Hawks came out hot, leading 5-0 going into the bottom of the 3rd. However, an error with 2 outs lead to a 2-run home run, and Maple Plain added 2 more in the 6th inning and 3 in the 8th to take a 7-5 lead.
+                        <br><br>Hamel wasn't done though, as Alex Wattermann led off the top of the 9th reaching on a dropped third strike. Brady Zackrison stepped up to the plate donning a new natural-finish hard maple bat. He sent a 1-0 fastball to Long Lake, flipping his bat at the opposing dugout in the process, and the game was tied at 7. 
+                        Relief pitcher Vann Olson shut down the Diamond Devils in the bottom of the 9th, and the game was suspended due to darkness. The game will resume in the top of the 10th inning on July 11 with the 2nd matchup to follow immediately after.
+                        <br><br>Starting pitcher, Alex Wattermann, went 6 strong innings (9 Ks, 2 ERs)<br><br>
+                        <strong>Friday, 6/6 vs. Montrose/Waverly Stingers</strong><br><br>
+                        Jake Vanyo was back at it again Friday night, but this time was different. With family in the stands, Vanyo gave each pitch a little extra zip. Vanyo pitched an 8-inning, 1 ER, 7K gem to lead the Hawks.
+                        <br><br>The Stingers took an early 2-0 lead on a couple of errors, but the Hawks answered back in the bottom of the 2nd. Zackrison lead off with a walk and eventually scored on a groundout by catcher, Harrison Boughton.
+                        Then, 3B Jack Puncochar hit a ball further than he ever had before and scored on a Levi Miller single to tie it up at 2. Outfielders Dominic Adkins and Ian Schock each added a single to increase the lead to 4-2.
+                        The Stingers stuck around until the bottom of the 7th inning when Hamel added 4 more runs thanks to timely hitting and a huge double from Harrison Boughton.
+                        <br><br>
+                        Dan Morrill closed the door in the 9th leading to a 8-3 Hamel victory. Humble player of the game, Jake Vanyo, credited his defense for his performance.<br><br>
+                        <strong>Sunday, 6/8 at Buffalo Bulldogs</strong><br><br>
+                        Hamel loses 10-0 in Buffalo.<br><br>
+                        <strong>Next up:</strong><br>
+                        Wednesday, 6/11 at Howard Lake<br>
+                        Friday, 6/13 vs. Hutchinson<br>
+                        Sunday, 6/15 at Dassel-Cokato
+                    </p>
+                    <button class="continue-reading">Continue Reading</button>
+                </article>
+
                 <article class="news-story" data-slug="hawks-win-season-opener">
                     <h1>Hamel Hawks win 2025 season opener!</h1>
                     <img src="/resources/images/willmar_5_31_2025.jfif" alt="Hamel Hawks win 2025 season opener" class="story-image">
@@ -276,7 +325,7 @@
                 const headlineLinks = document.querySelectorAll('.headline-link');
                 const headerHeight = document.querySelector('.header').offsetHeight || 115; // Default to 60px if header not found
                 const isMobile = () => window.innerWidth <= 800; // Matches CSS breakpoint
-                const TOP_ARTICLE_SLUG = 'hawks-win-season-opener';
+                const TOP_ARTICLE_SLUG = 'hawks-weekly-recap-06-01-06-08';
 
                 function setActiveHeadline(slug) {
                     headlineLinks.forEach(link => {
