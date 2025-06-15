@@ -71,6 +71,12 @@
                 <h2>Recent Headlines</h2>
                 <ul class="headlines-list">
                     <li>
+                        <a href="/news/hawks-weekly-recap-06-09-06-15" class="headline-link" data-slug="hawks-weekly-recap-06-09-06-15">
+                            <img src="resources/images/vann_olson_pitching.jpeg" alt="Vann Olson pitching for Hamel Hawks" class="headline-thumb">
+                            Hamel Hawks Weekly Recap 6/9 - 6/15
+                        </a>
+                    </li>
+                    <li>
                         <a href="/news/hawks-weekly-recap-06-01-06-08" class="headline-link" data-slug="hawks-weekly-recap-06-01-06-08">
                             <img src="resources/images/Weekly Recap 6.1 - 6.8 graphic.png" alt="Hamel Hawks Weekly Recap 6/1 - 6/8" class="headline-thumb">
                             Hamel Hawks Weekly Recap 6/1 - 6/8
@@ -110,6 +116,40 @@
 
             <!-- Main Content: Stories -->
             <main class="news-main">
+                <article class="news-story" data-slug="hawks-weekly-recap-06-09-06-15">
+                    <h1>Hamel Hawks Weekly Recap 6/9 - 6/15</h1>
+                    <img src="resources/images/vann_olson_pitching.jpeg" alt="Vann Olson pitching for Hamel Hawks" class="story-image">
+                    <div class="story-meta">
+                        <span class="author">By Hamel Hawks</span> | <span class="date">June 15, 2025</span>
+                    </div>
+                    <p class="story-preview">
+                        Hamel finishes the week 1-1 after a rainout Friday night. Their first league matchup with Hutchinson will have to wait, reschedule TBD.<br><br>
+                        <strong style="text-decoration:underline;">Record</strong><br>
+                        Overall: 3-3<br>
+                        Class B North Star League: 0-1<br>
+                        Overall North Star League: 2-3<br>
+                    </p>
+                    <p class="story-full" style="display: none;">
+                        <strong>Wednesday, 6/11 at Howard Lake Orphans</strong><br><br>
+
+                        Ian Schock pitched 5 innings allowing only 2 hits, 1 ER and 8 Ks to put Hamel in position to win on the road.   
+
+                        The Hawks put up 6 runs in the top of the 3rd on 3 walks, 2 HBPs, and a couple hits. From there, good defense (0 errors) and a solid relief appearance from Vann Olson (3 IP, 6 Ks) built a big enough cushion preventing a late Orphan-surge from mattering.<br><br>
+
+                        <strong>Friday, 6/13 vs. Hutchinson Huskies</strong><br><br>
+                        Friday night's game was postponed due to rain. Makeup TBD.<br><br>
+                        <strong>Sunday, 6/15 at Dassel-Cokato Saints</strong><br><br>
+                        One big inning for host Dassel-Cokato was the difference on Sunday. The Saints put up 5 runs in the bottom of the 6th, eventually winning the game 7-2. 
+                        <br><br>Sam Hagen debuted on the mound for Hamel, posting a respectable 6 innings, 2 ERs, and 5 Ks. Highlights at the plate for Hamel includes SS Alex Wattermann 2 for 3 (1 RBI, 1 BB) and 2B Jack Lewin 2 for 2 in his first start since returning to the team. The opposing starting pitcher, Jordan Flick, worked an efficient outing, finishing with 7 IP, 5 H and 0 ER on only 76 pitches.
+                        <br><br>
+                        <strong>Next up:</strong><br>
+                        Wednesday, 6/18 at Rockford 7pm<br>
+                        Friday, 6/20 vs. Litchfield 7:30pm<br>
+                        Sunday, 6/22 at Loretto 1pm
+                    </p>
+                    <button class="continue-reading">Continue Reading</button>
+                </article>
+
                 <article class="news-story" data-slug="hawks-weekly-recap-06-01-06-08">
                     <h1>Hamel Hawks Weekly Recap 6/1 - 6/8</h1>
                     <img src="resources/images/Weekly Recap 6.1 - 6.8 graphic.png" alt="Hamel Hawks Weekly Recap 6/1 - 6/8" class="story-image">
@@ -325,7 +365,7 @@
                 const headlineLinks = document.querySelectorAll('.headline-link');
                 const headerHeight = document.querySelector('.header').offsetHeight || 115; // Default to 60px if header not found
                 const isMobile = () => window.innerWidth <= 800; // Matches CSS breakpoint
-                const TOP_ARTICLE_SLUG = 'hawks-weekly-recap-06-01-06-08';
+                const TOP_ARTICLE_SLUG = 'hawks-weekly-recap-06-09-06-15';
 
                 function setActiveHeadline(slug) {
                     headlineLinks.forEach(link => {
