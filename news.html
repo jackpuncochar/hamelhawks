@@ -71,6 +71,12 @@
                 <h2>Recent Headlines</h2>
                 <ul class="headlines-list">
                     <li>
+                        <a href="/news/hawks-players-named-all-stars" class="headline-link" data-slug="hawks-players-named-all-stars">
+                            <img src="resources/images/alex_wattermann_fielding.jpeg" alt="SS Alex Wattermann fielding" class="headline-thumb">
+                            Zackrison and Wattermann Named North Star League All-Stars
+                        </a>
+                    </li>
+                    <li>
                         <a href="/news/hawks-weekly-recap-06-09-06-15" class="headline-link" data-slug="hawks-weekly-recap-06-09-06-15">
                             <img src="resources/images/vann_olson_pitching.jpeg" alt="Vann Olson pitching for Hamel Hawks" class="headline-thumb">
                             Hamel Hawks Weekly Recap 6/9 - 6/15
@@ -116,6 +122,34 @@
 
             <!-- Main Content: Stories -->
             <main class="news-main">
+                <article class="news-story" data-slug="hawks-players-named-all-stars">
+                    <h1>Zackrison and Wattermann Named North Star League All-Stars</h1>
+                    <img src="/resources/images/alex_wattermann_fielding.jpeg" alt="SS Alex Wattermann fielding" class="story-image">
+                    <div class="story-meta">
+                        <span class="author">By Hamel Hawks</span> | <span class="date">June 19, 2025</span>
+                    </div>
+                    <p class="story-preview">
+                        OF Brady Zackrison and SS/P Alex Wattermann were announced as Hamel's representatives for the 2025 North Star League All-Star Game on June 28 in Dassel.
+                    </p>
+                    <p class="story-full" style="display: none;">
+                        Zackrison is off to a hot start for the Hawks, slashing .414/.528/.690 with 1 HR and 5 doubles to go along with a 1.000 fielding percentage.<br><br>
+                        
+                        Wattermann has a .276 batting average and leads the Hawks in exit velocity including this line drive captured by our new Trackman system:<br><br>
+
+                        <video width="100%" height="auto" controls>
+                            <source src="/resources/images/Wattermann RBI single.mp4" type="video/mp4">
+                        </video><br><br>
+
+                        <img src="/resources/images/wattermann_trackman.jpg" alt="Wattermann RBI single Trackman" class="story-image"><br><br>
+                        
+                        He also holds a 3.00 ERA with 9 Ks in 6 innings on the mound, and a .944 fielding percentage.<br><br>
+
+                        Both players have proven to be solid offseason acquisitions by GM Greg DeVos.<br><br>
+                        They will join the North Star League All-Stars and take on the CRVL All-Stars on June 28 at Saints Field in Dassel at 7pm. 
+                    </p>
+                    <button class="continue-reading">Continue Reading</button>
+                </article>
+
                 <article class="news-story" data-slug="hawks-weekly-recap-06-09-06-15">
                     <h1>Hamel Hawks Weekly Recap 6/9 - 6/15</h1>
                     <img src="resources/images/vann_olson_pitching.jpeg" alt="Vann Olson pitching for Hamel Hawks" class="story-image">
@@ -365,7 +399,7 @@
                 const headlineLinks = document.querySelectorAll('.headline-link');
                 const headerHeight = document.querySelector('.header').offsetHeight || 115; // Default to 60px if header not found
                 const isMobile = () => window.innerWidth <= 800; // Matches CSS breakpoint
-                const TOP_ARTICLE_SLUG = 'hawks-weekly-recap-06-09-06-15';
+                const TOP_ARTICLE_SLUG = 'hawks-players-named-all-stars';
 
                 function setActiveHeadline(slug) {
                     headlineLinks.forEach(link => {
