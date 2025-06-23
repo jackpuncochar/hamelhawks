@@ -71,6 +71,12 @@
                 <h2>Recent Headlines</h2>
                 <ul class="headlines-list">
                     <li>
+                        <a href="/news/hawks-weekly-recap-06-16-06-22" class="headline-link" data-slug="hawks-weekly-recap-06-16-06-22">
+                            <img src="resources/images/Weekly Recap 6.16 - 6.22 graphic.png" alt="Hamel Hawks Weekly Recap 6/16 - 6/22" class="headline-thumb">
+                            Hamel Hawks Weekly Recap 6/16 - 6/22
+                        </a>
+                    </li>
+                    <li>
                         <a href="/news/hawks-players-named-all-stars" class="headline-link" data-slug="hawks-players-named-all-stars">
                             <img src="resources/images/alex_wattermann_fielding.jpeg" alt="SS Alex Wattermann fielding - photo credit Robert LaPlante" class="headline-thumb">
                             Three Hawks' Players Named North Star League All-Stars
@@ -122,6 +128,50 @@
 
             <!-- Main Content: Stories -->
             <main class="news-main">
+                <article class="news-story" data-slug="hawks-weekly-recap-06-16-06-22">
+                    <h1>Hamel Hawks Weekly Recap 6/16 - 6/22</h1>
+                    <img src="resources/images/Weekly Recap 6.16 - 6.22 graphic.png" alt="Hamel Hawks Weekly Recap 6/16 - 6/22" class="story-image">
+                    <div class="story-meta">
+                        <span class="author">By Hamel Hawks</span> | <span class="date">June 23, 2025</span>
+                    </div>
+                    <p class="story-preview">
+                        Hamel went 1-2 this week, including a dominant win over Rockford, and a tough Class B loss to Loretto.<br><br>
+                        <strong style="text-decoration:underline;">Record</strong><br>
+                        Overall: 4-5<br>
+                        Class B North Star League: 0-2<br>
+                        Overall North Star League: 3-5<br>
+                    </p>
+                    <p class="story-full" style="display: none;">
+                        <strong>Wednesday, 6/18 at Rockford Crows</strong><br><br>
+
+                        Starting pitcher Jake Vanyo throws a complete game shutout (8 IP, 8 H, 8 Ks, 1 BB) to lead the Hawks to a mercy rule victory 11-0. A few calls were made, and the North Star League had no other choice but to add Vanyo to the All-Star Game roster.  
+
+                        Hamel bats stayed hot, racking up 17 hits including a 4/5 night for RF Brady Zackrison and multi-hit games from C Harrison Boughton, LF Andrew Chlebeck, 2B Jack Lewin, and 3B Jack Puncochar.<br><br>
+                        
+                        <strong>Friday, 6/20 vs. Litchfield Blues</strong><br><br>
+                        Another great night at the plate for Hamel was marred by several defensive miscues, and the visiting Litchfield Blues took the W in 10 innings, 12-9.<br><br>
+                        
+                        Hamel jumped out to a 3-0 lead after scoring in 3 of the first 4 innings. Litchfield took a 4-3 lead after a poor defensive top of the 5th inning. The Hawks showed some life down 5-3 in the bottom of the 7th; Alex Wattermann tied it up with a 2 RBI single, and 3B Jack Puncochar put the Hawks ahead with an RBI single. Then, Litchfield tied it up in the 8th, and the game went to extra innings. The top of the 10th was another inning-to-forget for the Hawks defense, allowing 6 runs. The Hamel offense went down swinging in the final frame, including this absolute blast off the wall from Jack Lewin.<br><br>
+                        <video width="100%" height="auto" controls>
+                            <source src="/resources/images/jack_lewin_trackman_video.mp4" type="video/mp4">
+                        </video><br><br>
+
+                        <img src="/resources/images/jack_lewin_trackman.jpg" alt="Jack Lewin double off fence" class="story-image"><br><br>
+
+                        Other Hamel offensive highlights included Jack Puncochar (3/5 2 2Bs, 3 Rs, 1 RBI), and Ian Schock (3/5 1 R, 1 RBI, 1 BB) who is now hitting .562.<br><br>
+                        <strong>Sunday, 6/22 at Loretto Larks</strong><br><br>
+                        The Hawks drop to 0-2 in District 6B play losing to Loretto 9-5. Loretto starting pitcher, Miles Nablo got the win, going 7 strong innings while allowing only 1 ER on 4 hits. 
+                        <br><br>For the Hawks, RF Brady Zackrison hit a ball to the deepest part of Arnold Klaers Field for a stand-up triple and scored on a sac-fly. CF Josh Delange came up big in the top of the 9th with a 2-run double, but it wasn't enough for a comeback.
+                        <br><br>
+                        <strong>Next up:</strong><br>
+                        Wednesday, 6/25 at Cokato 7pm<br>
+                        Friday, 6/27 vs. Loretto 7pm<br>
+                        Saturday, 6/28 <a href="https://www.hamelhawks.com/hawks-players-named-all-stars">NSL All-Star Game</a> 7pm (Dassel)<br>
+                        Sunday, 6/29 at Maple Lake 1pm
+                    </p>
+                    <button class="continue-reading">Continue Reading</button>
+                </article>
+
                 <article class="news-story" data-slug="hawks-players-named-all-stars">
                     <h1>Zackrison, Wattermann, and Vanyo Named North Star League All-Stars</h1>
                     <img src="/resources/images/alex_wattermann_fielding.jpeg" alt="SS Alex Wattermann fielding - photo credit Robert LaPlante" class="story-image">
@@ -401,7 +451,7 @@
                 const headlineLinks = document.querySelectorAll('.headline-link');
                 const headerHeight = document.querySelector('.header').offsetHeight || 115; // Default to 60px if header not found
                 const isMobile = () => window.innerWidth <= 800; // Matches CSS breakpoint
-                const TOP_ARTICLE_SLUG = 'hawks-players-named-all-stars';
+                const TOP_ARTICLE_SLUG = 'hawks-weekly-recap-06-16-06-22';
 
                 function setActiveHeadline(slug) {
                     headlineLinks.forEach(link => {
