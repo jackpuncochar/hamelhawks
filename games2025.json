@@ -270,6 +270,21 @@
     "fieldName": "Paul Fortin Memorial Field"
   },
   {
+    "date": "Sat, 7/12",
+    "opponent": "Cokato Kernels ^",
+    "shortName": "Cokato ^",
+    "location": "Away",
+    "time": "7pm",
+    "sponsor": "",
+    "result": "",
+    "logo": "resources/images/cokatokernels.png",
+    "status": "upcoming",
+    "streamLink": "",
+    "boxScoreLink": "",
+    "address": "https://maps.app.goo.gl/6a2euoML7aUns9867",
+    "fieldName": "Veterans Memorial Park"
+  },
+  {
     "date": "Sun, 7/13",
     "opponent": "Buffalo Bulldogs *",
     "shortName": "Buffalo *",
@@ -298,6 +313,21 @@
     "boxScoreLink": "",
     "address": "https://maps.app.goo.gl/Qjntxj7h4tLwCCS46",
     "fieldName": "Veterans Memorial Field"
+  },
+  {
+    "date": "Sat, 7/19",
+    "opponent": "Hutchinson Huskies *",
+    "shortName": "Hutchinson *",
+    "location": "Home",
+    "time": "4pm",
+    "sponsor": "",
+    "result": "",
+    "logo": "resources/images/hutchinsonhuskies.png",
+    "status": "upcoming",
+    "streamLink": "https://www.sporfie.com/event/-OTm3dOrpivB_GehdQLz",
+    "boxScoreLink": "",
+    "address": "https://maps.google.com/?q=Fortin+Field,+Hamel,+MN+55340",
+    "fieldName": "Paul Fortin Memorial Field"
   },
   {
     "date": "Sun, 7/20",
