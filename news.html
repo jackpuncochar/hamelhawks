@@ -71,6 +71,12 @@
                 <h2>Recent Headlines</h2>
                 <ul class="headlines-list">
                     <li>
+                        <a href="/news/hawks-weekly-recap-06-23-06-29" class="headline-link" data-slug="hawks-weekly-recap-06-23-06-29">
+                            <img src="resources/images/paul_fortin_field_grandstand_view.jfif" alt="Paul Fortin Memorial Field grandstand sunset view" class="headline-thumb">
+                            Hamel Hawks Weekly Recap 6/23 - 6/29
+                        </a>
+                    </li>
+                    <li>
                         <a href="/news/hawks-weekly-recap-06-16-06-22" class="headline-link" data-slug="hawks-weekly-recap-06-16-06-22">
                             <img src="resources/images/Weekly Recap 6.16 - 6.22 graphic.png" alt="Hamel Hawks Weekly Recap 6/16 - 6/22" class="headline-thumb">
                             Hamel Hawks Weekly Recap 6/16 - 6/22
@@ -128,6 +134,39 @@
 
             <!-- Main Content: Stories -->
             <main class="news-main">
+                <article class="news-story" data-slug="hawks-weekly-recap-06-23-06-29">
+                    <h1>Hamel Hawks Weekly Recap 6/23 - 6/29</h1>
+                    <img src="resources/images/paul_fortin_field_grandstand_view.jfif" alt="Paul Fortin Memorial Field grandstand sunset view" class="story-image">
+                    <div class="story-meta">
+                        <span class="author">By Hamel Hawks</span> | <span class="date">June 30, 2025</span>
+                    </div>
+                    <p class="story-preview">
+                        Rain outs and a close loss to Loretto move Hamel to 0-3 in the Class B North Star League and 4-6 overall.<br><br>
+                        <strong style="text-decoration:underline;">Record</strong><br>
+                        Overall: 4-6<br>
+                        Class B North Star League: 0-3<br>
+                        Overall North Star League: 3-6<br>
+                    </p>
+                    <p class="story-full" style="display: none;">
+                        <strong>Wednesday, 6/25 at Cokato Kernels</strong><br><br>
+                        Rained out, makeup TBD<br><br>
+                        
+                        <strong>Friday, 6/27 vs. Loretto Larks</strong><br><br>
+                        A strong Friday night crowd was on hand to witness a great battle between reborn Highway 55 rivals Hamel and Loretto. Hamel was looking for revenge after losing to Loretto on the road 5 days earlier. They jumped out to a 3-0 lead in the 1st inning after 2 hard-hit singles by NSL all-stars Alex Wattermann and Brady Zackrison, and a sac-fly from catcher Harrison Boughton.
+                        <br><br>Loretto clawed back, putting up 1 run in the 4th and 5th to make it 3-2. They tied it on a bases loaded walk in the 8th and took the lead on a double from Joshua Koskie. The Hawks made it interesting in the bottom of the 9th. A leadoff bunt single from catcher Harrison Boughton and a Puncochar walk chased Loretto starting pitcher Andrew Kemper after 8 solid innings. 
+                        Loretto reliever Joshua Koskie walked the next batter to make it bases loaded, no outs. However, he struck out the next 3 batters to save the game for the Larks.
+                        <br><br>Hamel starting pitcher Jake Vanyo put up 7 strong innings, 1 ER, and 10 Ks.<br><br>
+
+                        <strong>Sunday, 6/29 at Maple Lake Lakers</strong><br><br>
+                        Rained out, rescheduled for Sunday, 7/6 4:30pm<br><br>
+                        <strong>Next up:</strong><br>
+                        Tuesday, 7/1 vs. Hudson 7pm<br>
+                        Wednesday, 7/2 at St. Anthony 7pm<br>
+                        Sunday, 7/6 at Maple Lake 4:30pm
+                    </p>
+                    <button class="continue-reading">Continue Reading</button>
+                </article>
+
                 <article class="news-story" data-slug="hawks-weekly-recap-06-16-06-22">
                     <h1>Hamel Hawks Weekly Recap 6/16 - 6/22</h1>
                     <img src="resources/images/Weekly Recap 6.16 - 6.22 graphic.png" alt="Hamel Hawks Weekly Recap 6/16 - 6/22" class="story-image">
@@ -451,7 +490,7 @@
                 const headlineLinks = document.querySelectorAll('.headline-link');
                 const headerHeight = document.querySelector('.header').offsetHeight || 115; // Default to 60px if header not found
                 const isMobile = () => window.innerWidth <= 800; // Matches CSS breakpoint
-                const TOP_ARTICLE_SLUG = 'hawks-weekly-recap-06-16-06-22';
+                const TOP_ARTICLE_SLUG = 'hawks-weekly-recap-06-23-06-29';
 
                 function setActiveHeadline(slug) {
                     headlineLinks.forEach(link => {
