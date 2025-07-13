@@ -1,4 +1,4 @@
-Number,GP,PA,AB,H,1B,2B,3B,HR,RBI,R,BB,SO,HBP,SB,CS,IP,GP.1,GS,BF,#P,W,L,H.1,ER,BB.1,SO.1,HBP.1,TC,A,PO,E,DP,TP,Name
+Number,batting_GP,PA,AB,batting_H,1B,2B,3B,HR,RBI,R,batting_BB,batting_SO,batting_HBP,SB,CS,IP,pitching_GP,GS,BF,#P,W,L,pitching_H,ER,pitching_BB,pitching_SO,pitching_HBP,TC,A,PO,E,DP,TP,Name
 0,2,5,4,3,2,1,0,0,3,1,0,0,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,6,2,3,1,1,0,Ian Farley
 5,12,51,44,11,7,3,0,1,2,7,4,13,3,1,0,2.0,1,0,9,33,0,0,2,0,1,3,0,41,21,18,2,5,0,Jack Lewin
 7,12,60,50,11,9,1,1,0,8,8,8,15,0,7,1,0.0,0,0,0,0,0,0,0,0,0,0,0,21,0,20,1,0,0,Dominic Adkins
