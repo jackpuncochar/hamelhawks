@@ -102,6 +102,8 @@
                             <th>HR</th>
                             <th>BB</th>
                             <th>SO</th>
+                            <th>R</th>
+                            <th>SB</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
@@ -167,13 +169,13 @@
 
         <script>
             const tableColumns = {
-                batting: ['Number', 'Name', 'GP', 'PA', 'AB', 'H', 'batting_avg', 'OBP', 'SLG', 'OPS', '2B', '3B', 'HR', 'SO', 'BB'],
+                batting: ['Number', 'Name', 'GP', 'PA', 'AB', 'H', 'batting_avg', 'OBP', 'SLG', 'OPS', '2B', '3B', 'HR', 'SO', 'BB', 'R', 'SB'],
                 fielding: ['Number', 'Name', 'fielding_avg', 'TC', 'A', 'PO', 'E'],
                 pitching: ['Number', 'Name', 'ERA', 'IP', 'GP.1', 'GS', 'W', 'L', 'H.1', 'ER', 'BB.1', 'SO.1', 'WHIP', 'BAA']
             };
 
             const tableHeaders = {
-                batting: ['#', '', 'GP', 'PA', 'AB', 'H', 'BA', 'OBP', 'SLG', 'OPS', '2B', '3B', 'HR', 'SO', 'BB'],
+                batting: ['#', '', 'GP', 'PA', 'AB', 'H', 'BA', 'OBP', 'SLG', 'OPS', '2B', '3B', 'HR', 'SO', 'BB', 'R', 'SB'],
                 fielding: ['#', '', 'Fielding %', 'TC', 'A', 'PO', 'E'],
                 pitching: ['#', '', 'ERA', 'IP', 'GP', 'GS', 'W', 'L', 'H', 'ER', 'BB', 'SO', 'WHIP', 'BAA']
             };
