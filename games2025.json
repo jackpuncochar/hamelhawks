@@ -381,48 +381,12 @@
     "location": "Away",
     "time": "1pm",
     "sponsor": "",
-    "result": "District 6B Play-in",
+    "result": "L 0-3",
     "logo": "",
-    "status": "upcoming",
+    "status": "complete",
     "streamLink": "",
     "boxScoreLink": "",
     "address": "https://maps.app.goo.gl/gKYz1kyobJ9kfHAk9",
     "fieldName": "Watkins Clippers Baseball Field"
-  },
-  {
-    "date": "Sat, 8/2",
-    "opponent": "District Playoffs",
-    "location": "Watkins",
-    "time": "",
-    "sponsor": "",
-    "result": "Weekend 1",
-    "logo": "",
-    "status": "upcoming",
-    "streamLink": "",
-    "boxScoreLink": "",
-    "address": "https://maps.app.goo.gl/gKYz1kyobJ9kfHAk9",
-    "fieldName": "Watkins Clippers Baseball Field"
-  },
-  {
-    "date": "Sat, 8/9",
-    "opponent": "District Playoffs",
-    "location": "Watkins",
-    "time": "",
-    "sponsor": "",
-    "result": "Weekend 2",
-    "logo": "",
-    "status": "upcoming",
-    "streamLink": "",
-    "boxScoreLink": "",
-    "address": "https://maps.app.goo.gl/gKYz1kyobJ9kfHAk9",
-    "fieldName": "Watkins Clippers Baseball Field"
-  },
-  {
-    "date": "Fri, 8/15",
-    "opponent": "State Tournament",
-    "location": "Brownton/Hutchinson/Gaylord",
-    "time": "",
-    "sponsor": "",
-    "result": "8/15 - 9/1"
   }
 ]
