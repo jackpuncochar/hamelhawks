@@ -3,6 +3,7 @@ import { API_BASE_URL } from './config.js';
 import { initAutocomplete } from './autocomplete.js';
 
 const stripe = Stripe('pk_live_51R9ntrJZJy0o2UfjZhZT1KKyUY8vNQ1yGNHN52i4Qh0gErkzjtLN32qIfZtSi3L1owoirPmeC01PAEquWpUfas2o00Q2FaCEc3');
+// const stripe = Stripe('pk_test_51R9ntrJZJy0o2UfjrAQ196Owg4xFmvpoIewsSmGlEKPkp6GbNR8ljj5d2z3suvn1CWZozpkC8WIbt2HsX5WtEtTh00XTjDVrD6');
 const elements = stripe.elements();
 // Create card Elements
 const cardNumber = elements.create('cardNumber');
@@ -21,12 +22,15 @@ const sameAsShippingCheckbox = document.getElementById('same-as-shipping');
 const shippingFields = ['shipping-name', 'shipping-street', 'shipping-city', 'shipping-state', 'shipping-zip', 'shipping-country'];
 const billingFieldIds = ['billing-name', 'billing-street', 'billing-city', 'billing-state', 'billing-zip', 'billing-country'];
 
-const USE_GOOGLE_API = true;
-let shippingAutocomplete, billingAutocomplete;
+const USE_GOOGLE_API = false; // ← single toggle
 
-// Global state objects
-const shippingState = { suggestionBox: null, isVisible: true, pacContainer: null };
-const billingState = { suggestionBox: null, isVisible: true, pacContainer: null };
+let googlePlacesReady = false;
+
+let shippingAutocomplete = null;
+let billingAutocomplete = null;
+
+const shippingState = { suggestionBox: null, isVisible: false, pacContainer: null };
+const billingState = { suggestionBox: null, isVisible: false, pacContainer: null };
 
 const validStates = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY'];
 
@@ -87,7 +91,6 @@ function validateAddress(prefix, address) {
     return null;
 }
 
-
 async function validateWithUSPS(address) {
     const response = await fetch(`${API_BASE_URL}/api/usps-verify`, {
         method: 'POST',
@@ -106,6 +109,22 @@ async function validateWithUSPS(address) {
         throw new Error('Invalid address. Please ensure all fields are accurate.');
     }
     return true;
+}
+
+function getOrCreateAttemptKey() {
+    // Store in sessionStorage so it's stable across retries while the tab is open.
+    const KEY_NAME = 'checkout_attempt_key';
+    let k = sessionStorage.getItem(KEY_NAME);
+    if (!k) {
+        // use crypto.randomUUID if available, otherwise fallback
+        k = (typeof crypto !== 'undefined' && crypto.randomUUID) ? crypto.randomUUID() : 'id-' + Date.now() + '-' + Math.random().toString(36).slice(2);
+        sessionStorage.setItem(KEY_NAME, k);
+    }
+    return k;
+}
+
+function clearAttemptKey() {
+    sessionStorage.removeItem('checkout_attempt_key');
 }
 
 function debounce(func, wait) {
@@ -141,6 +160,15 @@ function clearErrors() {
     document.querySelectorAll('.invalid').forEach(el => el.classList.remove('invalid'));
 }
 
+function showSuccess(successId, message) {
+    const el = document.getElementById(successId);
+    if (el) {
+        el.textContent = message;
+        el.style.color = '#28a745'; // green
+        el.style.display = 'block';
+    }
+}
+
 function resetButton() {
     submitButton.disabled = false;
     submitButton.textContent = 'Pay now';
@@ -166,8 +194,66 @@ function updateSubmitButton() {
     );
 
     submitButton.disabled = !allConditionsMet;
-    // console.log('Submit button checks:', checks);
-    // console.log("submit button disabled?", submitButton.disabled);
+}
+
+function loadGooglePlacesOnce() {
+    if (!USE_GOOGLE_API) return Promise.resolve(false);
+    if (googlePlacesReady) return Promise.resolve(true);
+
+    return new Promise((resolve, reject) => {
+        if (window.google?.maps?.places) {
+            googlePlacesReady = true;
+            return resolve(true);
+        }
+
+        if (document.querySelector('script[src*="maps.googleapis.com"]')) {
+            const check = setInterval(() => {
+                if (window.google?.maps?.places) {
+                    clearInterval(check);
+                    googlePlacesReady = true;
+                    resolve(true);
+                }
+            }, 100);
+            return;
+        }
+
+        const script = document.createElement('script');
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_API_KEY}&libraries=places&v=weekly`;
+        script.async = true;
+
+        script.onload = async () => {
+            await google.maps.importLibrary('places');
+            googlePlacesReady = true;
+            resolve(true);
+        };
+
+        script.onerror = () => reject(new Error('Google Places failed to load'));
+        document.head.appendChild(script);
+    });
+}
+
+function initShippingAutocomplete() {
+    if (!USE_GOOGLE_API || shippingAutocomplete || !googlePlacesReady) return;
+    shippingAutocomplete = initAutocomplete(
+        'shipping-street',
+        shippingFields,
+        shippingState
+    );
+}
+
+function initBillingAutocomplete() {
+    if (!USE_GOOGLE_API || billingAutocomplete || !googlePlacesReady) return;
+    billingAutocomplete = initAutocomplete(
+        'billing-street',
+        billingFieldIds,
+        billingState
+    );
+}
+
+function destroyBillingAutocomplete() {
+    if (!billingAutocomplete) return;
+    google.maps.event.clearInstanceListeners(billingAutocomplete);
+    billingAutocomplete = null;
 }
 
 async function initializeCheckout() {
@@ -348,7 +434,6 @@ async function checkout(event) {
     event.preventDefault();
     submitButton.disabled = true;
     submitButton.textContent = 'Processing...';
-    // clearErrors();
 
     const shippingAddress = {
         name: document.getElementById('shipping-name').value,
@@ -431,10 +516,11 @@ async function checkout(event) {
         const total = subtotal + effectiveShippingCost;
         const amount = Math.round(total * 100);
 
+        const idempotencyKey = getOrCreateAttemptKey();
         const paymentResponse = await fetch(`${API_BASE_URL}/api/payment-intent`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ amount })
+            body: JSON.stringify({ amount, idempotency_key: idempotencyKey })
         });
         const { clientSecret, paymentIntentId } = await paymentResponse.json();
 
@@ -461,10 +547,16 @@ async function checkout(event) {
             return;
         }
 
-        if (result.paymentIntent.status !== 'requires_capture') {
-            showError('card-error', 'Payment authorization failed. Please try again.');
+        // **Check for successful payment**
+        if (result.paymentIntent.status === 'succeeded' || result.paymentIntent.status === 'requires_capture') {
+            // Payment went through
+            clearErrors(); // hide error div
+            // Proceed with post-payment logic
+            showSuccess('general-error', 'Payment successful! Redirecting...');
+        } else {
+            // Any other status can be treated as a real error
+            showError('card-error', `Payment failed with status: ${result.paymentIntent.status}`);
             resetButton();
-            return;
         }
 
         const orderPayload = {
@@ -474,7 +566,8 @@ async function checkout(event) {
             email: formData.email,
             total,
             deliveryRange: shippingData.deliveryRange,
-            paymentIntentId // Include for capture/cancel in order.js
+            paymentIntentId, // Include for capture/cancel in order.js
+            idempotency_key: idempotencyKey
         };
         const orderResponse = await fetch(`${API_BASE_URL}/api/order`, {
             method: 'POST',
@@ -496,6 +589,7 @@ async function checkout(event) {
         localStorage.setItem('shippingAddress', shippingAddressFormatted);
         localStorage.setItem('deliveryRange', shippingData.deliveryRange);
         localStorage.removeItem('cart');
+        clearAttemptKey(); // Clear idempotency key on success
         window.location.href = 'confirmation.html';
     } catch (error) {
         showError('general-error', 'An unexpected error occurred. Please try again.');
@@ -594,12 +688,10 @@ function setupFieldListeners() {
                 input.value = '';
             }
         });
-        if (!e.target.checked && USE_GOOGLE_API && window.google?.maps?.places) {
-            if (billingAutocomplete) {
-                google.maps.event.clearInstanceListeners(billingAutocomplete);
-                billingAutocomplete = null;
-            }
-            billingAutocomplete = initAutocomplete('billing-street', billingFieldIds, billingState);
+        if (USE_GOOGLE_API && googlePlacesReady) {
+            e.target.checked
+                ? destroyBillingAutocomplete()
+                : initBillingAutocomplete();
         }
         updateSubmitButton();
     });
@@ -621,45 +713,24 @@ function setupFormFieldAnimations() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     initializeCheckout();
     setupFieldListeners();
     setupFormFieldAnimations();
-    if (USE_GOOGLE_API) {
-        const loadGoogleAPI = (retries = 3, delay = 1000) => {
-            if (document.querySelector('script[src*="maps.googleapis.com"]')) {
-                if (window.google?.maps?.places) {
-                    shippingAutocomplete = initAutocomplete('shipping-street', shippingFields, {});
-                    if (!sameAsShippingCheckbox.checked) {
-                        billingAutocomplete = initAutocomplete('billing-street', billingFieldIds, {});
-                    }
-                }
-                return;
-            }
-            const script = document.createElement('script');
-            script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCO3Tw7s4q05CNB1-TWF6kzooFnNDGDj1g&libraries=places&v=weekly`;
-            script.async = true;
-            script.onload = async () => {
-                await google.maps.importLibrary('places');
-                if (window.google?.maps?.places) {
-                    shippingAutocomplete = initAutocomplete('shipping-street', shippingFields, {});
-                    if (!sameAsShippingCheckbox.checked) {
-                        billingAutocomplete = initAutocomplete('billing-street', billingFieldIds, {});
-                    }
-                } else if (retries > 0) {
-                    setTimeout(() => loadGoogleAPI(retries - 1, delay * 2), delay);
-                } else {
-                    showError('general-error', 'Address autocomplete unavailable. Using manual entry.');
-                }
-            };
-            script.onerror = () => retries > 0 ? setTimeout(() => loadGoogleAPI(retries - 1, delay * 2), delay) : showError('general-error', 'Failed to load address autocomplete.');
-            document.head.appendChild(script);
-        };
-        loadGoogleAPI();
-    } else {
-        shippingAutocomplete = initAutocomplete('shipping-street', shippingFields, {});
+    
+    if (!USE_GOOGLE_API) return;
+
+    try {
+        await loadGooglePlacesOnce();
+        initShippingAutocomplete();
+
         if (!sameAsShippingCheckbox.checked) {
-            billingAutocomplete = initAutocomplete('billing-street', billingFieldIds, {});
+            initBillingAutocomplete();
         }
+    } catch (err) {
+        showError(
+            'general-error',
+            'Address autocomplete unavailable. Manual entry enabled.'
+        );
     }
 });
