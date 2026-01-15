@@ -14,17 +14,17 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">    
 
-        <title>2025 Schedule | Hamel Hawks</title>
-        <meta name="description" content="View the Hamel Hawks baseball 2025 schedule. Check out dates, times, and locations for all upcoming games.">
+        <title>2026 Schedule | Hamel Hawks</title>
+        <meta name="description" content="View the Hamel Hawks baseball 2026 schedule. Check out dates, times, and locations for all upcoming games.">
         <link rel="canonical" href="https://www.hamelhawks.com/schedule">
-        <meta property="og:title" content="2025 Schedule | Hamel Hawks">
-        <meta property="og:description" content="Check out our schedule for the 2025 season!">
+        <meta property="og:title" content="2026 Schedule | Hamel Hawks">
+        <meta property="og:description" content="Check out our schedule for the 2026 season!">
         <meta property="og:image" content="field view.jpg">
         <meta property="og:url" content="https://www.hamelhawks.com/schedule">
         <meta property="og:type" content="website">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@MNHamelHawks">
-        <meta name="twitter:title" content="2025 Schedule | Hamel Hawks">
+        <meta name="twitter:title" content="2026 Schedule | Hamel Hawks">
         <meta name="twitter:description" content="">
         <meta name="twitter:image" content="field view.jpg">
         <link rel="icon" type="image/png" sizes="16x16" href="h-script-favicon-small.png">
@@ -32,7 +32,7 @@
         <link href="./resources/css/main.css" type="text/css" rel="stylesheet">
         <link rel="preload" href="hawks logo.png" as="image">
         <link rel="preload" href="/resources/images/H background.avif" as="image">
-        <link rel="preload" href="/games2025.json" as="fetch" crossorigin="anonymous">
+        <link rel="preload" href="/games2026.json" as="fetch" crossorigin="anonymous">
     </head>
 
     <body class="bg-container">
@@ -70,7 +70,7 @@
             <div class="h-background"></div>
             <div class="schedule-container top-margin">
                 <div class="schedule-header">
-                    <h2>2025 Hamel Hawks Schedule</h2>
+                    <h2>2026 Hamel Hawks Schedule</h2>
                     <div class="schedule-btn-container">
                         <a 
                             href="webcal://api.team-manager.gc.com/ics-calendar-documents/user/9a625c06-07cc-424b-85a1-33dbdc9bdf22.ics?teamId=ec5c0d40-8178-421a-99e1-e0188930731b&token=42a26ab5235239a530b2fad43ff841a32ea5e143059a5b0b5106b66599b7c17b"
@@ -157,7 +157,7 @@
                 </div>
             </div>
             <div class="footer__copyright">
-                <p>&copy; 2025 Hamel Hawks Baseball.</p>
+                <p>&copy; 2026 Hamel Hawks Baseball.</p>
             </div>
         </footer>
 
@@ -247,7 +247,7 @@
             }
 
             // Fetch game data and populate the table initially
-            fetch('games2025.json')
+            fetch('games2026.json')
                 .then(response => response.json())
                 .then(data => {
                     populateTable(data);
@@ -256,7 +256,7 @@
 
             // Add event listener to handle window resizing
             window.addEventListener('resize', function() {
-                fetch('games2025.json')
+                fetch('games2026.json')
                     .then(response => response.json())
                     .then(data => {
                         populateTable(data); // Re-populate table with the updated names based on screen size
