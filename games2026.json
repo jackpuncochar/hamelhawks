@@ -15,6 +15,21 @@
     "fieldName": ""
   },
   {
+    "date": "Tue, 5/19",
+    "opponent": "Prior Lake Jays",
+    "shortName": "Prior Lake",
+    "location": "Home",
+    "time": "",
+    "sponsor": "",
+    "result": "",
+    "logo": "resources/images/priorlakejays.png",
+    "status": "",
+    "streamLink": "",
+    "boxScoreLink": "",
+    "address": "https://maps.google.com/?q=Fortin+Field,+Hamel,+MN+55340",
+    "fieldName": "Paul Fortin Memorial Field"
+  },
+  {
     "date": "Thu, 5/21",
     "opponent": "Andover Aces",
     "shortName": "Andover",
