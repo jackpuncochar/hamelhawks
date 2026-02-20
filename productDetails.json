@@ -275,6 +275,36 @@
                     ]
             }
         ]
+    },
+    {
+        "sync_product_id": "418994159",
+        "variants": [
+            {
+                "color": "Royal Blue/Natural",
+                "description": "Celebrate 100 years of Hamel baseball. Otto Cap 31-069 I 5 Panel Mid Profile Baseball Cap. Flat embroidered logo.",
+                "mockup_images": []
+            }
+        ]
+    },
+    {
+        "sync_product_id": "418994563",
+        "variants": [
+            {
+                "color": "Heather True Royal",
+                "description": "Celebrate 100 years of Hamel baseball. Bella + Canvas 3001 unisex tee. Soft and lightweight, 100% combed and ring-spun cotton (Heather colors contain polyester). Direct-to-garment (DTG) printing.",
+                "mockup_images": []
+            }
+        ]
+    },
+    {
+        "sync_product_id": "418994377",
+        "variants": [
+            {
+                "color": "Team Royal",
+                "description": "Celebrate 100 years of Hamel baseball. Cotton Heritage M2580 unisex premium hoodie (royal). 100% cotton face. 65% ring-spun cotton, 35% polyester. Front pouch pocket. Self-fabric patch on the back. Matching flat drawstrings. This hoodie runs small. For the perfect fit, we recommend ordering one size larger than your usual size. Direct-to-garment (DTG) printing.",
+                "mockup_images": []
+            }
+        ]
     }
     ]
   }
