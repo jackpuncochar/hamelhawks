@@ -169,7 +169,7 @@
     "opponent": "Delano Athletics",
     "shortName": "Delano",
     "location": "Away",
-    "time": "",
+    "time": "7:30pm",
     "sponsor": "",
     "result": "",
     "logo": "resources/images/delanoathletics.png",
@@ -313,21 +313,6 @@
     "boxScoreLink": "",
     "address": "https://maps.google.com/?q=Fortin+Field,+Hamel,+MN+55340",
     "fieldName": "Paul Fortin Memorial Field"
-  },
-  {
-    "date": "Fri, 7/24",
-    "opponent": "Dundas Dukes",
-    "shortName": "Dundas",
-    "location": "Away",
-    "time": "7:30pm",
-    "sponsor": "",
-    "result": "",
-    "logo": "resources/images/dundasdukes.png",
-    "status": "",
-    "streamLink": "",
-    "boxScoreLink": "",
-    "address": "https://maps.app.goo.gl/fupksi9Lbvk9PKN56",
-    "fieldName": "Memorial Park"
   },
   {
     "date": "Sat, 7/25",
