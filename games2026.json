@@ -45,6 +45,21 @@
     "fieldName": "Paul Fortin Memorial Field"
   },
   {
+    "date": "Wed, 5/27",
+    "opponent": "Monticello Polecats",
+    "shortName": "Monticello",
+    "location": "Away",
+    "time": "7pm",
+    "sponsor": "",
+    "result": "",
+    "logo": "resources/images/monticellopolecats.png",
+    "status": "",
+    "streamLink": "",
+    "boxScoreLink": "",
+    "address": "",
+    "fieldName": ""
+  },
+  {
     "date": "Sun, 5/31",
     "opponent": "Montrose/Waverly Stingers ^",
     "shortName": "Montrose/Waverly ^",
@@ -278,6 +293,21 @@
     "sponsor": "",
     "result": "",
     "logo": "resources/images/buffalobulldogs.png",
+    "status": "",
+    "streamLink": "",
+    "boxScoreLink": "",
+    "address": "",
+    "fieldName": ""
+  },
+  {
+    "date": "Wed, 7/15",
+    "opponent": "Dundas Dukes",
+    "shortName": "Dundas",
+    "location": "Away",
+    "time": "7:30pm",
+    "sponsor": "",
+    "result": "",
+    "logo": "resources/images/dundasdukes.png",
     "status": "",
     "streamLink": "",
     "boxScoreLink": "",
