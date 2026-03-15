@@ -31,14 +31,14 @@
         <link rel="icon" type="image/png" sizes="32x32" href="h-script-favicon-large.png">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
         <link href="./resources/css/main.css" type="text/css" rel="stylesheet">
-        <link rel="preload" href="hawks logo.png" as="image">
+        <link rel="preload" href="./resources/images/100 Year Anniversary Logo.png" as="image">
     </head>
       
       <body>
         <!-- Header logo and navigation  -->
         <header class="header">
             <div class="logo_area">
-                <a href="https://www.hamelhawks.com"><img src="hawks logo.png" alt="Hamel Hawks logo"></a>
+                <a href="https://www.hamelhawks.com"><img src="./resources/images/100 Year Anniversary Logo.png" alt="Hamel Hawks logo"></a>
             </div>
             <nav class="navbar">
                 <ul class="nav-menu" id="nav-menu">  
@@ -158,7 +158,7 @@
 
         <!-- Placeholder for no-data message -->
         <div id="no-data-message" class="no-data" style="display: none; text-align: center; margin: 20px;">
-            <p>Check back on Opening Day!! (May 30, 2025)</p>
+            <p>Check back on Opening Day!! (May 17, 2026)</p>
         </div>
 
         <!-- Include PapaParse for CSV parsing -->
@@ -167,237 +167,7 @@
         
         <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 
-        <script>
-            const tableColumns = {
-                batting: ['Number', 'Name', 'GP', 'PA', 'AB', 'H', 'batting_avg', 'OBP', 'SLG', 'OPS', '2B', '3B', 'HR', 'SO', 'BB', 'R', 'SB'],
-                fielding: ['Number', 'Name', 'fielding_avg', 'TC', 'A', 'PO', 'E'],
-                pitching: ['Number', 'Name', 'ERA', 'IP', 'GP.1', 'GS', 'W', 'L', 'H.1', 'ER', 'BB.1', 'SO.1', 'WHIP', 'BAA']
-            };
-
-            const tableHeaders = {
-                batting: ['#', '', 'GP', 'PA', 'AB', 'H', 'BA', 'OBP', 'SLG', 'OPS', '2B', '3B', 'HR', 'SO', 'BB', 'R', 'SB'],
-                fielding: ['#', '', 'Fielding %', 'TC', 'A', 'PO', 'E'],
-                pitching: ['#', '', 'ERA', 'IP', 'GP', 'GS', 'W', 'L', 'H', 'ER', 'BB', 'SO', 'WHIP', 'BAA']
-            };
-
-            const minimumRequirements = {
-                batting: {
-                    PA: 1  // Minimum 1 plate appearance
-                },
-                pitching: {
-                    IP: 0.1  // Minimum .1 innings pitched
-                },
-                fielding: {
-                    TC: 1  // Minimum 1 total chance
-                }
-            };
-
-            // Function to switch between tabs
-            function openTab(evt, tabName) {
-                const selectedYear = document.getElementById('year-select').value;
-                const noDataMessage = document.getElementById('no-data-message');
-                const tabContent = document.getElementsByClassName('tab-content');
-                const tabButtons = document.getElementsByClassName('tab-button');
-        
-                if (selectedYear === '2026') {
-                    // For 2025, keep all tabs hidden and show no-data message
-                    for (let i = 0; i < tabContent.length; i++) {
-                        tabContent[i].style.display = 'none';
-                    }
-                    noDataMessage.style.display = 'block';
-                    // Remove 'active' class from all tab buttons
-                    for (let i = 0; i < tabButtons.length; i++) {
-                        tabButtons[i].className = tabButtons[i].className.replace(' active', '');
-                    }
-                } else {
-                    // For archived years (e.g., 2024), proceed with normal tab behavior
-                    for (let i = 0; i < tabContent.length; i++) {
-                        tabContent[i].style.display = 'none';
-                    }
-                    for (let i = 0; i < tabButtons.length; i++) {
-                        tabButtons[i].className = tabButtons[i].className.replace(' active', '');
-                    }
-                    document.getElementById(tabName).style.display = 'block';
-                    evt.currentTarget.className += ' active';
-                    noDataMessage.style.display = 'none';
-                }
-            }
-
-            // Show default tab on page load
-            document.getElementById("batting").style.display = "block";
-            document.getElementsByClassName("tab-button")[0].classList.add("active");
-
-            // Function to load CSV data and populate the tables
-            function loadStatsForYear() {
-                const selectedYear = document.getElementById('year-select').value;
-                const csvFile = `cleaned_stats_${selectedYear}.csv`;
-                const noDataMessage = document.getElementById('no-data-message');
-                const tabContent = document.getElementsByClassName('tab-content');
-                const tabButtons = document.getElementsByClassName('tab-button');
-        
-                // Destroy and clear existing DataTables
-                ['batting', 'pitching', 'fielding'].forEach(table => {
-                    if ($.fn.DataTable.isDataTable(`#${table}-table`)) {
-                        $(`#${table}-table`).DataTable().destroy();
-                    }
-                    $(`#${table}-table tbody`).empty(); // Clear table body
-                });
-        
-                if (selectedYear === '2026') {
-                    // Hide all tab content and show no-data message
-                    for (let i = 0; i < tabContent.length; i++) {
-                        tabContent[i].style.display = 'none';
-                    }
-                    noDataMessage.style.display = 'block';
-                    // Remove 'active' class from all tab buttons
-                    for (let i = 0; i < tabButtons.length; i++) {
-                        tabButtons[i].className = tabButtons[i].className.replace(' active', '');
-                    }
-                } else {
-                    // Load archived data (e.g., 2024)
-                    noDataMessage.style.display = 'none';
-                    document.getElementById('batting').style.display = 'block'; // Default tab
-                    tabButtons[0].className += ' active';
-        
-                    Papa.parse(csvFile, {
-                        download: true,
-                        header: true,
-                        dynamicTyping: false,
-                        complete: function(results) {
-                            var data = results.data || [];
-                            data = data.filter(row => Object.values(row).some(value => value.trim() !== ''));
-        
-                            var battingData = filterData('batting', data);
-                            var fieldingData = filterData('fielding', data);
-                            var pitchingData = filterData('pitching', data);
-        
-                            populateTable('batting', battingData);
-                            populateTable('fielding', fieldingData);
-                            populateTable('pitching', pitchingData);
-                        },
-                        error: function() {
-                            console.error(`Failed to load ${csvFile}`);
-                        }
-                    });
-                }
-            }
-
-            function filterData(tableType, data) {
-                return data.filter(row => {
-                    const requirements = minimumRequirements[tableType];
-                    for (const key in requirements) {
-                        if (row[key] === undefined || parseFloat(row[key]) < requirements[key]) {
-                            return false;
-                        }
-                    }
-                    return true;
-                });
-            }
-
-            function populateTable(tableType, data) {
-                // Get the column names for the respective table type
-                const tableColumns = getColumnNames(tableType);
-
-                // Separate out the total row
-                const totalRow = data.find(row => row.Name === 'Total');
-
-                // Filter out the total row from the data
-                data = data.filter(row => row.Name !== 'Total');
-                
-                var table = $('#' + tableType + '-table').DataTable({
-                    data: data,
-                    columns: tableColumns, // Get column names from tableColumns
-                    order: [[3, "desc"]], // Sort by the first column by default
-                    searching: false, // disable search
-                    paging: false, // disable shown entries feature
-                    info: false // disable 'showing x of y entries'
-                });
-            
-                // Listen for the draw event to ensure the total row stays at the bottom
-                table.on('draw', function () {
-                    const tbody = $('#' + tableType + '-table tbody');
-                    const totalRowNode = tbody.find('.total-row');
-                    tbody.append(totalRowNode);
-                });
-
-                // If total row exists, add it at the bottom with special formatting
-                if (totalRow) {
-                    // Add the total row to the bottom of the table and apply special formatting
-                    table.row.add(totalRow).draw().node().classList.add('total-row');
-                }
-
-                // Append the total row to the bottom of the table body
-                const tbody = $('#' + tableType + '-table tbody');
-                const totalRowNode = tbody.find('.total-row');
-                tbody.append(totalRowNode);
-
-            }
-
-            // Function to get column names from tableColumns
-            function getColumnNames(tableType) {
-                var columns = {};
-                $('#' + tableType + '-table thead th').each(function(index) {
-                    var thText = $(this).text().trim(); // Trim to remove any leading/trailing spaces
-                    var csvColumnName = mapToCSVColumnName(thText, tableType); // Map to corresponding CSV column name
-                    if (columns[csvColumnName]) {
-                        // If the column name already exists, add an index to make it unique
-                        csvColumnName += '_' + index;
-                    }
-                    columns[csvColumnName] = { title: thText, data: csvColumnName };
-                });
-                return Object.values(columns);
-            }
-    
-            // Function to map <th> text to corresponding CSV column name
-            function mapToCSVColumnName(thText, tableType) {
-                // Mapping logic to map <th> text to corresponding CSV column name
-                if (thText === '#') {
-                    return 'Number';
-                } else if (thText === '') {
-                    return 'Name';
-                } else if (thText === 'BA') {
-                    return 'batting_avg';
-                } else if (thText === 'Fielding %') {
-                    return 'fielding_avg';
-                } else if (thText === 'SO') {
-                    if (tableType === 'batting') {
-                        return 'batting_SO'; // Mapping 'SO' to 'SO' for the batting table
-                    } else if (tableType === 'pitching') {
-                        return 'pitching_SO'; // Mapping 'SO' to 'SO' for the pitching table
-                    }
-                } else if (thText === 'BB') {
-                    if (tableType === 'batting') {
-                        return 'batting_BB'; // Mapping 'BB' to 'BB' for the batting table
-                    } else if (tableType === 'pitching') {
-                        return 'pitching_BB'; // Mapping 'BB' to 'BB' for the pitching table
-                    }
-                } else if (thText === 'GP') {
-                    if (tableType === 'batting') {
-                        return 'batting_GP'; // Mapping 'GP' to 'GP' for the batting table
-                    } else if (tableType === 'pitching') {
-                        return 'pitching_GP'; // Mapping 'GP' to 'GP' for the pitching table
-                    }
-                } else if (thText === 'H') {
-                    if (tableType === 'batting') {
-                        return 'batting_H'; // Mapping 'H' to 'H' for the batting table
-                    } else if (tableType === 'pitching') {
-                        return 'pitching_H'; // Mapping 'H' to 'H' for the pitching table
-                    }
-                } else if (thText === 'HBP') {
-                    if (tableType === 'batting') {
-                        return 'batting_HBP'; // Mapping 'HBP' to 'HBP' for the batting table
-                    } else if (tableType === 'pitching') {
-                        return 'pitching_HBP'; // Mapping 'HBP' to 'HBP' for the pitching table
-                    }
-                }                                           
-                return thText;
-            }
-
-            // Load data and set the default tab
-            $(document).ready(function() {
-                loadStatsForYear();
-            });
-        </script>
+        <script src="stats.js"></script>
 
         <div class='column margin-override'>
             <a href='https://icschillers.com/' target="_blank">
