@@ -345,6 +345,21 @@
     "fieldName": "Paul Fortin Memorial Field"
   },
   {
+    "date": "Fri, 7/24",
+    "opponent": "Watertown Red Devils",
+    "shortName": "Watertown",
+    "location": "Away",
+    "time": "7:30pm",
+    "sponsor": "",
+    "result": "",
+    "logo": "resources/images/watertownreddevils.png",
+    "status": "",
+    "streamLink": "",
+    "boxScoreLink": "",
+    "address": "",
+    "fieldName": ""
+  },
+  {
     "date": "Sat, 7/25",
     "opponent": "St. Martin Martins",
     "shortName": "St. Martin",
