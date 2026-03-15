@@ -16,11 +16,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">    
 
         <title>Jeff Ruhr | Hamel Hawks</title>
-        <link rel="canonical" href="https://www.hamelhawks.com/Jeff Ruhr">
+        <link rel="canonical" href="https://www.hamelhawks.com/jeff_ruhr">
         <meta property="og:title" content="Jeff Ruhr | Hamel Hawks">
         <meta property="og:description" content="Jeff Ruhr stats and information.">
-        <meta property="og:image" content="./hamelphotos/default_player.png">
-        <meta property="og:url" content="https://www.hamelhawks.com/Jeff Ruhr">
+        <meta property="og:image" content="./hamelphotos\jeffruhr-front.jpg">
+        <meta property="og:url" content="https://www.hamelhawks.com/jeff_ruhr">
         <meta property="og:type" content="website">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@MNHamelHawks">
@@ -30,17 +30,18 @@
         <link rel="icon" type="image/png" sizes="16x16" href="h-script-favicon-small.png">
         <link rel="icon" type="image/png" sizes="32x32" href="h-script-favicon-large.png">
         <link href="./resources/css/main.css" type="text/css" rel="stylesheet">
-        <link rel="preload" href="hawks logo.png" as="image">
+        <link rel="preload" href="./resources/images/100 Year Anniversary Logo.png" as="image">
     </head>
 
     <body class="bg-container">
         <a href="https://www.hamelhawks.com/roster" class="back-button">
-            <img src="chevron-left-solid.svg" class="chevron-left">
+            <img src="chevron-left-solid.svg" alt="Back" class="chevron-left">
+            <span class="back-text">Back to Roster</span>
         </a>
         <!-- Header logo and navigation  -->
         <header class="header">
             <div class="logo_area">
-                <a href="https://www.hamelhawks.com"><img src="hawks logo.png" alt="Hamel Hawks logo"></a>
+                <a href="https://www.hamelhawks.com"><img src="./resources/images/100 Year Anniversary Logo.png" alt="Hamel Hawks logo"></a>
             </div>
             <nav class="navbar">
                 <ul class="nav-menu" id="nav-menu">  
@@ -64,19 +65,79 @@
                 <span class="cart-count" id="cart-count">0</span>
             </div>
         </header>
-        
+
         <div class="cart-popup" id="cart-popup"></div>
 
-        <div class="player-header-container">
-            <img src="./hamelphotos/default_player.png" alt="Jeff Ruhr" class="player-headshot">
-            <div class="player-bio">
-                <h2>#6 Jeff Ruhr</h2>
-                <p><strong>Position:</strong> Manager</p>
-                <p><strong>Hometown:</strong> Maple Grove</p>
-                <p><strong>College:</strong> </p>
-                <p><strong>Season:</strong> 1</p>
-            </div>
-        </div>
+        
+        <section class="baseball-card-wrapper">
+            <button class="baseball-card js-baseball-card" type="button" aria-label="Flip baseball card for Jeff Ruhr">
+                <div class="baseball-card__inner">
+                    <article class="baseball-card__face baseball-card__face--front">
+                        <img src="./resources/images/hamel_wordmark.png" alt="Hamel Hawks wordmark" class="baseball-card__logo">
+                        <div class="baseball-card__image-container">
+                            <img src="./hamelphotos\jeffruhr-front.jpg" alt="Jeff Ruhr" class="baseball-card__image">
+                        </div>
+                        <div class="baseball-card__info">
+                            
+                            <div class="baseball-card__name">Jeff Ruhr</div>
+                            <div class="baseball-card__number">6</div>
+                        </div>
+                    </article>
+
+                    <article class="baseball-card__face baseball-card__face--back">
+                        <div class="back-header">
+                            <div class="back-headshot-container">
+                                <img src="./hamelphotos\jeffruhr-back.jpg" alt="Jeff Ruhr headshot" class="back-headshot">
+                                <div class="back-banner">
+                                    <span class="banner-text">Manager | 6</span>
+                                </div>
+                            </div>
+                            <div class="back-info">
+                                <h3 class="back-name">Jeff Ruhr</h3>
+                                <div class="back-meta">
+                                    <p><strong>Hometown:</strong> Maple Grove</p>
+                                    <p><strong>College:</strong> </p>
+                                    <p><strong>Bats:</strong> </p>
+                                    <p><strong>Throws:</strong> </p>
+                                    <p><strong>Seasons:</strong> 2</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back-stats">
+                            <table class="stats-table">
+                                <thead>
+                                    
+            <tr>
+                <th>Yr</th>
+                <th>G</th>
+                <th>AVG</th>
+                <th>AB</th>
+                <th>H</th>
+                <th>2B</th>
+                <th>3B</th>
+                <th>HR</th>
+                <th>RBI</th>
+                <th>R</th>
+                <th>BB</th>
+                <th>K</th>
+                <th>SB</th>
+            </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td colspan="13">No stats available.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="back-description">
+                            <p>A dedicated player contributing to the Hamel Hawks with skill and passion on the field.</p>
+                        </div>
+                        <div class="back-logo">
+                            <img src="./resources/images/100 Year Anniversary Logo.png" alt="Hamel 100 Year Anniversary Logo">
+                        </div>
+                    </article>
+                </div>
+            </button>
+        </section>
 
         <div class='column bg-white no-margin'>
             <a href='https://icschillers.com/' target="_blank">
@@ -107,22 +168,19 @@
                         <li>
                             <a href="https://www.hamelbaseball.org/" target="_blank">Hamel Athletic Club</a>
                         </li>
-
                         <li>
-                        <a href="https://www.instagram.com/hamelhawks/" target="_blank">Instagram</a>
+                            <a href="https://www.instagram.com/hamelhawks/" target="_blank">Instagram</a>
                         </li>
-                        
                         <li>
-                        <a href="https://twitter.com/mnhamelhawks" target="_blank">Twitter</a>
+                            <a href="https://twitter.com/mnhamelhawks" target="_blank">Twitter</a>
                         </li>
-                        
                         <li>
-                        <a href="https://www.facebook.com/hamelhawks" target="_blank">Facebook</a>
+                            <a href="https://www.facebook.com/hamelhawks" target="_blank">Facebook</a>
                         </li>
                     </ul>
                 </div>
                 <div class="footer__section">
-                    <a href="https://www.hamelhawks.com/contact"> <!-- Link to your contact page -->
+                    <a href="https://www.hamelhawks.com/contact">
                         <h2>Contact</h2>
                     </a>
                     <ul>
@@ -138,6 +196,14 @@
                 <p>&copy; 2025 Hamel Hawks Baseball.</p>
             </div>
         </footer>
+
+        <script>
+            document.querySelectorAll('.js-baseball-card').forEach((card) => {
+                card.addEventListener('click', () => {
+                    card.classList.toggle('is-flipped');
+                });
+            });
+        </script>
         <script src="/cart.js" type="module"></script>
         <script src="navigation.js"></script>
     </body>
