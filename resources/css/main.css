@@ -137,8 +137,8 @@ ul{
 }
 
 .logo_area img {
-    height: 64px;
-    width: 123px;
+    /* height: 64px; */
+    width: 96px;
 }
 
 .logo {
@@ -162,6 +162,39 @@ ul{
     height: .25rem;
     background-color: red;
     z-index: -1; 
+}
+
+/* Base Dropdown Styles */
+.nav-menu li.dropdown {
+  position: relative;
+}
+
+.nav-menu .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 5px 0;
+  z-index: 1000;
+  min-width: 160px;
+}
+
+.nav-menu .dropdown-menu li {
+  padding: 5px 20px;
+}
+
+.nav-menu .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.nav-menu .dropdown-menu a {
+  text-decoration: none;
+}
+
+.nav-menu .dropdown-menu a:hover {
+  background-color: #f2f2f2;
 }
 
 .container {
@@ -875,30 +908,260 @@ textarea {
     font-weight: normal;
 }
 
+/* ------------------------------------------------------------------
+   player-card size & centering (reduced height to prevent scrolling)
+   ------------------------------------------------------------------ */
+.baseball-card-wrapper {
+    margin: 130px auto 2.5rem;
+    perspective: 1600px;
+    width: min(92%, 420px);
+    max-width: 480px;
+    /* Center in viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px); /* Allow for header/footer, prevent overflow */
+}
+
+.baseball-card {
+    width: 100%;
+    border: none;
+    background: #fbfaf1ff;
+    border-radius: 16px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.baseball-card:hover {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;  
+}
+
+.baseball-card__inner {
+    position: relative;
+    width: 100%;
+    min-height: 520px; /* Reduced from 680px to fit viewport */
+    transform-style: preserve-3d;
+    transition: transform 0.7s ease;
+}
+
+.baseball-card.is-flipped .baseball-card__inner {
+    transform: rotateY(180deg);
+}
+
+.baseball-card__face {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    box-shadow: 0 10px 28px rgba(12, 35, 78, 0.2);
+    background: #fbfaf1ff;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.baseball-card__face--back {
+    transform: rotateY(180deg);
+    align-items: stretch; /* Stretch to fill width */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    padding: 12px; /* Adjust padding for back content */
+}
+
+/* "Hamel Hawks" in script font, centered at top */
+.baseball-card__logo {
+    width: 240px; /* Adjust size as needed */
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 16px;
+}
+
+/* Image container: smaller, centered, with border-radius and background */
+.baseball-card__image-container {
+    position: relative;
+    width: 85%; /* Smaller than full card */
+    height: 80%; /* Centered in middle */
+    border-radius: 12px; /* Rounded corners */
+    border: 4px solid black; /* Rounded corners */
+    overflow: hidden;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.baseball-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Fill container, crop if needed */
+}
+
+/* Badge for position: inline with player info */
+.baseball-card__badge {
+    color: #4169e1;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 3px solid #4169e1;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.baseball-card__position {
+    font-size: 1rem;
+}
+
+.baseball-card__info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5rem;
+    margin-top: .5rem;
+}
+
+.baseball-card__number {
+    font-size: 1rem;
+    color: red;
+    font-weight: bold;
+}
+
+/* Player name */
+.baseball-card__name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Back of card: new layout */
+.back-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.back-headshot-container {
+    position: relative;
+    display: inline-block; /* Or flex if needed */
+}
+
+.back-headshot {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    object-position: center 1%;
+}
+
+.back-banner {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: rgb(65, 105, 225, 0.9); 
+    border-radius: 6px;
+    padding: 4px 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.back-info {
+    flex: 1;
+}
+
+.back-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4169e1;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+    margin-top: 0;
+}
+
+.back-meta {
+    font-size: 0.9rem;
+    line-height: 1.1;
+    color: black;
+}
+
+.back-meta p {
+    margin: 4px 0;
+}
+
+.stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    margin-bottom: 16px;
+    color: black;
+}
+
+.stats-table th,
+.stats-table td {
+    padding: 4px 6px;
+    text-align: center;
+}
+
+.stats-table th {
+    background: #4169e1;
+    font-weight: bold;
+    color: white;
+}
+
+.back-description {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #555;
+    text-align: center;
+}
+
+.back-description p {
+    margin: 0;
+}
+
+.back-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.back-logo img {
+    width: 40%; /* Scale to fit card width */
+    max-width: 120px; /* Prevent overflow, adjust as needed */
+    height: auto;
+    margin-top: 8px; /* Space below description */
+}
+
 .back-button {
-    position: fixed;
+    position: absolute;
     top: 124px;
     left: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
     text-align: center;
-    line-height: 40px;
-    font-size: 24px;
     text-decoration: none;
-    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1000;
 }
 
 .back-button:hover {
-    background-color: #f0f0f0;
+    /* background-color: #f0f0f0; */
+    font-weight: bold;
 }
 
 .back-button .chevron-left {
-    width: 40px;
-    height: 40px;
-    fill: rgb(65, 105, 225);
+    width: 16px;
+    height: 16px;
+}
+
+.back-text {
+    font-size: 16px;
+    color: black;
 }
 
 /* styling for the tabs on stats page */
@@ -2138,10 +2401,10 @@ label {
         order: 2;
     }
 
-    .logo_area img {
+    /* .logo_area img {
         height: 48px;
         width: 93px;
-    }
+    } */
 
     .hamburger.active .bar:nth-child(1) {
         transform: translateY(9px) rotate(45deg);
@@ -2187,6 +2450,10 @@ label {
     /* player page styles */
     .player-header-container {
         margin: 0 !important;
+    }
+
+    .baseball-card-wrapper {
+        margin-top: 15px !important;
     }
 }
 
@@ -2278,6 +2545,80 @@ label {
     line-height: 2rem;
   }
 
+/* Playoff Bracket */
+.bracket-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bracket {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+.round {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* vertical spacing between games in a round */
+    position: relative;
+}
+
+.bracket-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.bracket-subheading {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.game {
+    width: 180px;
+    height: 100px;
+    background: #fff;
+    border: 2px solid #ccc;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.game-info {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    line-height: 1.4;
+}
+
+.game-info div {
+    margin: 2px 0;
+}
+
+.game .team {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bracket-section {
+    margin-bottom: 60px;
+}
+
+.round-label {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
   @media (max-width: 800px) {
     .modal-content {
       margin: 10% auto;
@@ -2319,3 +2660,58 @@ label {
         transform: scale(1.05); /* Slightly smaller zoom on mobile */
       }
   }
+
+  /* Baseball Card responsive adjustments */
+@media (max-width: 768px) {
+    .baseball-card-wrapper {
+        width: min(92%, 360px);
+        min-height: calc(100vh - 160px);
+    }
+    .baseball-card__inner {
+        min-height: 480px;
+    }
+    .baseball-card__logo {
+        width: 200px;
+    }
+    .baseball-card__name {
+        font-size: 1rem;
+    }
+    .baseball-card__badge {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+    }
+    .baseball-card__face {
+        justify-content: space-between;
+    }
+    .back-header {
+        flex-direction: column; /* Stack headshot and info vertically */
+        align-items: center; /* Center headshot */
+        gap: 8px; /* Reduce gap for mobile */
+    }
+    .back-name {
+        font-size: 1.3rem;
+    }
+    .stats-table {
+        font-size: 0.7rem;
+    }
+    .back-meta {
+        font-size: 0.8rem;
+        text-align: center; /* Center metadata on mobile */
+    }
+    .back-description {
+        font-size: 0.8rem;
+    }
+    .back-logo img {
+        max-width: 120px; /* Smaller on mobile */
+    }
+    .back-button {
+        top: 112px;
+    }
+    .chevron-left {
+        width: 18px;
+        height: 18px;
+    }
+    .back-text {
+        font-size: 14px;
+    }
+}
