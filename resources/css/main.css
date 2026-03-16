@@ -1114,17 +1114,6 @@ textarea {
     color: white;
 }
 
-.back-description {
-    font-size: 0.9rem;
-    line-height: 1.4;
-    color: #555;
-    text-align: center;
-}
-
-.back-description p {
-    margin: 0;
-}
-
 .back-logo {
     display: flex;
     justify-content: center;
@@ -2697,9 +2686,6 @@ label {
     .back-meta {
         font-size: 0.8rem;
         text-align: center; /* Center metadata on mobile */
-    }
-    .back-description {
-        font-size: 0.8rem;
     }
     .back-logo img {
         max-width: 120px; /* Smaller on mobile */
