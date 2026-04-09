@@ -14,18 +14,18 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">    
 
-        <title>Statistics | Hamel Hawks</title>
-        <meta name="description" content="Hamel Hawks player statistics">
-        <link rel="canonical" href="https://www.hamelhawks.com/stats">
-        <meta property="og:title" content="Statistics | Hamel Hawks">
-        <meta property="og:description" content="Hamel Hawks player statistics">
+        <title>Standings | Hamel Hawks</title>
+        <meta name="description" content="2026 North Star League Standings">
+        <link rel="canonical" href="https://www.hamelhawks.com/standings">
+        <meta property="og:title" content="Standings | Hamel Hawks">
+        <meta property="og:description" content="2026 North Star League Standings">
         <meta property="og:image" content="field view.jpg">
-        <meta property="og:url" content="https://www.hamelhawks.com/stats">
+        <meta property="og:url" content="https://www.hamelhawks.com/standings">
         <meta property="og:type" content="website">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@MNHamelHawks">
-        <meta name="twitter:title" content="Statistics | Hamel Hawks">
-        <meta name="twitter:description" content="Hamel Hawks player statistics">
+        <meta name="twitter:title" content="Standings | Hamel Hawks">
+        <meta name="twitter:description" content="2026 North Star League Standings">
         <meta name="twitter:image" content="field view.jpg">
         <link rel="icon" type="image/png" sizes="16x16" href="h-script-favicon-small.png">
         <link rel="icon" type="image/png" sizes="32x32" href="h-script-favicon-large.png">
@@ -74,71 +74,30 @@
         
         <div class="cart-popup" id="cart-popup"></div>
 
-        <!-- Tab buttons -->
         <div class="tabs top-margin">
-            <div class="tabs-inner">
-                <button class="tab-button" onclick="openTab(event, 'batting')">HITTING</button>
-                <button class="tab-button" onclick="openTab(event, 'pitching')">PITCHING</button>
-                <button class="tab-button" onclick="openTab(event, 'fielding')">FIELDING</button>
+            <h2>North Star League Standings</h2>
+            <div class="tabs-inner standings-tabs-inner">
+                <button class="tab-button" onclick="openTab(event, 'league')">LEAGUE (NSL)</button>
+                <button class="tab-button" onclick="openTab(event, 'class')">CLASS</button>
+                <select id="year-select" class="year-selector-standings" onchange="onYearChange(event)"></select>
             </div>
         </div>
-    
-        <!-- Year Dropdown -->
-        <div class="year-selector">
-            <select id="year-select" onchange="loadStatsForYear()">
-                <option value="2025" selected>2025</option>
-                <option value="2024">2024</option>
-            </select>
+        <div class="standings-meta">
+            <p id="standings-updated">Last updated: loading...</p>
         </div>
 
-        <div id="batting" class="tab-content">
-            <div class="table-container">
-                <table id="batting-table" class="styled-table">
+        <div id="league" class="tab-content">
+            <div class="class-pills-placeholder"></div>
+            <div class="standings-container">
+                <table id="league-table" class="standings-table">
                     <thead>
                         <tr>
-                            <th>#</th>
-                            <th></th>
-                            <th>GP</th>
-                            <th>PA</th>
-                            <th>AB</th>
-                            <th>H</th>
-                            <th>BA</th>
-                            <th>OBP</th>
-                            <th>SLG</th>
-                            <th>OPS</th>
-                            <th>2B</th>
-                            <th>3B</th>
-                            <th>HR</th>
-                            <th>BB</th>
-                            <th>SO</th>
-                            <th>R</th>
-                            <th>SB</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-            </div>
-        </div>
-    
-        <div id="pitching" class="tab-content">
-            <div class="table-container">
-                <table id="pitching-table" class="styled-table">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th></th>
-                            <th>ERA</th>
-                            <th>IP</th>
-                            <th>GP</th>
-                            <th>GS</th>
+                            <th>Team</th>
+                            <th>Class</th>
                             <th>W</th>
                             <th>L</th>
-                            <th>H</th>
-                            <th>ER</th>
-                            <th>BB</th>
-                            <th>SO</th>
-                            <th>WHIP</th>
-                            <th>BAA</th>
+                            <th>PCT</th>
+                            <th>GB</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
@@ -146,37 +105,34 @@
             </div>
         </div>
 
-        <div id="fielding" class="tab-content">
-            <div class="table-container">
-                <table id="fielding-table" class="styled-table">
+        <div id="class" class="tab-content">
+            <div class="class-pills">
+                <button class="class-pill" onclick="setClassFilter(event, 'B')">Class B</button>
+                <button class="class-pill" onclick="setClassFilter(event, 'C')">Class C</button>
+            </div>
+            <div class="standings-container">
+                <table id="class-table" class="standings-table">
                     <thead>
                         <tr>
-                            <th>#</th>
-                            <th></th>
-                            <th>Fielding %</th>
-                            <th>TC</th>
-                            <th>A</th>
-                            <th>PO</th>
-                            <th>E</th>
+                            <th>Team</th>
+                            <th>Class</th>
+                            <th>W</th>
+                            <th>L</th>
+                            <th>PCT</th>
+                            <th>GB</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
                 </table>
             </div>
-        </div>
-
-        <!-- Placeholder for no-data message -->
-        <div id="no-data-message" class="no-data" style="display: none; text-align: center; margin: 20px;">
-            <p>Check back on Opening Day!! (May 17, 2026)</p>
         </div>
 
         <!-- Include PapaParse for CSV parsing -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        
+        <script src="standings.js"></script>
         <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 
-        <script src="stats.js"></script>
 
         <div class='column margin-override'>
             <a href='https://icschillers.com/' target="_blank">

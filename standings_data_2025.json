@@ -1,0 +1,101 @@
+{
+  "updatedAt": "2026-04-08",
+  "league": [
+    {
+      "team": "Buffalo Bulldogs",
+      "class": "A",
+      "leagueWins": 16,
+      "leagueLosses": 0,
+      "classWins": 0,
+      "classLosses": 0
+    },
+    {
+      "team": "DC Saints",
+      "class": "C",
+      "leagueWins": 9,
+      "leagueLosses": 7,
+      "classWins": 7,
+      "classLosses": 3
+    },
+    {
+      "team": "Cokato Kernels",
+      "class": "C",
+      "leagueWins": 6,
+      "leagueLosses": 10,
+      "classWins": 4,
+      "classLosses": 6
+    },
+    {
+      "team": "Hamel Hawks",
+      "class": "B",
+      "leagueWins": 5,
+      "leagueLosses": 11,
+      "classWins": 2,
+      "classLosses": 6
+    },
+    {
+      "team": "Howard Lake Orphans",
+      "class": "C",
+      "leagueWins": 7,
+      "leagueLosses": 9,
+      "classWins": 6,
+      "classLosses": 4
+    },
+    {
+      "team": "Hutchinson Huskies",
+      "class": "B",
+      "leagueWins": 12,
+      "leagueLosses": 4,
+      "classWins": 7,
+      "classLosses": 1
+    },
+    {
+      "team": "Loretto Larks",
+      "class": "B",
+      "leagueWins": 10,
+      "leagueLosses": 6,
+      "classWins": 5,
+      "classLosses": 3
+    },
+    {
+      "team": "Litchfield Blues",
+      "class": "C",
+      "leagueWins": 10,
+      "leagueLosses": 6,
+      "classWins": 8,
+      "classLosses": 2
+    },
+    {
+      "team": "Maple Lake Lakers",
+      "class": "B",
+      "leagueWins": 8,
+      "leagueLosses": 8,
+      "classWins": 4,
+      "classLosses": 4
+    },
+    {
+      "team": "Maple Plain Diamond Devils",
+      "class": "B",
+      "leagueWins": 5,
+      "leagueLosses": 11,
+      "classWins": 2,
+      "classLosses": 6
+    },
+    {
+      "team": "Waverly Stingers",
+      "class": "C",
+      "leagueWins": 2,
+      "leagueLosses": 14,
+      "classWins": 0,
+      "classLosses": 10
+    },
+    {
+      "team": "Rockford Crows",
+      "class": "C",
+      "leagueWins": 6,
+      "leagueLosses": 10,
+      "classWins": 5,
+      "classLosses": 5
+    }
+  ]
+}

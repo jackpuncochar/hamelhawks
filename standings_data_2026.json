@@ -1,0 +1,109 @@
+{
+  "updatedAt": "2026-04-08",
+  "league": [
+    {
+      "team": "Buffalo Bulldogs",
+      "class": "B",
+      "leagueWins": 0,
+      "leagueLosses": 0,
+      "classWins": 0,
+      "classLosses": 0
+    },
+    {
+      "team": "DC Saints",
+      "class": "C",
+      "leagueWins": 0,
+      "leagueLosses": 0,
+      "classWins": 0,
+      "classLosses": 0
+    },
+    {
+      "team": "Cokato Kernels",
+      "class": "C",
+      "leagueWins": 0,
+      "leagueLosses": 0,
+      "classWins": 0,
+      "classLosses": 0
+    },
+    {
+      "team": "Hamel Hawks",
+      "class": "B",
+      "leagueWins": 0,
+      "leagueLosses": 0,
+      "classWins": 0,
+      "classLosses": 0
+    },
+    {
+      "team": "Howard Lake Orphans",
+      "class": "C",
+      "leagueWins": 0,
+      "leagueLosses": 0,
+      "classWins": 0,
+      "classLosses": 0
+    },
+    {
+      "team": "Hutchinson Huskies",
+      "class": "B",
+      "leagueWins": 0,
+      "leagueLosses": 0,
+      "classWins": 0,
+      "classLosses": 0
+    },
+    {
+      "team": "Kimball Express",
+      "class": "B",
+      "leagueWins": 0,
+      "leagueLosses": 0,
+      "classWins": 0,
+      "classLosses": 0
+    },
+    {
+      "team": "Loretto Larks",
+      "class": "B",
+      "leagueWins": 0,
+      "leagueLosses": 0,
+      "classWins": 0,
+      "classLosses": 0
+    },
+    {
+      "team": "Litchfield Blues",
+      "class": "C",
+      "leagueWins": 0,
+      "leagueLosses": 0,
+      "classWins": 0,
+      "classLosses": 0
+    },
+    {
+      "team": "Maple Lake Lakers",
+      "class": "B",
+      "leagueWins": 0,
+      "leagueLosses": 0,
+      "classWins": 0,
+      "classLosses": 0
+    },
+    {
+      "team": "Maple Plain Diamond Devils",
+      "class": "C",
+      "leagueWins": 0,
+      "leagueLosses": 0,
+      "classWins": 0,
+      "classLosses": 0
+    },
+    {
+      "team": "Waverly Stingers",
+      "class": "C",
+      "leagueWins": 0,
+      "leagueLosses": 0,
+      "classWins": 0,
+      "classLosses": 0
+    },
+    {
+      "team": "Rockford Crows",
+      "class": "C",
+      "leagueWins": 0,
+      "leagueLosses": 0,
+      "classWins": 0,
+      "classLosses": 0
+    }
+  ]
+}

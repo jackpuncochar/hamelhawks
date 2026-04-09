@@ -13,8 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Highlight active nav
     const navLinks = document.querySelectorAll('.nav-menu .item');
+    const currentPath = window.location.pathname.replace(/\/$/, '');
+
     navLinks.forEach(link => {
-        if (link.href === window.location.href) {
+        const linkPath = new URL(link.href, window.location.origin).pathname.replace(/\/$/, '');
+        if (linkPath === currentPath || (currentPath === '' && linkPath === '/index.html')) {
             link.parentElement.classList.add('active');
         }
     });
