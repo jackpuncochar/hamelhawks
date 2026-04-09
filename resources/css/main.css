@@ -161,7 +161,7 @@ ul{
     width: 25%;
     height: .25rem;
     background-color: red;
-    z-index: -1; 
+    display: block;
 }
 
 /* Base Dropdown Styles */
@@ -191,10 +191,6 @@ ul{
 
 .nav-menu .dropdown-menu a {
   text-decoration: none;
-}
-
-.nav-menu .dropdown-menu a:hover {
-  background-color: #f2f2f2;
 }
 
 .container {
@@ -1156,29 +1152,28 @@ textarea {
 /* styling for the tabs on stats page */
 .tabs {
     width: 100%;
-    background-color: #f1f1f1;
-    border-bottom: 3px solid #dddddd;
-    border-top: 3px solid #dddddd;
-    margin-bottom: 20px;
-    /* padding: 0 20px; */
+    margin: 125px 0 10px;
+    text-align: center;
 }
 
 .tabs-inner {
     display: flex;
     justify-content: center;
-    max-width: 300px;
+    align-items: center;
+    max-width: 420px;
     margin: 0 auto;
+    padding: 0 0.5rem;
 }
 
 .tab-button {
     background-color: #f1f1f1;
     border: none;
-    padding: 14px 20px;
+    padding: 12px 18px;
     cursor: pointer;
     transition: background-color 0.3s;
     font-family: inherit;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: #555;
 }
 
@@ -1187,8 +1182,25 @@ textarea {
 }
 
 .tab-button.active {
-    background-color: #ccc;
+    background-color: #4169e1;
+    color: #fff;
+    padding: 16px 18px;
+}
+
+.year-selector-standings {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-family: inherit;
+    font-size: 0.95rem;
     color: #333;
+    min-width: 75px;
+    margin: 0 10px 0;
+}
+
+.year-selector-standings:focus {
+    outline: none;
+    border-color: #888;
 }
 
 /* Styles for the tab content */
@@ -1206,11 +1218,6 @@ textarea {
     overflow-x: auto; /* Horizontal scrollbar if needed */
     overflow-y: auto; /* Vertical scrollbar if needed */
     padding: 0 2rem;
-}
-
-.styled-table {
-    border-collapse: collapse;
-    font-size: 1rem;
 }
 
 .styled-table thead {
@@ -1292,6 +1299,7 @@ textarea {
     cursor: pointer;
     -webkit-appearance: menulist-button; /* Ensures dropdown arrow appears */
     appearance: menulist-button; /* Standard property for dropdown styling */
+    padding: 8px 10px;
 }
 
 .no-data {
@@ -1688,6 +1696,32 @@ textarea {
 .add-to-cart:disabled {
     background: #ccc;
     cursor: not-allowed;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    z-index: 1001;
+}
+
+.shop-link {
+    color: white;
+    background-color: #4169e1;
+    padding: 0 24px;
+    border-radius: 8px;
+    margin-bottom: 0;
+    line-height: 2em;
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: inherit;
+    transition: color .3s;
+    display: none;
+}
+
+.nav-menu .shop-item {
+    display: none;
 }
 
 .cart-icon { 
@@ -2390,10 +2424,9 @@ label {
         order: 2;
     }
 
-    /* .logo_area img {
-        height: 48px;
-        width: 93px;
-    } */
+    .header-actions {
+        order: 3;
+    }
 
     .hamburger.active .bar:nth-child(1) {
         transform: translateY(9px) rotate(45deg);
@@ -2422,13 +2455,16 @@ label {
     }
 
     .cart-icon {
-        order: 3;
         right: 10px;
         padding-left: 2rem;
     }
 
     .top-margin {
         margin-top: 0 !important;
+    }
+
+    .tabs-inner {
+        margin-top: 10px;
     }
 
     /* confirmation page styles */
@@ -2443,6 +2479,25 @@ label {
 
     .baseball-card-wrapper {
         margin-top: 15px !important;
+    }
+
+    .shop-link {
+        display: none;
+    }
+
+    .nav-menu .shop-item {
+        display: block;
+    }
+}
+
+/* For large screens (desktop) */
+@media (min-width: 1001px) {
+    .shop-link {
+        display: block;
+    }
+
+    .nav-menu .shop-item {
+        display: none;
     }
 }
 
@@ -2700,4 +2755,122 @@ label {
     .back-text {
         font-size: 14px;
     }
+}
+
+/* Standings page */
+.standings-tabs-inner {
+    max-width: 420px;
+}
+
+.standings-meta {
+    text-align: center;
+    margin: 0 auto 20px;
+    max-width: 1000px;
+    line-height: 1.4;
+    padding: 0 2rem;
+}
+
+.standings-meta p {
+    margin: 0 0 8px;
+}
+
+.class-pills {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto 16px;
+    width: 25%;
+}
+
+.class-pills-placeholder {
+    margin-bottom: 16px;
+    height: 32px;
+}
+
+.class-pill {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.class-pill.active,
+.class-pill:hover {
+    background-color: #4169e1;
+    color: #fff;
+    border-color: #4169e1;
+}
+
+.standings-container {
+    max-width: 840px;
+    width: 100%;
+    margin: 0 auto 1.5rem;
+    overflow-x: auto;
+    padding: 0 1rem;
+}
+
+.standings-table {
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    width: 100%;
+    table-layout: fixed;
+    min-width: 700px;
+}
+
+.standings-table th:nth-child(1) { width: 50%; } /* Team */
+.standings-table th:nth-child(2) { width: 15%; } /* Class */
+.standings-table th:nth-child(3) { width: 10%; } /* W */
+.standings-table th:nth-child(4) { width: 10%; } /* L */
+.standings-table th:nth-child(5) { width: 10%; } /* PCT */
+.standings-table th:nth-child(6) { width: 5%; } /* GB */
+
+.standings-table thead {
+    background-color: rgb(65, 105, 225);
+    color: #ffffff;
+    text-align: center;
+}
+
+.standings-table th {
+   border: none;
+   padding: 0.35rem 0.5rem;
+   line-height: 1.6;
+   white-space: nowrap;
+   font-weight: 700;
+}
+.standings-table td {
+    padding: 0.35rem 0.5rem;
+    border: 1px solid #dddddd;
+    white-space: nowrap;
+    font-weight: normal;
+}
+
+.standings-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+    text-align: center;
+    line-height: 1;
+}
+
+.standings-table tbody tr:nth-child(even) {
+    background-color: #f3f3f3;
+}
+
+.standings-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.standings-table tbody .total-row td {
+    font-weight: bold !important;
+    border-top: 1px solid #333;
+}
+
+.standings-table th:first-child,
+.standings-table td:first-child {
+    text-align: left;
+}
+
+.text-left {
+    text-align: left;
 }
