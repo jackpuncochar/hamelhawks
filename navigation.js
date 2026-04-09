@@ -16,6 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentPath = window.location.pathname.replace(/\/$/, '');
 
     navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (!href || href === '#' || href.startsWith('mailto:') || href.startsWith('tel:')) {
+            return; // skip dropdown toggles and non-page links
+        }
+
         const linkPath = new URL(link.href, window.location.origin).pathname.replace(/\/$/, '');
         if (linkPath === currentPath || (currentPath === '' && linkPath === '/index.html')) {
             link.parentElement.classList.add('active');
