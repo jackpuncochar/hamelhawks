@@ -10,6 +10,17 @@
     "pageUrl":"ian_farley"
   },
   {
+    "number": "3",
+    "player": "Trevor Porisch",
+    "position": "",
+    "bats": "R",
+    "throws": "R",
+    "hometown": "Wayzata",
+    "college": "DCTC",
+    "season": "1",
+    "pageUrl":"trevor_porisch"
+  },
+  {
     "number": "5",
     "player": "Jack Lewin",
     "position": "OF",
@@ -241,29 +252,7 @@
     "pageUrl":"sam_hagen"
   },
   {
-    "number": "",
-    "player": "Josh Wilson",
-    "position": "",
-    "bats": "",
-    "throws": "",
-    "hometown": "",
-    "college": "",
-    "season": "3",
-    "pageUrl":"josh_wilson"
-  },
-  {
-    "number": "",
-    "player": "Connor Johnson",
-    "position": "",
-    "bats": "",
-    "throws": "",
-    "hometown": "Maple Grove",
-    "college": "",
-    "season": "1",
-    "pageUrl":"connor_johnson"
-  },
-  {
-    "number": "",
+    "number": "31",
     "player": "Griffin Booms",
     "position": "",
     "bats": "R",
@@ -274,15 +263,26 @@
     "pageUrl":"griffin_booms"
   },
   {
-    "number": "",
-    "player": "Trevor Porisch",
+    "number": "36",
+    "player": "Connor Johnson",
     "position": "",
-    "bats": "R",
-    "throws": "R",
+    "bats": "",
+    "throws": "",
+    "hometown": "Maple Grove",
+    "college": "",
+    "season": "1",
+    "pageUrl":"connor_johnson"
+  },
+  {
+    "number": "99",
+    "player": "James Hansen",
+    "position": "",
+    "bats": "",
+    "throws": "",
     "hometown": "Wayzata",
     "college": "DCTC",
     "season": "1",
-    "pageUrl":"trevor_porisch"
+    "pageUrl":"james_hansen"
   },
   {
     "number": "",
@@ -294,16 +294,5 @@
     "college": "",
     "season": "1",
     "pageUrl":"preston_berg"
-  },
-  {
-    "number": "",
-    "player": "James Hansen",
-    "position": "",
-    "bats": "",
-    "throws": "",
-    "hometown": "Wayzata",
-    "college": "DCTC",
-    "season": "1",
-    "pageUrl":"james_hansen"
   }
 ]
