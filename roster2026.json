@@ -241,15 +241,15 @@
     "pageUrl":"vann_olson"
   },
   {
-    "number": "33",
-    "player": "Sam Hagen",
-    "position": "P",
+    "number": "30",
+    "player": "Preston Berg",
+    "position": "",
     "bats": "R",
     "throws": "R",
     "hometown": "Maple Grove",
-    "college": "Crookston",
-    "season": "2",
-    "pageUrl":"sam_hagen"
+    "college": "",
+    "season": "1",
+    "pageUrl":"preston_berg"
   },
   {
     "number": "31",
@@ -261,6 +261,17 @@
     "college": "",
     "season": "1",
     "pageUrl":"griffin_booms"
+  },
+  {
+    "number": "33",
+    "player": "Sam Hagen",
+    "position": "P",
+    "bats": "R",
+    "throws": "R",
+    "hometown": "Maple Grove",
+    "college": "Crookston",
+    "season": "2",
+    "pageUrl":"sam_hagen"
   },
   {
     "number": "36",
@@ -283,16 +294,5 @@
     "college": "DCTC",
     "season": "1",
     "pageUrl":"james_hansen"
-  },
-  {
-    "number": "",
-    "player": "Preston Berg",
-    "position": "",
-    "bats": "R",
-    "throws": "R",
-    "hometown": "Maple Grove",
-    "college": "",
-    "season": "1",
-    "pageUrl":"preston_berg"
   }
 ]
