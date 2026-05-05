@@ -1,5 +1,20 @@
 [
   {
+    "date": "Sun, 5/10",
+    "opponent": "Glencoe Brewers",
+    "shortName": "Glencoe",
+    "location": "Away",
+    "time": "2pm",
+    "sponsor": "",
+    "result": "",
+    "logo": "resources/images/glencoebrewers.png",
+    "status": "",
+    "streamLink": "",
+    "boxScoreLink": "",
+    "address": "https://maps.app.goo.gl/ez1wsdVnUSNz7AAi7",
+    "fieldName": "VOllmer Field"
+  },
+  {
     "date": "Sun, 5/17",
     "opponent": "Kimball Express *",
     "shortName": "Kimball *",
