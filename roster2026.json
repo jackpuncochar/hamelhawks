@@ -12,7 +12,7 @@
   {
     "number": "3",
     "player": "Trevor Porisch",
-    "position": "",
+    "position": "1B",
     "bats": "R",
     "throws": "R",
     "hometown": "Wayzata",
@@ -232,7 +232,7 @@
   {
     "number": "30",
     "player": "Preston Berg",
-    "position": "",
+    "position": "IF",
     "bats": "R",
     "throws": "R",
     "hometown": "Maple Grove",
@@ -243,7 +243,7 @@
   {
     "number": "31",
     "player": "Griffin Booms",
-    "position": "",
+    "position": "OF",
     "bats": "R",
     "throws": "R",
     "hometown": "",
@@ -276,7 +276,7 @@
   {
     "number": "36",
     "player": "Connor Johnson",
-    "position": "",
+    "position": "1B",
     "bats": "",
     "throws": "",
     "hometown": "Maple Grove",
@@ -287,7 +287,7 @@
   {
     "number": "99",
     "player": "James Hansen",
-    "position": "",
+    "position": "IF",
     "bats": "",
     "throws": "",
     "hometown": "Wayzata",
