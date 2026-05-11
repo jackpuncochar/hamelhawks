@@ -240,6 +240,21 @@
     "fieldName": "Saints Field"
   },
   {
+    "date": "Fri, 6/26",
+    "opponent": "St. Patrick Irish",
+    "shortName": "St. Patrick",
+    "location": "Away",
+    "time": "7:30pm",
+    "sponsor": "",
+    "result": "",
+    "logo": "resources/images/stpatrickirish.png",
+    "status": "",
+    "streamLink": "",
+    "boxScoreLink": "",
+    "address": "https://maps.app.goo.gl/4XLYzsimxHhhymTH7",
+    "fieldName": "Bonin Field"
+  },
+  {
     "date": "Sun, 6/28",
     "opponent": "Loretto Larks *",
     "shortName": "Loretto *",
