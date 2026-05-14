@@ -225,6 +225,21 @@
     "fieldName": "Paul Fortin Memorial Field"
   },
   {
+    "date": "Sat, 6/20",
+    "opponent": "Northwest Orioles",
+    "shortName": "Northwest",
+    "location": "Home",
+    "time": "6pm",
+    "sponsor": "",
+    "result": "",
+    "logo": "resources/images/northwestorioles.png",
+    "status": "",
+    "streamLink": "",
+    "boxScoreLink": "",
+    "address": "https://maps.google.com/?q=Fortin+Field,+Hamel,+MN+55340",
+    "fieldName": "Paul Fortin Memorial Field"
+  },
+  {
     "date": "Wed, 6/24",
     "opponent": "Dassel-Cokato Saints ^",
     "shortName": "Dassel-Cokato ^",
