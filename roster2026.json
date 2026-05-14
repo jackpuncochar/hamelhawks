@@ -296,7 +296,18 @@
     "pageUrl":"teddy_conlon"
   },
   {
-    "number": "99",
+    "number": "38",
+    "player": "Matt Kramer",
+    "position": "IF",
+    "bats": "",
+    "throws": "",
+    "hometown": "",
+    "college": "Harvard",
+    "season": "2",
+    "pageUrl":"matt_kramer"
+  },
+  {
+    "number": "39",
     "player": "James Hansen",
     "position": "IF",
     "bats": "",
