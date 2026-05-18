@@ -28,9 +28,9 @@
     {
       "team": "Hamel Hawks",
       "class": "B",
-      "leagueWins": 0,
+      "leagueWins": 1,
       "leagueLosses": 0,
-      "classWins": 0,
+      "classWins": 1,
       "classLosses": 0
     },
     {
@@ -53,9 +53,9 @@
       "team": "Kimball Express",
       "class": "B",
       "leagueWins": 0,
-      "leagueLosses": 0,
+      "leagueLosses": 1,
       "classWins": 0,
-      "classLosses": 0
+      "classLosses": 1
     },
     {
       "team": "Loretto Larks",
