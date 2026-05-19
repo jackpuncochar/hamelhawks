@@ -2,16 +2,50 @@ const BASE_URL = window.location.hostname === 'localhost' ? 'http://localhost:80
 import { fetchProductsData, updateCartPrices, fetchShippingRates } from './utils.js';
 
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
+let productsDataPromise = null;
+
+function hasProductsData() {
+    return Array.isArray(window.productsData);
+}
+
+function getPricedCart() {
+    if (!hasProductsData()) {
+        return cart;
+    }
+
+    return updateCartPrices(cart, window.productsData);
+}
+
+async function ensureProductsData() {
+    if (hasProductsData()) {
+        return window.productsData;
+    }
+
+    if (!productsDataPromise) {
+        productsDataPromise = fetchProductsData()
+            .then(data => {
+                if (!Array.isArray(data)) {
+                    console.error('Product data response was not an array:', data);
+                    return null;
+                }
+
+                window.productsData = data;
+                return window.productsData;
+            })
+            .catch(error => {
+                console.error('Product data fetch error:', error);
+                return null;
+            })
+            .finally(() => {
+                productsDataPromise = null;
+            });
+    }
+
+    return productsDataPromise;
+}
 
 export function initializeCart() {
-    if (!window.productsData) {
-        fetchProductsData().then(data => {
-            window.productsData = data;
-            updateCart();
-        }).catch(error => console.error('Init error:', error));
-    } else {
-        updateCart();
-    }
+    updateCart();
 
     const cartIcon = document.getElementById('cart-icon');
     if (cartIcon) {
@@ -27,6 +61,10 @@ export function showCart() {
         if (isMobile) {
             document.body.classList.add('no-scroll');
         }
+    }
+
+    if (cart.length > 0 && !hasProductsData()) {
+        ensureProductsData().then(() => updateCart());
     }
 }
 
@@ -75,7 +113,7 @@ export async function updateCart() {
     cartCount.textContent = totalItems;
     cartCount.classList.toggle('show', totalItems > 0);
 
-    const updatedCart = updateCartPrices(cart, window.productsData);
+    const updatedCart = getPricedCart();
     const subtotal = updatedCart.reduce((sum, item) => sum + item.price * item.quantity, 0);
     const total = subtotal;
 
