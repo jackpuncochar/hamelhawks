@@ -355,6 +355,226 @@ h1{
     margin: 0 0 16px;
 }
 
+.anniversary-page {
+    color: #1f2937;
+    line-height: 1.7;
+}
+
+.anniversary-page h1,
+.anniversary-page h2,
+.anniversary-page h3,
+.anniversary-page p {
+    margin-top: 0;
+}
+
+.anniversary-page h2 {
+    color: #4169e1;
+    font-size: 2rem;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.anniversary-hero {
+    position: relative;
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #111827;
+}
+
+.anniversary-hero__image {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(6, 16, 42, 0.62), rgba(6, 16, 42, 0.72)), url('/resources/images/Fortin Field Drone Shot 3.avif');
+    background-size: cover;
+    background-position: center;
+}
+
+.anniversary-hero__content {
+    position: relative;
+    width: min(980px, 92%);
+    padding: 4rem 0;
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+.anniversary-hero__content img {
+    width: min(190px, 46vw);
+    height: auto;
+    margin-bottom: 1.25rem;
+}
+
+.anniversary-eyebrow {
+    color: #dbeafe;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.anniversary-hero h1 {
+    font-size: 4.5rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.anniversary-hero p {
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.35rem;
+}
+
+.anniversary-hero__actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.anniversary-btn-secondary {
+    background-color: rgb(230, 4, 4);
+}
+
+.anniversary-btn-secondary::before {
+    background-color: #f04444;
+}
+
+.anniversary-intro,
+.anniversary-schedule,
+.anniversary-highlight,
+.anniversary-details {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+
+.anniversary-intro {
+    text-align: center;
+}
+
+.anniversary-intro p {
+    max-width: 900px;
+    margin: 0 auto 1rem;
+    font-size: 1.2rem;
+}
+
+.anniversary-schedule {
+    border-top: 1px solid #d1d5db;
+    border-bottom: 1px solid #d1d5db;
+}
+
+.anniversary-events {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.anniversary-event,
+.anniversary-details > div {
+    background: #f8fafc;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.anniversary-event h3 {
+    color: #111827;
+    font-size: 1.65rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.anniversary-event__day {
+    display: inline-block;
+    background: #4169e1;
+    color: white;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0.75rem;
+    text-transform: uppercase;
+}
+
+.anniversary-event__location {
+    color: rgb(230, 4, 4);
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+}
+
+.anniversary-times {
+    margin: 0 0 1.5rem;
+}
+
+.anniversary-times div {
+    display: grid;
+    grid-template-columns: 135px 1fr;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-top: 1px solid #d1d5db;
+}
+
+.anniversary-times div:last-child {
+    border-bottom: 1px solid #d1d5db;
+}
+
+.anniversary-times dt {
+    color: #4169e1;
+    font-weight: 600;
+}
+
+.anniversary-times dd {
+    margin: 0;
+}
+
+.anniversary-highlight {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.anniversary-highlight img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+}
+
+.anniversary-highlight p,
+.anniversary-details p,
+.anniversary-rate-list {
+    font-size: 1.1rem;
+}
+
+.anniversary-details {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 1.5rem;
+    padding-top: 0;
+}
+
+.anniversary-details a {
+    color: #4169e1;
+    font-weight: 600;
+}
+
+.anniversary-rate-list {
+    margin: 1rem 0 0;
+    padding-left: 1.25rem;
+}
+
+.anniversary-rate-list li {
+    list-style: disc;
+    margin-bottom: 0.35rem;
+}
+
 .footer {
     background-color: #f0f0f0;
     padding: 20px;
@@ -475,9 +695,13 @@ h1{
         text-align: center;
     }
 
-    .schedule-container, .roster-container {
+    .schedule-container, .roster-container, .sponsor-container {
         width: 90% !important;
         margin-top: 60px !important;
+    }
+
+    .sponsor-container {
+        padding: 24px !important;
     }
 
     #schedule-table, #roster-table {
@@ -486,6 +710,28 @@ h1{
 
     .about-container p {
         padding: 0;
+    }
+
+    .anniversary-hero {
+        min-height: 560px;
+    }
+
+    .anniversary-hero h1 {
+        font-size: 3rem;
+    }
+
+    .anniversary-hero p {
+        font-size: 1.1rem;
+    }
+
+    .anniversary-events,
+    .anniversary-highlight,
+    .anniversary-details {
+        grid-template-columns: 1fr;
+    }
+
+    .anniversary-highlight img {
+        height: auto;
     }
 
     .table-icon {
@@ -502,6 +748,33 @@ h1{
     .content-buttons {
         flex-direction: column;
         gap: 16px;
+    }
+
+    .anniversary-page h2 {
+        font-size: 1.65rem;
+    }
+
+    .anniversary-hero h1 {
+        font-size: 2.35rem;
+    }
+
+    .anniversary-hero__content {
+        padding: 3rem 0;
+    }
+
+    .anniversary-hero__actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .anniversary-times div {
+        grid-template-columns: 1fr;
+        gap: 0.25rem;
+    }
+
+    .anniversary-event,
+    .anniversary-details > div {
+        padding: 1.25rem;
     }
 
     .footer__section { /* center align footer links on small screens */
@@ -575,10 +848,14 @@ h1{
 }
 
 /* Style for the schedule container */
-.schedule-wrapper, .roster-wrapper {
+.schedule-wrapper, .roster-wrapper, .sponsor-wrapper {
     position: relative;
     width: 100%;
     min-height: 500px;
+}
+
+.sponsor-wrapper {
+    max-height: none;
 }
 
 .h-background {
@@ -593,7 +870,7 @@ h1{
     z-index: 1;
 }
 
-.schedule-container, .roster-container {
+.schedule-container, .roster-container, .sponsor-container {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -608,6 +885,11 @@ h1{
     max-width: 100%;
     min-height: 1200px;
     z-index: 2;
+}
+
+.sponsor-container {
+    padding: 48px;
+    min-height: 0;
 }
 
 /* Style for the schedule table */
