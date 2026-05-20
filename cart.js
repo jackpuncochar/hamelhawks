@@ -158,6 +158,7 @@ export async function updateCart() {
                 <p>Subtotal: $${subtotal.toFixed(2)}</p>
                 <p>Shipping: <span class="shipping-cost">adjusts at checkout</span></p>
                 <button class="estimate-shipping-btn">Estimate Shipping</button>
+                <p class="free-shipping-note cart-free-shipping-note">FREE shipping to MN customers</p>
                 <p><strong>Total: $${total.toFixed(2)}</strong></p>
                 <button class="checkout-btn">Proceed to Checkout</button>
             </div>
