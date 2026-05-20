@@ -1852,6 +1852,22 @@ textarea {
 .shop-container h1 {
     color: rgb(65, 105, 225);
     text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}
+
+.free-shipping-note {
+    color: red;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0.25rem 0 1rem;
+    text-align: center;
+}
+
+.cart-free-shipping-note {
+    font-size: 0.95rem;
+    margin: 0.35rem 0 0.75rem;
+    text-align: right;
 }
 
 /* Product Grid */
