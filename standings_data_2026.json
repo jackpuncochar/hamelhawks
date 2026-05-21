@@ -76,7 +76,7 @@
     {
       "team": "Maple Lake Lakers",
       "class": "B",
-      "leagueWins": 1,
+      "leagueWins": 2,
       "leagueLosses": 0,
       "classWins": 0,
       "classLosses": 0
@@ -101,7 +101,7 @@
       "team": "Rockford Crows",
       "class": "C",
       "leagueWins": 0,
-      "leagueLosses": 0,
+      "leagueLosses": 1,
       "classWins": 0,
       "classLosses": 0
     }
