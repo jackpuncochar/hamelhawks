@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-18",
+  "updatedAt": "2026-05-24",
   "league": [
     {
       "team": "Buffalo Bulldogs",
@@ -44,18 +44,18 @@
     {
       "team": "Hutchinson Huskies",
       "class": "B",
-      "leagueWins": 0,
+      "leagueWins": 1,
       "leagueLosses": 0,
-      "classWins": 0,
+      "classWins": 1,
       "classLosses": 0
     },
     {
       "team": "Kimball Express",
       "class": "B",
       "leagueWins": 0,
-      "leagueLosses": 1,
+      "leagueLosses": 2,
       "classWins": 0,
-      "classLosses": 1
+      "classLosses": 2
     },
     {
       "team": "Loretto Larks",
