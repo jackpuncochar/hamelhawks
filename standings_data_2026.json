@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-24",
+  "updatedAt": "2026-05-26",
   "league": [
     {
       "team": "Buffalo Bulldogs",
@@ -36,9 +36,9 @@
     {
       "team": "Howard Lake Orphans",
       "class": "C",
-      "leagueWins": 0,
+      "leagueWins": 1,
       "leagueLosses": 0,
-      "classWins": 0,
+      "classWins": 1,
       "classLosses": 0
     },
     {
@@ -93,9 +93,9 @@
       "team": "Waverly Stingers",
       "class": "C",
       "leagueWins": 0,
-      "leagueLosses": 2,
+      "leagueLosses": 3,
       "classWins": 0,
-      "classLosses": 1
+      "classLosses": 2
     },
     {
       "team": "Rockford Crows",
