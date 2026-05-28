@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-26",
+  "updatedAt": "2026-05-28",
   "league": [
     {
       "team": "Buffalo Bulldogs",
@@ -12,9 +12,9 @@
     {
       "team": "DC Saints",
       "class": "C",
-      "leagueWins": 1,
+      "leagueWins": 2,
       "leagueLosses": 0,
-      "classWins": 1,
+      "classWins": 2,
       "classLosses": 0
     },
     {
@@ -93,9 +93,9 @@
       "team": "Waverly Stingers",
       "class": "C",
       "leagueWins": 0,
-      "leagueLosses": 3,
+      "leagueLosses": 4,
       "classWins": 0,
-      "classLosses": 2
+      "classLosses": 3
     },
     {
       "team": "Rockford Crows",
