@@ -81,6 +81,12 @@
                 <h2>Recent Headlines</h2>
                 <ul class="headlines-list">
                     <li>
+                        <a href="/news/hawks-weekly-recap-05-25-05-31" class="headline-link" data-slug="hawks-weekly-recap-05-25-05-31">
+                            <img src="resources/images/Hawks Rain Out.jpg" alt="Hamel Hawks Weekly Recap 5/25 - 5/31" class="headline-thumb">
+                            Hamel Hawks Weekly Recap 5/25 - 5/31
+                        </a>
+                    </li>
+                    <li>
                         <a href="/news/hawks-weekly-recap-05-17-05-24" class="headline-link" data-slug="hawks-weekly-recap-05-17-05-24">
                             <img src="resources/images/Weekly Recap 5.17 - 5.24 graphic.png" alt="Hamel Hawks Weekly Recap 5/17 - 5/24" class="headline-thumb">
                             Hamel Hawks Weekly Recap 5/17 - 5/24
@@ -162,6 +168,41 @@
 
             <!-- Main Content: Stories -->
             <main class="news-main">
+                <article class="news-story" data-slug="hawks-weekly-recap-05-25-05-31">
+                    <h1>Hamel Hawks Weekly Recap 5/25 - 5/31</h1>
+                    <img src="resources/images/Hawks Rain Out.jpg" alt="Hamel Hawks Weekly Recap 5/25 - 5/31" class="story-image">
+                    <div class="story-meta">
+                        <span class="author">By Hamel Hawks</span> | <span class="date">May 31, 2026</span>
+                    </div>
+                    <p class="story-preview">
+                        Hawks lose Wednesday night at Monticello 16-8 and postpone Sunday's game to a later date due to rain.<br><br>
+                        <strong style="text-decoration:underline;">Record</strong><br>
+                        Overall: 2-3<br>
+                        Class B North Star League: 1-0<br>
+                        Overall North Star League: 1-0<br>
+                        <a href="/standings" target="_blank" rel="noopener">North Star League Standings</a><br>
+
+                    </p>
+                    <p class="story-full" style="display: none;">
+                        <strong>Wednesday, 5/27 at Monticello Polecats</strong><br><br>
+                        Class A Monticello hosted the Hawks on Wednesday night. The Polecats jumped out to a 8-0 lead after manufacturing a run in the 1st inning, and scoring 7 in the 3rd after a questionable call extended the inning. The Hawks got 4 runs back in the 4th to make it a game, but never got within striking distance. Hamel avoided the dreaded 10-run rule in the 7th with a 3-pointer to cut the deficit to 8.<br><br>
+                        
+                        <a href="/brady_zackrison" target="_blank" rel="noopener">Brady Zackrison</a> (3-for-5, RBI) and <a href="/ian_schock" target="_blank" rel="noopener">Ian Schock</a> (2-for-4, 2B, 3 runs scored) lead the hitters.<br><br>
+                        <strong>Sunday, 5/31 vs. Montrose/Waverly Stingers</strong><br><br>
+                        Hamel attempted to host Montrose/Waverly in North Star League action on Sunday, but a consistent rain washed out the field. The teams will makeup the game at a later date.<br><br>
+
+                        <strong>Player of the Week</strong><br>
+                        <u><i>Weather</i></u><br>
+                        The weather got the best of Paul Fortin Field this Sunday.<br><br>
+
+                        <strong>Next up:</strong><br>
+                        Wednesday, 6/3 at Litchfield 7pm<br>
+                        Friday, 6/5 vs. Hutchinson 7:30pm<br>
+                        Sunday, 6/7 at Loretto 1pm
+                    </p>
+                    <button class="continue-reading">Continue Reading</button>
+                </article>
+
                 <article class="news-story" data-slug="hawks-weekly-recap-05-17-05-24">
                     <h1>Hamel Hawks Weekly Recap 5/17 - 5/24</h1>
                     <img src="resources/images/Weekly Recap 5.17 - 5.24 graphic.png" alt="Hamel Hawks Weekly Recap 5/17 - 5/24" class="story-image">
@@ -618,7 +659,7 @@
                 const headlineLinks = document.querySelectorAll('.headline-link');
                 const headerHeight = document.querySelector('.header').offsetHeight || 115; // Default to 60px if header not found
                 const isMobile = () => window.innerWidth <= 800; // Matches CSS breakpoint
-                const TOP_ARTICLE_SLUG = 'hawks-weekly-recap-05-17-05-24';
+                const TOP_ARTICLE_SLUG = 'hawks-weekly-recap-05-25-05-31';
 
                 function setActiveHeadline(slug) {
                     headlineLinks.forEach(link => {
