@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-30",
+  "updatedAt": "2026-06-01",
   "league": [
     {
       "team": "Buffalo Bulldogs",
@@ -13,7 +13,7 @@
       "team": "DC Saints",
       "class": "C",
       "leagueWins": 2,
-      "leagueLosses": 0,
+      "leagueLosses": 1,
       "classWins": 2,
       "classLosses": 0
     },
@@ -21,9 +21,9 @@
       "team": "Cokato Kernels",
       "class": "C",
       "leagueWins": 0,
-      "leagueLosses": 0,
+      "leagueLosses": 1,
       "classWins": 0,
-      "classLosses": 0
+      "classLosses": 1
     },
     {
       "team": "Hamel Hawks",
@@ -36,23 +36,23 @@
     {
       "team": "Howard Lake Orphans",
       "class": "C",
-      "leagueWins": 1,
+      "leagueWins": 2,
       "leagueLosses": 0,
-      "classWins": 1,
+      "classWins": 2,
       "classLosses": 0
     },
     {
       "team": "Hutchinson Huskies",
       "class": "B",
       "leagueWins": 1,
-      "leagueLosses": 1,
+      "leagueLosses": 2,
       "classWins": 1,
       "classLosses": 0
     },
     {
       "team": "Kimball Express",
       "class": "B",
-      "leagueWins": 0,
+      "leagueWins": 1,
       "leagueLosses": 2,
       "classWins": 0,
       "classLosses": 2
@@ -68,7 +68,7 @@
     {
       "team": "Litchfield Blues",
       "class": "C",
-      "leagueWins": 0,
+      "leagueWins": 1,
       "leagueLosses": 1,
       "classWins": 0,
       "classLosses": 0
@@ -84,9 +84,9 @@
     {
       "team": "Maple Plain Diamond Devils",
       "class": "C",
-      "leagueWins": 1,
+      "leagueWins": 2,
       "leagueLosses": 0,
-      "classWins": 0,
+      "classWins": 1,
       "classLosses": 0
     },
     {
@@ -101,9 +101,9 @@
       "team": "Rockford Crows",
       "class": "C",
       "leagueWins": 0,
-      "leagueLosses": 1,
+      "leagueLosses": 2,
       "classWins": 0,
-      "classLosses": 0
+      "classLosses": 1
     }
   ]
 }
