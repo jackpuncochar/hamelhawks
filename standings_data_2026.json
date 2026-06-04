@@ -5,14 +5,14 @@
       "team": "Buffalo Bulldogs",
       "class": "B",
       "leagueWins": 1,
-      "leagueLosses": 0,
+      "leagueLosses": 1,
       "classWins": 0,
       "classLosses": 0
     },
     {
       "team": "DC Saints",
       "class": "C",
-      "leagueWins": 2,
+      "leagueWins": 3,
       "leagueLosses": 1,
       "classWins": 2,
       "classLosses": 0
@@ -28,7 +28,7 @@
     {
       "team": "Hamel Hawks",
       "class": "B",
-      "leagueWins": 1,
+      "leagueWins": 2,
       "leagueLosses": 0,
       "classWins": 1,
       "classLosses": 0
@@ -37,7 +37,7 @@
       "team": "Howard Lake Orphans",
       "class": "C",
       "leagueWins": 2,
-      "leagueLosses": 0,
+      "leagueLosses": 1,
       "classWins": 2,
       "classLosses": 0
     },
@@ -60,7 +60,7 @@
     {
       "team": "Loretto Larks",
       "class": "B",
-      "leagueWins": 0,
+      "leagueWins": 1,
       "leagueLosses": 0,
       "classWins": 0,
       "classLosses": 0
@@ -69,14 +69,14 @@
       "team": "Litchfield Blues",
       "class": "C",
       "leagueWins": 1,
-      "leagueLosses": 1,
+      "leagueLosses": 2,
       "classWins": 0,
       "classLosses": 0
     },
     {
       "team": "Maple Lake Lakers",
       "class": "B",
-      "leagueWins": 2,
+      "leagueWins": 3,
       "leagueLosses": 0,
       "classWins": 0,
       "classLosses": 0
@@ -85,7 +85,7 @@
       "team": "Maple Plain Diamond Devils",
       "class": "C",
       "leagueWins": 2,
-      "leagueLosses": 0,
+      "leagueLosses": 1,
       "classWins": 1,
       "classLosses": 0
     },
@@ -93,16 +93,16 @@
       "team": "Waverly Stingers",
       "class": "C",
       "leagueWins": 0,
-      "leagueLosses": 4,
+      "leagueLosses": 5,
       "classWins": 0,
-      "classLosses": 3
+      "classLosses": 4
     },
     {
       "team": "Rockford Crows",
       "class": "C",
-      "leagueWins": 0,
+      "leagueWins": 1,
       "leagueLosses": 2,
-      "classWins": 0,
+      "classWins": 1,
       "classLosses": 1
     }
   ]
