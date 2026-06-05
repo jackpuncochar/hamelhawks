@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-01",
+  "updatedAt": "2026-06-05",
   "league": [
     {
       "team": "Buffalo Bulldogs",
@@ -21,7 +21,7 @@
       "team": "Cokato Kernels",
       "class": "C",
       "leagueWins": 0,
-      "leagueLosses": 1,
+      "leagueLosses": 2,
       "classWins": 0,
       "classLosses": 1
     },
@@ -52,7 +52,7 @@
     {
       "team": "Kimball Express",
       "class": "B",
-      "leagueWins": 1,
+      "leagueWins": 2,
       "leagueLosses": 2,
       "classWins": 0,
       "classLosses": 2
