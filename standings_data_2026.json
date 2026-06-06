@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-05",
+  "updatedAt": "2026-06-06",
   "league": [
     {
       "team": "Buffalo Bulldogs",
@@ -12,63 +12,63 @@
     {
       "team": "DC Saints",
       "class": "C",
-      "leagueWins": 3,
+      "leagueWins": 4,
       "leagueLosses": 1,
-      "classWins": 2,
+      "classWins": 3,
       "classLosses": 0
     },
     {
       "team": "Cokato Kernels",
       "class": "C",
       "leagueWins": 0,
-      "leagueLosses": 2,
+      "leagueLosses": 3,
       "classWins": 0,
-      "classLosses": 1
+      "classLosses": 2
     },
     {
       "team": "Hamel Hawks",
       "class": "B",
       "leagueWins": 2,
-      "leagueLosses": 0,
+      "leagueLosses": 1,
       "classWins": 1,
-      "classLosses": 0
+      "classLosses": 1
     },
     {
       "team": "Howard Lake Orphans",
       "class": "C",
-      "leagueWins": 2,
+      "leagueWins": 3,
       "leagueLosses": 1,
-      "classWins": 2,
+      "classWins": 3,
       "classLosses": 0
     },
     {
       "team": "Hutchinson Huskies",
       "class": "B",
-      "leagueWins": 1,
+      "leagueWins": 2,
       "leagueLosses": 2,
-      "classWins": 1,
+      "classWins": 2,
       "classLosses": 0
     },
     {
       "team": "Kimball Express",
       "class": "B",
       "leagueWins": 2,
-      "leagueLosses": 2,
+      "leagueLosses": 3,
       "classWins": 0,
       "classLosses": 2
     },
     {
       "team": "Loretto Larks",
       "class": "B",
-      "leagueWins": 1,
+      "leagueWins": 2,
       "leagueLosses": 0,
-      "classWins": 0,
+      "classWins": 1,
       "classLosses": 0
     },
     {
       "team": "Litchfield Blues",
       "class": "C",
-      "leagueWins": 1,
+      "leagueWins": 2,
       "leagueLosses": 2,
       "classWins": 0,
       "classLosses": 0
@@ -77,17 +77,17 @@
       "team": "Maple Lake Lakers",
       "class": "B",
       "leagueWins": 3,
-      "leagueLosses": 0,
+      "leagueLosses": 1,
       "classWins": 0,
-      "classLosses": 0
+      "classLosses": 1
     },
     {
       "team": "Maple Plain Diamond Devils",
       "class": "C",
       "leagueWins": 2,
-      "leagueLosses": 1,
+      "leagueLosses": 2,
       "classWins": 1,
-      "classLosses": 0
+      "classLosses": 1
     },
     {
       "team": "Waverly Stingers",
