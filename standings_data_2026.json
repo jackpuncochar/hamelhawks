@@ -68,9 +68,9 @@
     {
       "team": "Litchfield Blues",
       "class": "C",
-      "leagueWins": 2,
+      "leagueWins": 3,
       "leagueLosses": 2,
-      "classWins": 0,
+      "classWins": 1,
       "classLosses": 0
     },
     {
@@ -93,9 +93,9 @@
       "team": "Waverly Stingers",
       "class": "C",
       "leagueWins": 0,
-      "leagueLosses": 5,
+      "leagueLosses": 6,
       "classWins": 0,
-      "classLosses": 4
+      "classLosses": 5
     },
     {
       "team": "Rockford Crows",
