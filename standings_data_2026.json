@@ -4,10 +4,10 @@
     {
       "team": "Buffalo Bulldogs",
       "class": "B",
-      "leagueWins": 1,
+      "leagueWins": 2,
       "leagueLosses": 1,
-      "classWins": 0,
-      "classLosses": 0
+      "classWins": 1,
+      "classLosses": 1
     },
     {
       "team": "DC Saints",
@@ -29,9 +29,9 @@
       "team": "Hamel Hawks",
       "class": "B",
       "leagueWins": 2,
-      "leagueLosses": 1,
+      "leagueLosses": 2,
       "classWins": 1,
-      "classLosses": 1
+      "classLosses": 2
     },
     {
       "team": "Howard Lake Orphans",
@@ -53,16 +53,16 @@
       "team": "Kimball Express",
       "class": "B",
       "leagueWins": 2,
-      "leagueLosses": 3,
+      "leagueLosses": 4,
       "classWins": 0,
-      "classLosses": 2
+      "classLosses": 3
     },
     {
       "team": "Loretto Larks",
       "class": "B",
-      "leagueWins": 2,
+      "leagueWins": 3,
       "leagueLosses": 0,
-      "classWins": 1,
+      "classWins": 2,
       "classLosses": 0
     },
     {
@@ -77,9 +77,9 @@
       "team": "Maple Lake Lakers",
       "class": "B",
       "leagueWins": 3,
-      "leagueLosses": 1,
+      "leagueLosses": 2,
       "classWins": 0,
-      "classLosses": 1
+      "classLosses": 2
     },
     {
       "team": "Maple Plain Diamond Devils",
@@ -104,6 +104,14 @@
       "leagueLosses": 2,
       "classWins": 1,
       "classLosses": 1
+    },
+    {
+      "team": "St Martin Martins",
+      "class": "B",
+      "leagueWins": 2,
+      "leagueLosses": 0,
+      "classWins": 2,
+      "classLosses": 0
     }
   ]
 }
