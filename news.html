@@ -81,6 +81,12 @@
                 <h2>Recent Headlines</h2>
                 <ul class="headlines-list">
                     <li>
+                        <a href="/news/hawks-weekly-recap-06-01-06-07" class="headline-link" data-slug="hawks-weekly-recap-06-01-06-07">
+                            <img src="resources/images/Hamel Hawks Players in Dugout.png" alt="Hamel Hawks Weekly Recap 6/1 - 6/7" class="headline-thumb">
+                            Hamel Hawks Weekly Recap 6/1 - 6/7
+                        </a>
+                    </li>
+                    <li>
                         <a href="/news/hawks-weekly-recap-05-25-05-31" class="headline-link" data-slug="hawks-weekly-recap-05-25-05-31">
                             <img src="resources/images/Hawks Rain Out.jpg" alt="Hamel Hawks Weekly Recap 5/25 - 5/31" class="headline-thumb">
                             Hamel Hawks Weekly Recap 5/25 - 5/31
@@ -168,6 +174,48 @@
 
             <!-- Main Content: Stories -->
             <main class="news-main">
+                <article class="news-story" data-slug="hawks-weekly-recap-06-01-06-07">
+                    <h1>Hamel Hawks Weekly Recap 6/1 - 6/7</h1>
+                    <img src="resources/images/Hamel Hawks Players in Dugout.png" alt="Hamel Hawks Weekly Recap 6/1 - 6/7" class="story-image">
+                    <p style="margin:0; font-style:italic;">Photo: Koko Yoko Photography - @koko_yoko_photography on Instagram</p>
+                    <div class="story-meta">
+                        <span class="author">By Hamel Hawks</span> | <span class="date">June 7, 2026</span>
+                    </div>
+                    <p class="story-preview">
+                        Hamel bats highlight a Wednesday night win in Litchfield and the Hawks lose a couple District 6B games to Hutchinson and Loretto.<br><br>
+                        <strong style="text-decoration:underline;">Record</strong><br>
+                        Overall: 3-5<br>
+                        Class B North Star League: 1-2<br>
+                        Overall North Star League: 2-2<br>
+                        <a href="/standings" target="_blank" rel="noopener">North Star League Standings</a><br>
+
+                    </p>
+                    <p class="story-full" style="display: none;">
+                        <strong>Wednesday, 6/3 at Litchfield Blues</strong><br><br>
+                        Hamel offense exploded for 17 runs highlighted by <a href="/trevor_porisch" target="_blank" rel="noopener">Trevor Porisch</a> (DH) 3-for-5, 6 RBIs and a <a href="/jack_lewin" target="_blank" rel="noopener">Jack Lewin</a> (3B) 2-run HR. Lewin showcased the brand-new Home Run King Championship belt in the <a href="https://www.instagram.com/reel/DZJfGlxNDXu/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Bully Bats post-game interview</a> hosted by Hayden Potratz. Porisch added 3 solid innings on the mound to get the save, while starting pitcher Jake Vanyo continued his hot start to the year (5 IP, 0 R, 3 H, 2 Ks).<br><br>
+                        
+                        <strong>Friday, 6/5 vs. Hutchinson Huskies</strong><br><br>
+                        Hutchinson starting pitcher Jon Derock threw 6 shutout innings, only allowing 1 hit and striking out 7. Sam Starke closed the final 3 frames for the Huskies to complete the shutout.<br><br>
+
+                        Hamel defense was on full display, including 2 outfield assists to home from <a href="/josh_delange" target="_blank" rel="noopener">Josh Delange</a> and <a href="/brady_zackrison" target="_blank" rel="noopener">Brady Zackrison</a> in the same inning. The Hawks' fielding percentage is .977 with only 5 errors on 220 chances.<br><br>
+
+                        Hawks starting pitcher, <a href="/alex_wattermann" target="_blank" rel="noopener">Alex Wattermann</a> went 7 strong innings (2 ER).<br><br>
+                        <strong>Sunday, 6/7 at Loretto Larks</strong><br><br>
+                        Hawks lose 10-4 after Loretto scores 8 in the first 3 innings. The teams combined for 28 hits, including Brady Zackrison (3-for-5, 2 R), Alex Wattermann (2-for-4, 2B, 2 RBIs). <a href="/james_hansen" target="_blank" rel="noopener">James Hansen</a> (SS) and Josh Delange (LF) each collected a triple. 15-year old <a href="/tommy_ruhr" target="_blank" rel="noopener">Tommy Ruhr</a> (2B) collected his first career hit with the Hawks, while 40-year old <a href="/matt_kramer" target="_blank" rel="noopener">Matt Kramer</a> singled in a run in his first AB of the season.<br><br>
+
+                        <strong>Player of the Week</strong><br>
+                        <u><i>Trevor Porisch (DH/P)</i></u><br>
+                        Trevor Porisch got it done in the batter's box and on the mound this week. Porisch drove in 6 runs on Wednesday night against Litchfield, including a bases clearing triple. He provided 3 innings of shutdown relief to get the save.<br><br>
+
+                        <strong>Next up:</strong><br>
+                        Wednesday, 6/10 at Rockford 7pm<br>
+                        Friday, 6/12 vs. Kimball 7pm<br>
+                        Saturday, 6/13 at Maple Plain 4pm<br>
+                        Sunday, 6/14 vs. Cokato 1pm
+                    </p>
+                    <button class="continue-reading">Continue Reading</button>
+                </article>
+
                 <article class="news-story" data-slug="hawks-weekly-recap-05-25-05-31">
                     <h1>Hamel Hawks Weekly Recap 5/25 - 5/31</h1>
                     <img src="resources/images/Hawks Rain Out.jpg" alt="Hamel Hawks Weekly Recap 5/25 - 5/31" class="story-image">
@@ -659,7 +707,7 @@
                 const headlineLinks = document.querySelectorAll('.headline-link');
                 const headerHeight = document.querySelector('.header').offsetHeight || 115; // Default to 60px if header not found
                 const isMobile = () => window.innerWidth <= 800; // Matches CSS breakpoint
-                const TOP_ARTICLE_SLUG = 'hawks-weekly-recap-05-25-05-31';
+                const TOP_ARTICLE_SLUG = 'hawks-weekly-recap-06-01-06-07';
 
                 function setActiveHeadline(slug) {
                     headlineLinks.forEach(link => {
