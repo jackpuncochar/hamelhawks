@@ -10,6 +10,17 @@
     "pageUrl":"trevor_porisch"
   },
   {
+    "number": "4",
+    "player": "Elias Leach",
+    "position": "OF",
+    "bats": "R",
+    "throws": "R",
+    "hometown": "Wayzata",
+    "college": "Crookston",
+    "season": "1",
+    "pageUrl":"elias_leach"
+  },
+  {
     "number": "5",
     "player": "Jack Lewin",
     "position": "OF",
@@ -45,7 +56,7 @@
   {
     "number": "8",
     "player": "Jayden Mersereau",
-    "position": "IF",
+    "position": "P",
     "bats": "R",
     "throws": "R",
     "hometown": "Plymouth",
