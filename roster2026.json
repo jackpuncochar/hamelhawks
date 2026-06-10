@@ -1,4 +1,15 @@
-[{
+[ {
+    "number": "0",
+    "player": "Ian Farley",
+    "position": "IF",
+    "bats": "R",
+    "throws": "R",
+    "hometown": "Maple Grove",
+    "college": "",
+    "season": "3",
+    "pageUrl":"ian_farley"
+  },
+  {
     "number": "3",
     "player": "Trevor Porisch",
     "position": "1B",
@@ -316,16 +327,5 @@
     "college": "DCTC",
     "season": "1",
     "pageUrl":"james_hansen"
-  },
-  {
-    "number": "99",
-    "player": "Ian Farley",
-    "position": "IF",
-    "bats": "R",
-    "throws": "R",
-    "hometown": "Maple Grove",
-    "college": "",
-    "season": "3",
-    "pageUrl":"ian_farley"
   }
 ]
