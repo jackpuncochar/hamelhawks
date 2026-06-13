@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-11",
+  "updatedAt": "2026-06-13",
   "league": [
     {
       "team": "Buffalo Bulldogs",
@@ -13,9 +13,9 @@
       "team": "DC Saints",
       "class": "C",
       "leagueWins": 4,
-      "leagueLosses": 2,
+      "leagueLosses": 3,
       "classWins": 3,
-      "classLosses": 0
+      "classLosses": 1
     },
     {
       "team": "Cokato Kernels",
@@ -28,9 +28,9 @@
     {
       "team": "Hamel Hawks",
       "class": "B",
-      "leagueWins": 2,
+      "leagueWins": 3,
       "leagueLosses": 3,
-      "classWins": 1,
+      "classWins": 2,
       "classLosses": 2
     },
     {
@@ -45,17 +45,17 @@
       "team": "Hutchinson Huskies",
       "class": "B",
       "leagueWins": 4,
-      "leagueLosses": 2,
+      "leagueLosses": 3,
       "classWins": 2,
-      "classLosses": 0
+      "classLosses": 1
     },
     {
       "team": "Kimball Express",
       "class": "B",
       "leagueWins": 2,
-      "leagueLosses": 5,
+      "leagueLosses": 6,
       "classWins": 0,
-      "classLosses": 3
+      "classLosses": 4
     },
     {
       "team": "Loretto Larks",
@@ -100,17 +100,17 @@
     {
       "team": "Rockford Crows",
       "class": "C",
-      "leagueWins": 2,
+      "leagueWins": 3,
       "leagueLosses": 3,
-      "classWins": 1,
+      "classWins": 2,
       "classLosses": 1
     },
     {
       "team": "St Martin Martins",
       "class": "B",
-      "leagueWins": 2,
+      "leagueWins": 3,
       "leagueLosses": 0,
-      "classWins": 2,
+      "classWins": 3,
       "classLosses": 0
     }
   ]
