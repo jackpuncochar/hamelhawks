@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-13",
+  "updatedAt": "2026-06-14",
   "league": [
     {
       "team": "Buffalo Bulldogs",
@@ -21,15 +21,15 @@
       "team": "Cokato Kernels",
       "class": "C",
       "leagueWins": 0,
-      "leagueLosses": 4,
+      "leagueLosses": 5,
       "classWins": 0,
-      "classLosses": 3
+      "classLosses": 4
     },
     {
       "team": "Hamel Hawks",
       "class": "B",
       "leagueWins": 3,
-      "leagueLosses": 3,
+      "leagueLosses": 4,
       "classWins": 2,
       "classLosses": 2
     },
@@ -84,7 +84,7 @@
     {
       "team": "Maple Plain Diamond Devils",
       "class": "C",
-      "leagueWins": 3,
+      "leagueWins": 4,
       "leagueLosses": 3,
       "classWins": 2,
       "classLosses": 1
@@ -92,9 +92,9 @@
     {
       "team": "Waverly Stingers",
       "class": "C",
-      "leagueWins": 0,
+      "leagueWins": 1,
       "leagueLosses": 8,
-      "classWins": 0,
+      "classWins": 1,
       "classLosses": 6
     },
     {
