@@ -219,17 +219,6 @@
     "pageUrl":"brady_zackrison"
   },
   {
-    "number": "28",
-    "player": "Aidan Frye",
-    "position": "P",
-    "bats": "L",
-    "throws": "L",
-    "hometown": "Minneapolis",
-    "college": "Buena Vista",
-    "season": "2",
-    "pageUrl":"aidan_frye"
-  },
-  {
     "number": "29",
     "player": "Vann Olson",
     "position": "P",
@@ -261,6 +250,17 @@
     "college": "",
     "season": "1",
     "pageUrl":"griffin_booms"
+  },
+  {
+    "number": "32",
+    "player": "Liam Hall",
+    "position": "P",
+    "bats": "R",
+    "throws": "R",
+    "hometown": "Wayzata",
+    "college": "",
+    "season": "1",
+    "pageUrl":"liam_hall"
   },
   {
     "number": "33",

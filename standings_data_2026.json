@@ -4,31 +4,31 @@
     {
       "team": "Buffalo Bulldogs",
       "class": "B",
-      "leagueWins": 3,
+      "leagueWins": 4,
       "leagueLosses": 1,
-      "classWins": 1,
+      "classWins": 2,
       "classLosses": 1
     },
     {
       "team": "DC Saints",
       "class": "C",
       "leagueWins": 4,
-      "leagueLosses": 3,
+      "leagueLosses": 4,
       "classWins": 3,
-      "classLosses": 1
+      "classLosses": 2
     },
     {
       "team": "Cokato Kernels",
       "class": "C",
       "leagueWins": 0,
-      "leagueLosses": 5,
+      "leagueLosses": 6,
       "classWins": 0,
       "classLosses": 4
     },
     {
       "team": "Hamel Hawks",
       "class": "B",
-      "leagueWins": 3,
+      "leagueWins": 4,
       "leagueLosses": 4,
       "classWins": 2,
       "classLosses": 2
@@ -45,9 +45,9 @@
       "team": "Hutchinson Huskies",
       "class": "B",
       "leagueWins": 4,
-      "leagueLosses": 3,
+      "leagueLosses": 4,
       "classWins": 2,
-      "classLosses": 1
+      "classLosses": 2
     },
     {
       "team": "Kimball Express",
@@ -60,7 +60,7 @@
     {
       "team": "Loretto Larks",
       "class": "B",
-      "leagueWins": 4,
+      "leagueWins": 5,
       "leagueLosses": 0,
       "classWins": 2,
       "classLosses": 0
@@ -69,7 +69,7 @@
       "team": "Litchfield Blues",
       "class": "C",
       "leagueWins": 4,
-      "leagueLosses": 3,
+      "leagueLosses": 4,
       "classWins": 2,
       "classLosses": 0
     },
@@ -100,9 +100,9 @@
     {
       "team": "Rockford Crows",
       "class": "C",
-      "leagueWins": 3,
+      "leagueWins": 4,
       "leagueLosses": 3,
-      "classWins": 2,
+      "classWins": 3,
       "classLosses": 1
     },
     {
