@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-14",
+  "updatedAt": "2026-06-15",
   "league": [
     {
       "team": "Buffalo Bulldogs",
@@ -53,9 +53,9 @@
       "team": "Kimball Express",
       "class": "B",
       "leagueWins": 2,
-      "leagueLosses": 6,
+      "leagueLosses": 7,
       "classWins": 0,
-      "classLosses": 4
+      "classLosses": 5
     },
     {
       "team": "Loretto Larks",
@@ -76,9 +76,9 @@
     {
       "team": "Maple Lake Lakers",
       "class": "B",
-      "leagueWins": 4,
+      "leagueWins": 5,
       "leagueLosses": 2,
-      "classWins": 0,
+      "classWins": 1,
       "classLosses": 2
     },
     {
