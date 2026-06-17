@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-15",
+  "updatedAt": "2026-06-16",
   "league": [
     {
       "team": "Buffalo Bulldogs",
@@ -12,9 +12,9 @@
     {
       "team": "DC Saints",
       "class": "C",
-      "leagueWins": 4,
+      "leagueWins": 5,
       "leagueLosses": 4,
-      "classWins": 3,
+      "classWins": 4,
       "classLosses": 2
     },
     {
@@ -85,9 +85,9 @@
       "team": "Maple Plain Diamond Devils",
       "class": "C",
       "leagueWins": 4,
-      "leagueLosses": 3,
+      "leagueLosses": 4,
       "classWins": 2,
-      "classLosses": 1
+      "classLosses": 2
     },
     {
       "team": "Waverly Stingers",
