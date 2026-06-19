@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-16",
+  "updatedAt": "2026-06-18",
   "league": [
     {
       "team": "Buffalo Bulldogs",
@@ -36,7 +36,7 @@
     {
       "team": "Howard Lake Orphans",
       "class": "C",
-      "leagueWins": 4,
+      "leagueWins": 5,
       "leagueLosses": 1,
       "classWins": 3,
       "classLosses": 0
@@ -45,7 +45,7 @@
       "team": "Hutchinson Huskies",
       "class": "B",
       "leagueWins": 4,
-      "leagueLosses": 4,
+      "leagueLosses": 5,
       "classWins": 2,
       "classLosses": 2
     },
