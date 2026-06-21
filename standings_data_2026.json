@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-19",
+  "updatedAt": "2026-06-20",
   "league": [
     {
       "team": "Buffalo Bulldogs",
@@ -60,7 +60,7 @@
     {
       "team": "Loretto Larks",
       "class": "B",
-      "leagueWins": 5,
+      "leagueWins": 6,
       "leagueLosses": 0,
       "classWins": 2,
       "classLosses": 0
@@ -93,7 +93,7 @@
       "team": "Waverly Stingers",
       "class": "C",
       "leagueWins": 1,
-      "leagueLosses": 8,
+      "leagueLosses": 9,
       "classWins": 1,
       "classLosses": 6
     },
