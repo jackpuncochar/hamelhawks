@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27",
+  "updatedAt": "2026-06-29",
   "league": [
     {
       "team": "Buffalo Bulldogs",
@@ -7,7 +7,7 @@
       "leagueWins": 7,
       "leagueLosses": 1,
       "classWins": 4,
-      "classLosses": 1
+      "classLosses": 2
     },
     {
       "team": "DC Saints",
@@ -21,17 +21,17 @@
       "team": "Cokato Kernels",
       "class": "C",
       "leagueWins": 1,
-      "leagueLosses": 7,
+      "leagueLosses": 8,
       "classWins": 1,
-      "classLosses": 4
+      "classLosses": 5
     },
     {
       "team": "Hamel Hawks",
       "class": "B",
       "leagueWins": 5,
-      "leagueLosses": 5,
+      "leagueLosses": 6,
       "classWins": 2,
-      "classLosses": 3
+      "classLosses": 4
     },
     {
       "team": "Howard Lake Orphans",
@@ -44,10 +44,10 @@
     {
       "team": "Hutchinson Huskies",
       "class": "B",
-      "leagueWins": 6,
+      "leagueWins": 7,
       "leagueLosses": 6,
-      "classWins": 4,
-      "classLosses": 2
+      "classWins": 5,
+      "classLosses": 3
     },
     {
       "team": "Kimball Express",
@@ -60,26 +60,26 @@
     {
       "team": "Loretto Larks",
       "class": "B",
-      "leagueWins": 8,
+      "leagueWins": 9,
       "leagueLosses": 1,
-      "classWins": 3,
+      "classWins": 4,
       "classLosses": 1
     },
     {
       "team": "Litchfield Blues",
       "class": "C",
-      "leagueWins": 5,
+      "leagueWins": 6,
       "leagueLosses": 5,
-      "classWins": 3,
+      "classWins": 4,
       "classLosses": 1
     },
     {
       "team": "Maple Lake Lakers",
       "class": "B",
       "leagueWins": 5,
-      "leagueLosses": 4,
+      "leagueLosses": 5,
       "classWins": 1,
-      "classLosses": 3
+      "classLosses": 5
     },
     {
       "team": "Maple Plain Diamond Devils",
@@ -108,9 +108,9 @@
     {
       "team": "St Martin Martins",
       "class": "B",
-      "leagueWins": 3,
+      "leagueWins": 0,
       "leagueLosses": 0,
-      "classWins": 3,
+      "classWins": 6,
       "classLosses": 0
     }
   ]
