@@ -81,6 +81,12 @@
                 <h2>Recent Headlines</h2>
                 <ul class="headlines-list">
                     <li>
+                        <a href="/news/hawks-weekly-recap-06-22-06-28" class="headline-link" data-slug="hawks-weekly-recap-06-22-06-28">
+                            <img src="resources/images/Hawks infield chat.png" alt="Hamel Hawks infield chats during a pitching change. photo credit: @staci_lynn_photos" class="headline-thumb">
+                            Hamel Hawks Weekly Recap 6/22 - 6/28
+                        </a>
+                    </li>
+                    <li>
                         <a href="/news/hawks-weekly-recap-06-15-06-21" class="headline-link" data-slug="hawks-weekly-recap-06-15-06-21">
                             <img src="resources/images/Matt Kramer singles.png" alt="Hamel Hawks player Matt Kramer singles to right field. photo credit: Koko Yoko Photography" class="headline-thumb">
                             Hamel Hawks Weekly Recap 6/15 - 6/21
@@ -186,6 +192,47 @@
 
             <!-- Main Content: Stories -->
             <main class="news-main">
+                <article class="news-story" data-slug="hawks-weekly-recap-06-22-06-28">
+                    <h1>Hamel Hawks Weekly Recap 6/22 - 6/28</h1>
+                    <img src="resources/images/Hawks infield chat.png" alt="Hamel Hawks infield chats during a pitching change. photo credit: @staci_lynn_photos" class="story-image">
+                    <p style="margin:0; font-style:italic;">Photo: Staci Lynn Photos - @staci_lynn_photos on Instagram</p>
+                    <div class="story-meta">
+                        <span class="author">By Hamel Hawks</span> | <span class="date">June 28, 2026</span>
+                    </div>
+                    <p class="story-preview">
+                        Elias Leach hits for the cycle to lead the Hawks over Dassel, lose in St. Patrick on Friday night, and drop a North Star League game to Loretto.<br><br>
+                        <strong style="text-decoration:underline;">Record</strong><br>
+                        Overall: 7-11<br>
+                        Class B North Star League: 2-4<br>
+                        Overall North Star League: 5-6<br>
+                        <a href="/standings" target="_blank" rel="noopener">North Star League Standings</a><br>
+
+                    </p>
+                    <p class="story-full" style="display: none;">
+                        <strong>Wednesday, 6/24 at Dassel-Cokato Saints</strong><br><br>
+                        The Hawks traveled to beautiful DC Saints Field in Dassel and came away with a 12-6 win. <a href="/elias_leach" target="_blank" rel="noopener">Elias Leach</a> hit for the first cycle in the Hamel record-keeping era. He capped it off with a single in the 9th inning.<br><br>
+                        <video width="100%" height="auto" controls>
+                            <source src="/resources/images/elias_leach_cycle.mp4" type="video/mp4">
+                        </video><br><br>
+                        <a href="/liam_hall" target="_blank" rel="noopener">Liam Hall</a> started on the bump for the Hawks, finishing with 6 IP, 3 ER, and 6 Ks to get the win.<br><br>
+                        Hamel offense totaled 17 hits on the night, and moved to 5-5 in North Star League play.<br><br>
+                        
+                        <strong>Friday, 6/26 at St. Patrick Irish</strong><br><br>
+                        The Hawks brought their Iron 11 to Bonin Field in St. Patrick and enjoyed a night of pork burgers and baseball. Levi Miller pitched great for the Hawks (5 2/3 IP, 2 ER). However, Hamel bats struggled against outstanding pitching from St. Patrick, who recorded 15 Ks and shutout the Hawks 6-0.<br><br>
+
+                        <strong>Sunday, 6/28 vs. Loretto Larks</strong><br><br>
+                        Hamel celebrated 100 years of baseball with a huge crowd on a beautiful Sunday afternoon. Rain pushed the start back an hour, but the sun came out and the pregame ceremonies honoring past Hamel players went on as scheduled. 6 members of the Hamel baseball community were inducted into the Hall of Fame, including longtime Hawks' GM, Greg DeVos.<br><br>
+                        Although the game on the field didn't go the Hawks' way, the day was a huge success. Hamel fell 6-0 to Loretto; the Larks were lead by Andrew Kemper's complete game shutout.<br><br>
+                        <strong>Player of the Week</strong><br>
+                        <u><i>Elias Leach (OF)</i></u><br>
+                        Leach hit for the cycle in Dassel on Wednesday, including his 2nd HR of the season. This goes down as the first cycle in Hamel Hawks' history.<br><br>
+                        <strong>Next up:</strong><br>
+                        Wednesday, 7/1 vs. Howard Lake 7pm<br>
+                        4th of July Break<br>
+                    </p>
+                    <button class="continue-reading">Continue Reading</button>
+                </article>
+
                 <article class="news-story" data-slug="hawks-weekly-recap-06-15-06-21">
                     <h1>Hamel Hawks Weekly Recap 6/15 - 6/21</h1>
                     <img src="resources/images/Matt Kramer singles.png" alt="Hamel Hawks player Matt Kramer singles to right field. photo credit: Koko Yoko Photography" class="story-image">
@@ -800,7 +847,7 @@
                 const headlineLinks = document.querySelectorAll('.headline-link');
                 const headerHeight = document.querySelector('.header').offsetHeight || 115; // Default to 60px if header not found
                 const isMobile = () => window.innerWidth <= 800; // Matches CSS breakpoint
-                const TOP_ARTICLE_SLUG = 'hawks-weekly-recap-06-15-06-21';
+                const TOP_ARTICLE_SLUG = 'hawks-weekly-recap-06-22-06-28';
 
                 function setActiveHeadline(slug) {
                     headlineLinks.forEach(link => {
