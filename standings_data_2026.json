@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-29",
+  "updatedAt": "2026-07-01",
   "league": [
     {
       "team": "Buffalo Bulldogs",
@@ -21,9 +21,9 @@
       "team": "Cokato Kernels",
       "class": "C",
       "leagueWins": 1,
-      "leagueLosses": 8,
+      "leagueLosses": 9,
       "classWins": 1,
-      "classLosses": 5
+      "classLosses": 6
     },
     {
       "team": "Hamel Hawks",
@@ -36,9 +36,9 @@
     {
       "team": "Howard Lake Orphans",
       "class": "C",
-      "leagueWins": 6,
+      "leagueWins": 7,
       "leagueLosses": 2,
-      "classWins": 4,
+      "classWins": 5,
       "classLosses": 0
     },
     {
