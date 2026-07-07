@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-02",
+  "updatedAt": "2026-07-07",
   "league": [
     {
       "team": "Buffalo Bulldogs",
@@ -21,7 +21,7 @@
       "team": "Cokato Kernels",
       "class": "C",
       "leagueWins": 1,
-      "leagueLosses": 10,
+      "leagueLosses": 11,
       "classWins": 1,
       "classLosses": 7
     },
@@ -76,7 +76,7 @@
     {
       "team": "Maple Lake Lakers",
       "class": "B",
-      "leagueWins": 6,
+      "leagueWins": 7,
       "leagueLosses": 4,
       "classWins": 2,
       "classLosses": 5
