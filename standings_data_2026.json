@@ -1,20 +1,20 @@
 {
-  "updatedAt": "2026-07-07",
+  "updatedAt": "2026-07-09",
   "league": [
     {
       "team": "Buffalo Bulldogs",
       "class": "B",
-      "leagueWins": 7,
+      "leagueWins": 8,
       "leagueLosses": 2,
-      "classWins": 4,
+      "classWins": 5,
       "classLosses": 3
     },
     {
       "team": "DC Saints",
       "class": "C",
-      "leagueWins": 6,
+      "leagueWins": 7,
       "leagueLosses": 6,
-      "classWins": 4,
+      "classWins": 5,
       "classLosses": 3
     },
     {
@@ -28,18 +28,18 @@
     {
       "team": "Hamel Hawks",
       "class": "B",
-      "leagueWins": 5,
+      "leagueWins": 6,
       "leagueLosses": 7,
-      "classWins": 2,
+      "classWins": 3,
       "classLosses": 4
     },
     {
       "team": "Howard Lake Orphans",
       "class": "C",
       "leagueWins": 8,
-      "leagueLosses": 2,
+      "leagueLosses": 3,
       "classWins": 5,
-      "classLosses": 0
+      "classLosses": 1
     },
     {
       "team": "Hutchinson Huskies",
@@ -53,14 +53,14 @@
       "team": "Kimball Express",
       "class": "B",
       "leagueWins": 4,
-      "leagueLosses": 9,
+      "leagueLosses": 10,
       "classWins": 0,
-      "classLosses": 7
+      "classLosses": 8
     },
     {
       "team": "Loretto Larks",
       "class": "B",
-      "leagueWins": 9,
+      "leagueWins": 10,
       "leagueLosses": 1,
       "classWins": 4,
       "classLosses": 1
@@ -77,9 +77,9 @@
       "team": "Maple Lake Lakers",
       "class": "B",
       "leagueWins": 7,
-      "leagueLosses": 4,
+      "leagueLosses": 5,
       "classWins": 2,
-      "classLosses": 5
+      "classLosses": 6
     },
     {
       "team": "Maple Plain Diamond Devils",
@@ -101,7 +101,7 @@
       "team": "Rockford Crows",
       "class": "C",
       "leagueWins": 6,
-      "leagueLosses": 4,
+      "leagueLosses": 5,
       "classWins": 5,
       "classLosses": 2
     },
