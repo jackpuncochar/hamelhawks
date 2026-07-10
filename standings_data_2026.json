@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-09",
+  "updatedAt": "2026-07-10",
   "league": [
     {
       "team": "Buffalo Bulldogs",
@@ -85,9 +85,9 @@
       "team": "Maple Plain Diamond Devils",
       "class": "C",
       "leagueWins": 5,
-      "leagueLosses": 6,
+      "leagueLosses": 7,
       "classWins": 2,
-      "classLosses": 3
+      "classLosses": 4
     },
     {
       "team": "Waverly Stingers",
@@ -100,9 +100,9 @@
     {
       "team": "Rockford Crows",
       "class": "C",
-      "leagueWins": 6,
+      "leagueWins": 7,
       "leagueLosses": 5,
-      "classWins": 5,
+      "classWins": 6,
       "classLosses": 2
     },
     {
