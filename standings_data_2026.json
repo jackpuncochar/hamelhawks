@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-12",
+  "updatedAt": "2026-07-13",
   "league": [
     {
       "team": "Buffalo Bulldogs",
@@ -36,9 +36,9 @@
     {
       "team": "Howard Lake Orphans",
       "class": "C",
-      "leagueWins": 8,
+      "leagueWins": 9,
       "leagueLosses": 4,
-      "classWins": 5,
+      "classWins": 6,
       "classLosses": 2
     },
     {
@@ -52,9 +52,9 @@
     {
       "team": "Kimball Express",
       "class": "B",
-      "leagueWins": 4,
+      "leagueWins": 5,
       "leagueLosses": 10,
-      "classWins": 0,
+      "classWins": 1,
       "classLosses": 8
     },
     {
@@ -77,33 +77,33 @@
       "team": "Maple Lake Lakers",
       "class": "B",
       "leagueWins": 7,
-      "leagueLosses": 5,
+      "leagueLosses": 6,
       "classWins": 2,
-      "classLosses": 6
+      "classLosses": 7
     },
     {
       "team": "Maple Plain Diamond Devils",
       "class": "C",
-      "leagueWins": 5,
+      "leagueWins": 6,
       "leagueLosses": 7,
-      "classWins": 2,
+      "classWins": 3,
       "classLosses": 4
     },
     {
       "team": "Waverly Stingers",
       "class": "C",
       "leagueWins": 1,
-      "leagueLosses": 12,
+      "leagueLosses": 13,
       "classWins": 1,
-      "classLosses": 8
+      "classLosses": 9
     },
     {
       "team": "Rockford Crows",
       "class": "C",
       "leagueWins": 7,
-      "leagueLosses": 5,
+      "leagueLosses": 6,
       "classWins": 6,
-      "classLosses": 2
+      "classLosses": 3
     },
     {
       "team": "St Martin Martins",
