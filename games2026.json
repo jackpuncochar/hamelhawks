@@ -435,25 +435,25 @@
     "fieldName": "Paul Fortin Memorial Field"
   },
   {
-    "date": "Wed, 7/29",
-    "opponent": "Playoffs",
-    "shortName": "Playoffs",
-    "location": "TBD",
-    "time": "",
+    "date": "Sat, 8/1",
+    "opponent": "Intrasquad Scrimmage",
+    "shortName": "Scrimmage",
+    "location": "Home",
+    "time": "TBD",
     "sponsor": "",
     "result": "",
-    "logo": "",
+    "logo": "resources/images/hamelhawks.png",
     "status": "",
     "streamLink": "",
     "boxScoreLink": "",
-    "address": "",
-    "fieldName": ""
+    "address": "https://maps.google.com/?q=Fortin+Field,+Hamel,+MN+55340",
+    "fieldName": "Paul Fortin Memorial Field"
   },
   {
-    "date": "Sat, 8/1",
+    "date": "Fri, 8/7",
     "opponent": "Districts",
     "shortName": "Districts",
-    "location": "TBD",
+    "location": "",
     "time": "",
     "sponsor": "",
     "result": "",
@@ -461,27 +461,14 @@
     "status": "",
     "streamLink": "",
     "boxScoreLink": "",
-    "address": "",
-    "fieldName": ""
-  },{
-    "date": "Sun, 8/2",
-    "opponent": "Districts",
-    "shortName": "Districts",
-    "location": "TBD",
-    "time": "",
-    "sponsor": "",
-    "result": "",
-    "logo": "",
-    "status": "",
-    "streamLink": "",
-    "boxScoreLink": "",
-    "address": "",
-    "fieldName": ""
-  },{
+    "address": "https://maps.app.goo.gl/xGumEwocwP1dvfLn9",
+    "fieldName": "Irish Stadium"
+  },
+  {
     "date": "Sat, 8/8",
     "opponent": "Districts",
     "shortName": "Districts",
-    "location": "TBD",
+    "location": "",
     "time": "",
     "sponsor": "",
     "result": "",
@@ -489,9 +476,10 @@
     "status": "",
     "streamLink": "",
     "boxScoreLink": "",
-    "address": "",
-    "fieldName": ""
-  },{
+    "address": "https://maps.app.goo.gl/xGumEwocwP1dvfLn9",
+    "fieldName": "Irish Stadium"
+  },
+  {
     "date": "Sun, 8/9",
     "opponent": "Districts",
     "shortName": "Districts",
@@ -503,7 +491,7 @@
     "status": "",
     "streamLink": "",
     "boxScoreLink": "",
-    "address": "",
-    "fieldName": ""
+    "address": "https://maps.app.goo.gl/xGumEwocwP1dvfLn9",
+    "fieldName": "Irish Stadium"
   }
 ]
