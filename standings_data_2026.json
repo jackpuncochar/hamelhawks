@@ -1,29 +1,29 @@
 {
-  "updatedAt": "2026-07-13",
+  "updatedAt": "2026-07-16",
   "league": [
     {
       "team": "Buffalo Bulldogs",
       "class": "B",
-      "leagueWins": 9,
+      "leagueWins": 10,
       "leagueLosses": 2,
-      "classWins": 6,
+      "classWins": 7,
       "classLosses": 3
     },
     {
       "team": "DC Saints",
       "class": "C",
       "leagueWins": 8,
-      "leagueLosses": 7,
+      "leagueLosses": 8,
       "classWins": 6,
-      "classLosses": 4
+      "classLosses": 5
     },
     {
       "team": "Cokato Kernels",
       "class": "C",
       "leagueWins": 2,
-      "leagueLosses": 11,
+      "leagueLosses": 12,
       "classWins": 2,
-      "classLosses": 7
+      "classLosses": 8
     },
     {
       "team": "Hamel Hawks",
@@ -36,9 +36,9 @@
     {
       "team": "Howard Lake Orphans",
       "class": "C",
-      "leagueWins": 9,
+      "leagueWins": 10,
       "leagueLosses": 4,
-      "classWins": 6,
+      "classWins": 7,
       "classLosses": 2
     },
     {
@@ -61,16 +61,16 @@
       "team": "Loretto Larks",
       "class": "B",
       "leagueWins": 10,
-      "leagueLosses": 2,
+      "leagueLosses": 3,
       "classWins": 4,
-      "classLosses": 2
+      "classLosses": 3
     },
     {
       "team": "Litchfield Blues",
       "class": "C",
-      "leagueWins": 8,
+      "leagueWins": 9,
       "leagueLosses": 5,
-      "classWins": 6,
+      "classWins": 7,
       "classLosses": 1
     },
     {
@@ -93,16 +93,16 @@
       "team": "Waverly Stingers",
       "class": "C",
       "leagueWins": 1,
-      "leagueLosses": 13,
+      "leagueLosses": 14,
       "classWins": 1,
-      "classLosses": 9
+      "classLosses": 10
     },
     {
       "team": "Rockford Crows",
       "class": "C",
-      "leagueWins": 7,
+      "leagueWins": 8,
       "leagueLosses": 6,
-      "classWins": 6,
+      "classWins": 7,
       "classLosses": 3
     },
     {

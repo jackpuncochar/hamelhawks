@@ -114,7 +114,11 @@ function addLeagueMetrics(leagueData) {
         team.leaguePct = formatPct(wins, losses);
     });
 
-    const leader = [...leagueData].sort((a, b) => b.leagueWins - a.leagueWins || a.leagueLosses - b.leagueLosses)[0];
+    const leader = [...leagueData].sort((a, b) => {
+        const aPct = getWinPctValue(a.leagueWins, a.leagueLosses);
+        const bPct = getWinPctValue(b.leagueWins, b.leagueLosses);
+        return bPct - aPct || b.leagueWins - a.leagueWins || a.leagueLosses - b.leagueLosses;
+    })[0];
     leagueData.forEach(team => {
         team.leagueGb = leader && team !== leader ? formatGb(leader, team, "league") : "-";
     });
@@ -126,7 +130,11 @@ function addClassMetrics(classes) {
             row.winPct = formatPct(row.wins, row.losses);
         });
 
-        const leader = [...rows].sort((a, b) => b.wins - a.wins || a.losses - b.losses)[0];
+        const leader = [...rows].sort((a, b) => {
+            const aPct = getWinPctValue(a.wins, a.losses);
+            const bPct = getWinPctValue(b.wins, b.losses);
+            return bPct - aPct || b.wins - a.wins || a.losses - b.losses;
+        })[0];
         rows.forEach(row => {
             row.gb = leader && row !== leader ? formatGb(leader, row) : "-";
         });
@@ -139,6 +147,11 @@ function formatPct(wins, losses) {
         return "-";
     }
     return (wins / total).toFixed(3).replace(/^0/, "");
+}
+
+function getWinPctValue(wins, losses) {
+    const total = wins + losses;
+    return total === 0 ? 0 : wins / total;
 }
 
 function formatGb(leader, team, prefix) {
@@ -170,7 +183,7 @@ function renderLeagueTable(data) {
             { data: "leaguePct", title: "PCT", defaultContent: "", render: function(data, type, row) { return data != null ? data : row.winPct; } },
             { data: "leagueGb", title: "GB", defaultContent: "", render: function(data, type, row) { return data != null ? data : row.gb; } }
         ],
-        order: [[2, "desc"], [3, "asc"]],
+        order: [[4, "desc"], [2, "desc"]],
         searching: false,
         paging: false,
         info: false,
@@ -203,7 +216,7 @@ function renderClassTable(classes) {
             { data: "winPct", title: "PCT" },
             { data: "gb", title: "GB" }
         ],
-        order: [[2, "desc"], [3, "asc"]],
+        order: [[4, "desc"], [2, "desc"]],
         searching: true,
         paging: false,
         info: false,
