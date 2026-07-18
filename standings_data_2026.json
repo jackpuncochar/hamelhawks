@@ -1,29 +1,29 @@
 {
-  "updatedAt": "2026-07-16",
+  "updatedAt": "2026-07-18",
   "league": [
     {
       "team": "Buffalo Bulldogs",
       "class": "B",
       "leagueWins": 10,
-      "leagueLosses": 2,
+      "leagueLosses": 3,
       "classWins": 7,
-      "classLosses": 3
+      "classLosses": 4
     },
     {
       "team": "DC Saints",
       "class": "C",
       "leagueWins": 8,
-      "leagueLosses": 8,
+      "leagueLosses": 9,
       "classWins": 6,
-      "classLosses": 5
+      "classLosses": 6
     },
     {
       "team": "Cokato Kernels",
       "class": "C",
       "leagueWins": 2,
-      "leagueLosses": 12,
+      "leagueLosses": 13,
       "classWins": 2,
-      "classLosses": 8
+      "classLosses": 9
     },
     {
       "team": "Hamel Hawks",
@@ -37,16 +37,16 @@
       "team": "Howard Lake Orphans",
       "class": "C",
       "leagueWins": 10,
-      "leagueLosses": 4,
+      "leagueLosses": 5,
       "classWins": 7,
-      "classLosses": 2
+      "classLosses": 3
     },
     {
       "team": "Hutchinson Huskies",
       "class": "B",
-      "leagueWins": 9,
+      "leagueWins": 10,
       "leagueLosses": 5,
-      "classWins": 7,
+      "classWins": 8,
       "classLosses": 3
     },
     {
@@ -61,32 +61,32 @@
       "team": "Loretto Larks",
       "class": "B",
       "leagueWins": 10,
-      "leagueLosses": 3,
+      "leagueLosses": 4,
       "classWins": 4,
-      "classLosses": 3
+      "classLosses": 4
     },
     {
       "team": "Litchfield Blues",
       "class": "C",
-      "leagueWins": 9,
+      "leagueWins": 10,
       "leagueLosses": 5,
-      "classWins": 7,
+      "classWins": 8,
       "classLosses": 1
     },
     {
       "team": "Maple Lake Lakers",
       "class": "B",
-      "leagueWins": 7,
+      "leagueWins": 8,
       "leagueLosses": 6,
-      "classWins": 2,
+      "classWins": 3,
       "classLosses": 7
     },
     {
       "team": "Maple Plain Diamond Devils",
       "class": "C",
-      "leagueWins": 6,
+      "leagueWins": 7,
       "leagueLosses": 7,
-      "classWins": 3,
+      "classWins": 4,
       "classLosses": 4
     },
     {
@@ -100,9 +100,9 @@
     {
       "team": "Rockford Crows",
       "class": "C",
-      "leagueWins": 8,
+      "leagueWins": 9,
       "leagueLosses": 6,
-      "classWins": 7,
+      "classWins": 8,
       "classLosses": 3
     },
     {
