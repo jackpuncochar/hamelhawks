@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-07-18",
+  "updatedAt": "2026-07-19",
   "league": [
     {
       "team": "Buffalo Bulldogs",
       "class": "B",
-      "leagueWins": 10,
+      "leagueWins": 11,
       "leagueLosses": 3,
-      "classWins": 7,
+      "classWins": 8,
       "classLosses": 4
     },
     {
@@ -21,89 +21,89 @@
       "team": "Cokato Kernels",
       "class": "C",
       "leagueWins": 2,
-      "leagueLosses": 13,
+      "leagueLosses": 14,
       "classWins": 2,
-      "classLosses": 9
+      "classLosses": 10
     },
     {
       "team": "Hamel Hawks",
       "class": "B",
-      "leagueWins": 6,
+      "leagueWins": 7,
       "leagueLosses": 9,
-      "classWins": 3,
+      "classWins": 4,
       "classLosses": 6
     },
     {
       "team": "Howard Lake Orphans",
       "class": "C",
-      "leagueWins": 10,
+      "leagueWins": 11,
       "leagueLosses": 5,
-      "classWins": 7,
+      "classWins": 8,
       "classLosses": 3
     },
     {
       "team": "Hutchinson Huskies",
       "class": "B",
       "leagueWins": 10,
-      "leagueLosses": 5,
+      "leagueLosses": 6,
       "classWins": 8,
-      "classLosses": 3
+      "classLosses": 4
     },
     {
       "team": "Kimball Express",
       "class": "B",
       "leagueWins": 5,
-      "leagueLosses": 10,
+      "leagueLosses": 11,
       "classWins": 1,
-      "classLosses": 8
+      "classLosses": 9
     },
     {
       "team": "Loretto Larks",
       "class": "B",
-      "leagueWins": 10,
+      "leagueWins": 11,
       "leagueLosses": 4,
-      "classWins": 4,
+      "classWins": 5,
       "classLosses": 4
     },
     {
       "team": "Litchfield Blues",
       "class": "C",
-      "leagueWins": 10,
+      "leagueWins": 11,
       "leagueLosses": 5,
-      "classWins": 8,
+      "classWins": 9,
       "classLosses": 1
     },
     {
       "team": "Maple Lake Lakers",
       "class": "B",
       "leagueWins": 8,
-      "leagueLosses": 6,
+      "leagueLosses": 7,
       "classWins": 3,
-      "classLosses": 7
+      "classLosses": 8
     },
     {
       "team": "Maple Plain Diamond Devils",
       "class": "C",
-      "leagueWins": 7,
+      "leagueWins": 8,
       "leagueLosses": 7,
-      "classWins": 4,
+      "classWins": 5,
       "classLosses": 4
     },
     {
       "team": "Waverly Stingers",
       "class": "C",
       "leagueWins": 1,
-      "leagueLosses": 14,
+      "leagueLosses": 15,
       "classWins": 1,
-      "classLosses": 10
+      "classLosses": 11
     },
     {
       "team": "Rockford Crows",
       "class": "C",
       "leagueWins": 9,
-      "leagueLosses": 6,
+      "leagueLosses": 7,
       "classWins": 8,
-      "classLosses": 3
+      "classLosses": 4
     },
     {
       "team": "St Martin Martins",
