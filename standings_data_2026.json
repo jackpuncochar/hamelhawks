@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-19",
+  "updatedAt": "2026-07-20",
   "league": [
     {
       "team": "Buffalo Bulldogs",
@@ -53,7 +53,7 @@
       "team": "Kimball Express",
       "class": "B",
       "leagueWins": 5,
-      "leagueLosses": 11,
+      "leagueLosses": 12,
       "classWins": 1,
       "classLosses": 9
     },
@@ -100,7 +100,7 @@
     {
       "team": "Rockford Crows",
       "class": "C",
-      "leagueWins": 9,
+      "leagueWins": 10,
       "leagueLosses": 7,
       "classWins": 8,
       "classLosses": 4
