@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-23",
+  "updatedAt": "2026-07-24",
   "league": [
     {
       "team": "Buffalo Bulldogs",
       "class": "B",
-      "leagueWins": 12,
+      "leagueWins": 14,
       "leagueLosses": 3,
       "classWins": 8,
       "classLosses": 4
@@ -36,9 +36,9 @@
     {
       "team": "Howard Lake Orphans",
       "class": "C",
-      "leagueWins": 12,
+      "leagueWins": 13,
       "leagueLosses": 5,
-      "classWins": 8,
+      "classWins": 9,
       "classLosses": 3
     },
     {
@@ -85,15 +85,15 @@
       "team": "Maple Plain Diamond Devils",
       "class": "C",
       "leagueWins": 9,
-      "leagueLosses": 7,
+      "leagueLosses": 8,
       "classWins": 6,
-      "classLosses": 4
+      "classLosses": 5
     },
     {
       "team": "Waverly Stingers",
       "class": "C",
       "leagueWins": 1,
-      "leagueLosses": 15,
+      "leagueLosses": 16,
       "classWins": 1,
       "classLosses": 11
     },
