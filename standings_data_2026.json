@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-25",
+  "updatedAt": "2026-07-26",
   "league": [
     {
       "team": "Buffalo Bulldogs",
@@ -28,7 +28,7 @@
     {
       "team": "Hamel Hawks",
       "class": "B",
-      "leagueWins": 7,
+      "leagueWins": 8,
       "leagueLosses": 9,
       "classWins": 4,
       "classLosses": 8
@@ -60,9 +60,9 @@
     {
       "team": "Loretto Larks",
       "class": "B",
-      "leagueWins": 11,
+      "leagueWins": 12,
       "leagueLosses": 5,
-      "classWins": 5,
+      "classWins": 6,
       "classLosses": 6
     },
     {
@@ -77,9 +77,9 @@
       "team": "Maple Lake Lakers",
       "class": "B",
       "leagueWins": 8,
-      "leagueLosses": 8,
+      "leagueLosses": 9,
       "classWins": 3,
-      "classLosses": 8
+      "classLosses": 9
     },
     {
       "team": "Maple Plain Diamond Devils",
@@ -93,7 +93,7 @@
       "team": "Waverly Stingers",
       "class": "C",
       "leagueWins": 1,
-      "leagueLosses": 16,
+      "leagueLosses": 17,
       "classWins": 1,
       "classLosses": 11
     },
