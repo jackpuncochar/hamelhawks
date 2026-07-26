@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-24",
+  "updatedAt": "2026-07-25",
   "league": [
     {
       "team": "Buffalo Bulldogs",
@@ -31,7 +31,7 @@
       "leagueWins": 7,
       "leagueLosses": 9,
       "classWins": 4,
-      "classLosses": 6
+      "classLosses": 8
     },
     {
       "team": "Howard Lake Orphans",
@@ -63,7 +63,7 @@
       "leagueWins": 11,
       "leagueLosses": 5,
       "classWins": 5,
-      "classLosses": 4
+      "classLosses": 6
     },
     {
       "team": "Litchfield Blues",
@@ -110,7 +110,7 @@
       "class": "B",
       "leagueWins": 0,
       "leagueLosses": 0,
-      "classWins": 6,
+      "classWins": 10,
       "classLosses": 0
     }
   ]
