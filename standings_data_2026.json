@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-26",
+  "updatedAt": "2026-07-27",
   "league": [
     {
       "team": "Buffalo Bulldogs",
@@ -68,9 +68,9 @@
     {
       "team": "Litchfield Blues",
       "class": "C",
-      "leagueWins": 11,
+      "leagueWins": 12,
       "leagueLosses": 6,
-      "classWins": 9,
+      "classWins": 10,
       "classLosses": 2
     },
     {
@@ -85,9 +85,9 @@
       "team": "Maple Plain Diamond Devils",
       "class": "C",
       "leagueWins": 9,
-      "leagueLosses": 8,
+      "leagueLosses": 9,
       "classWins": 6,
-      "classLosses": 5
+      "classLosses": 6
     },
     {
       "team": "Waverly Stingers",
